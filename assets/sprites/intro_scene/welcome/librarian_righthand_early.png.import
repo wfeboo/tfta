@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://iqqa56ctilo4"
-path="res://.godot/imported/crowdpeople_a.png-de8db8a7027140bba859d003bfda2b03.ctex"
+uid="uid://c77373vbxv0n6"
+path="res://.godot/imported/librarian_righthand_early.png-90d080eaac67d3028acfdb4753abdf2f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/intro_scene/crowdpeople_a.png"
-dest_files=["res://.godot/imported/crowdpeople_a.png-de8db8a7027140bba859d003bfda2b03.ctex"]
+source_file="res://assets/sprites/intro_scene/welcome/librarian_righthand_early.png"
+dest_files=["res://.godot/imported/librarian_righthand_early.png-90d080eaac67d3028acfdb4753abdf2f.ctex"]
 
 [params]
 

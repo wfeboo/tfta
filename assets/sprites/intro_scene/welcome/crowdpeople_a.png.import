@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dx4mi3hfo1o22"
-path="res://.godot/imported/crowdpeople_b.png-6fd10596780828f7c7f2e56828ccac54.ctex"
+uid="uid://iqqa56ctilo4"
+path="res://.godot/imported/crowdpeople_a.png-a97f440e0eb2438af1be952809947ccb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/intro_scene/crowdpeople_b.png"
-dest_files=["res://.godot/imported/crowdpeople_b.png-6fd10596780828f7c7f2e56828ccac54.ctex"]
+source_file="res://assets/sprites/intro_scene/welcome/crowdpeople_a.png"
+dest_files=["res://.godot/imported/crowdpeople_a.png-a97f440e0eb2438af1be952809947ccb.ctex"]
 
 [params]
 

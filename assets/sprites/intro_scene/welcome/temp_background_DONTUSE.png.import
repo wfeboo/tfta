@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c77373vbxv0n6"
-path="res://.godot/imported/librarian_righthand_early.png-b939a3e85c5baa783acae817bd964870.ctex"
+uid="uid://r1j62camtwb5"
+path="res://.godot/imported/temp_background_DONTUSE.png-27c65ba237bb907a484034d87c731985.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/intro_scene/librarian_righthand_early.png"
-dest_files=["res://.godot/imported/librarian_righthand_early.png-b939a3e85c5baa783acae817bd964870.ctex"]
+source_file="res://assets/sprites/intro_scene/welcome/temp_background_DONTUSE.png"
+dest_files=["res://.godot/imported/temp_background_DONTUSE.png-27c65ba237bb907a484034d87c731985.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vxldtydkwdvm"
-path="res://.godot/imported/crowdpeople_c.png-fdb34a00cfd3f20bb6c87eca90eb7ca5.ctex"
+path="res://.godot/imported/crowdpeople_c.png-b923ebaeb358eb3a855e9c8fb088140e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/intro_scene/crowdpeople_c.png"
-dest_files=["res://.godot/imported/crowdpeople_c.png-fdb34a00cfd3f20bb6c87eca90eb7ca5.ctex"]
+source_file="res://assets/sprites/intro_scene/welcome/crowdpeople_c.png"
+dest_files=["res://.godot/imported/crowdpeople_c.png-b923ebaeb358eb3a855e9c8fb088140e.ctex"]
 
 [params]
 

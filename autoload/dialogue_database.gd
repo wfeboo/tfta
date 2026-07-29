@@ -2,21 +2,21 @@ extends Node
 # Autoload: dialogue_database.gd
 # Lee el CSV completo del bibliotecario y lo organiza en memoria para consultas rápidas
 
-const DIALOGUE_PATH: String = "res://data/dialogue/librarian_dialogue.txt"
+const DIALOGUE_PATHS: Array[String] = [
+	"res://data/dialogue/intro/librarian_dialogue.txt",
+	"res://data/dialogue/intro/destiny_dialogue.txt"
+]
 
 # Agrupa líneas por su Conversation ID: {"INTRO-00": [linea1, linea2, ...], "CHATS-02": [...]}
 var conversations: Dictionary = {}
-
-
 func _ready() -> void:
-	load_dialogue()
+	for path: String in DIALOGUE_PATHS:
+		load_dialogue(path)
 
-
-func load_dialogue() -> void:
-	var file := FileAccess.open(DIALOGUE_PATH, FileAccess.READ)
-
+func load_dialogue(path: String) -> void:
+	var file := FileAccess.open(path, FileAccess.READ)
 	if file == null:
-		push_error("No se pudo abrir el archivo de diálogos")
+		push_error("No se pudo abrir el archivo de diálogos: " + path)
 		return
 
 	# La primera fila es el encabezado (ID, Scene, Exact Scene, etc.) - la saltamos

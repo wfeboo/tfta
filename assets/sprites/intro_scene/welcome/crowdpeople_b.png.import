@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://r1j62camtwb5"
-path="res://.godot/imported/temp_background_DONTUSE.png-df99ba712b0309ce18bc970fc3f565bf.ctex"
+uid="uid://dx4mi3hfo1o22"
+path="res://.godot/imported/crowdpeople_b.png-4c79be5c182c197d9b0c9381960c96fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/intro_scene/temp_background_DONTUSE.png"
-dest_files=["res://.godot/imported/temp_background_DONTUSE.png-df99ba712b0309ce18bc970fc3f565bf.ctex"]
+source_file="res://assets/sprites/intro_scene/welcome/crowdpeople_b.png"
+dest_files=["res://.godot/imported/crowdpeople_b.png-4c79be5c182c197d9b0c9381960c96fe.ctex"]
 
 [params]
 

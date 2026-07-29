@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://dglrvcsqvbwp4"]
 
-[ext_resource type="Script" uid="uid://c4fnspjonwdyx" path="res://scenes/menu/intro_cinematic.gd" id="1_ql1ym"]
-[ext_resource type="Texture2D" uid="uid://r1j62camtwb5" path="res://assets/sprites/intro_scene/temp_background_DONTUSE.png" id="2_wy64s"]
-[ext_resource type="Texture2D" uid="uid://c77373vbxv0n6" path="res://assets/sprites/intro_scene/librarian_righthand_early.png" id="3_epife"]
-[ext_resource type="Texture2D" uid="uid://illc2t4ecrvf" path="res://assets/sprites/intro_scene/librarian_lefthand_early.png" id="4_jvfq4"]
-[ext_resource type="Texture2D" uid="uid://iqqa56ctilo4" path="res://assets/sprites/intro_scene/crowdpeople_a.png" id="5_k78rq"]
+[ext_resource type="Script" uid="uid://c4fnspjonwdyx" path="res://scenes/menu/intro/intro scripts/sc_welcome.gd" id="1_ci655"]
+[ext_resource type="Texture2D" uid="uid://r1j62camtwb5" path="res://assets/sprites/intro_scene/welcome/temp_background_DONTUSE.png" id="2_743fy"]
+[ext_resource type="Texture2D" uid="uid://c77373vbxv0n6" path="res://assets/sprites/intro_scene/welcome/librarian_righthand_early.png" id="3_uqo1f"]
+[ext_resource type="Texture2D" uid="uid://illc2t4ecrvf" path="res://assets/sprites/intro_scene/welcome/librarian_lefthand_early.png" id="4_musqv"]
+[ext_resource type="Texture2D" uid="uid://iqqa56ctilo4" path="res://assets/sprites/intro_scene/welcome/crowdpeople_a.png" id="5_dpcnr"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_wy64s"]
 
-[node name="IntroCinematic" type="Node2D" unique_id=344024437]
-script = ExtResource("1_ql1ym")
+[node name="WelcomeCinematic" type="Node2D" unique_id=344024437]
+script = ExtResource("1_ci655")
 
 [node name="MemoryOverlay" type="CanvasModulate" parent="." unique_id=890874089]
 
@@ -77,21 +77,21 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1095987160]
 position = Vector2(320, 256)
-texture = ExtResource("2_wy64s")
+texture = ExtResource("2_743fy")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1828019086]
 
 [node name="LibrarianHandLeft" type="Sprite2D" parent="." unique_id=790485116]
 position = Vector2(220, 290)
-texture = ExtResource("3_epife")
+texture = ExtResource("3_uqo1f")
 
 [node name="LibrarianHandRight" type="Sprite2D" parent="." unique_id=1627802154]
 position = Vector2(420, 290)
-texture = ExtResource("4_jvfq4")
+texture = ExtResource("4_musqv")
 
 [node name="BackgroundPeople" type="Sprite2D" parent="." unique_id=1388949002]
 position = Vector2(320, 256)
-texture = ExtResource("5_k78rq")
+texture = ExtResource("5_dpcnr")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=864426529]
 position = Vector2(320, 256)

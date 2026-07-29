@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://illc2t4ecrvf"
-path="res://.godot/imported/librarian_lefthand_early.png-bf13890dfc93fd8dcb2f094ddf982749.ctex"
+uid="uid://bti8g6dkq580f"
+path="res://.godot/imported/M-godarti-STOCK-5.jpg-cbb66c57a930ced2eaaa6a0576844682.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/intro_scene/librarian_lefthand_early.png"
-dest_files=["res://.godot/imported/librarian_lefthand_early.png-bf13890dfc93fd8dcb2f094ddf982749.ctex"]
+source_file="res://assets/sprites/intro_scene/first_scene/M-godarti-STOCK-5.jpg"
+dest_files=["res://.godot/imported/M-godarti-STOCK-5.jpg-cbb66c57a930ced2eaaa6a0576844682.ctex"]
 
 [params]
 

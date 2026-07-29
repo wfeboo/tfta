@@ -1,8 +1,8 @@
 extends Node2D
 
-const CROWD_A = preload("res://assets/sprites/intro_scene/crowdpeople_a.png") 
-const CROWD_B = preload("res://assets/sprites/intro_scene/crowdpeople_b.png") 
-const CROWD_C = preload("res://assets/sprites/intro_scene/crowdpeople_c.png")
+const CROWD_A = preload("res://assets/sprites/intro_scene/welcome/crowdpeople_a.png") 
+const CROWD_B = preload("res://assets/sprites/intro_scene/welcome/crowdpeople_b.png") 
+const CROWD_C = preload("res://assets/sprites/intro_scene/welcome/crowdpeople_c.png")
 
 var animation_speed : float = 0.9
 var time_passed : float = 0.0
@@ -45,9 +45,11 @@ func _ready() -> void:
 	# Iniciar el diálogo
 	show_dialogue()
 
-func _on_intro_finished()-> void:
-	GameData.mark_intro_seen()
-	get_tree().change_scene_to_file("res://scenes/menu/main_menu.tscn")
+func _on_scene_finished() -> void:
+	# Solo cambia de escena - NO toca el guardado en disco
+	get_tree().change_scene_to_file("res://scenes/menu/intro/intro_scenes/scn_comic_panels.tscn")
+
+
 
 func show_dialogue() -> void:
 	var conversation: Array = DialogueDatabase.get_conversation("INTRO-00")
@@ -72,5 +74,10 @@ func show_dialogue() -> void:
 		await typewriter_tween.finished
 		# Luego esperar a pasar a la siguiente línea de diálogo
 		await get_tree().create_timer(2.0 + (line["text"].length() * 0.009)).timeout
-		
-	_on_intro_finished()
+	# 1. Hide the UI boxes instantly
+	$UILayer/Control/SpeakerBox.visible = false
+	$UILayer/Control/DialogueBox.visible = false
+	var screen_tween := create_tween()
+	screen_tween.tween_property($MemoryOverlay, "color", Color("1a1a1a"), 2.0)
+	await screen_tween.finished
+	_on_scene_finished()

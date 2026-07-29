@@ -1,0 +1,33 @@
+ID,Scene,Exact Scene,Character,Situation Name,Text,Emotion
+DTNY-0000,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0000,It’s quiet…,None
+DTNY-0001,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0000,Can you hear me?,None
+DTNY-0002,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0000,Are you there?,None
+DTNY-0003,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0000,I can sense you.,None
+DTNY-0004,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0001,,None
+DTNY-0005,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0001,"I can feel you reading this.
+",None
+DTNY-0006,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0002,,None
+DTNY-0007,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0002,Can you hear them? ,None
+DTNY-0008,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0002,The trumpets of freedom,None
+DTNY-0009,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0002,…finally,None
+DTNY-0010,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0003,,None
+DTNY-0011,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0003,Who are you?,None
+DTNY-0012,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0003,I can see that your curious for what’s to come,None
+DTNY-0013,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0003,But I’m afraid you are a little bit too late,None
+DTNY-0014,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0003,...,None
+DTNY-0015,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0003,What are you seeking?,None
+DTNY-0016,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0003,It's all right.,None
+DTNY-0017,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0003,You don't need an answer for everything right now.,None
+DTNY-0018,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0004,,None
+DTNY-0019,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0004,Are you scared of anything?,None
+DTNY-0020,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0004,You keep running,None
+DTNY-0021,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0004,"You need something
+",None
+DTNY-0022,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0004,It's all going to be fine.,None
+DTNY-0023,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0004,You don't need an answer for everything right now.,None
+DTNY-0024,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0005,,None
+DTNY-0025,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0005,"This won’t last long, but I won’t leave you on your own.",None
+DTNY-0026,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0005,I will give you the help of a dear friend of mine.,None
+DTNY-0027,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0005,There is only one thing I need from you…,None
+DTNY-0028,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0006,,None
+DTNY-0029,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0006,CHANGE,None
