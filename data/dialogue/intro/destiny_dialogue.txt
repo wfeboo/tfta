@@ -1,7 +1,7 @@
 ID,Scene,Exact Scene,Character,Situation Name,Text,Emotion,Trigger
 DTNY-0000,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0000,,None,bar_appears
 DTNY-0001,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0000,It’s quiet…,None,initial_dialogue
-DTNY-0002,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0000,Can you hear me?,None,bar_blinks
+DTNY-0002,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0000,Can you hear me?,None,
 DTNY-0003,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0000,Are you there?,None,
 DTNY-0004,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0000,...,None,roots_start
 DTNY-0005,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0001,I can sense you.,None,
