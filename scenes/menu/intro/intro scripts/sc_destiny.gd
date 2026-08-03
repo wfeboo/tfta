@@ -1,5 +1,5 @@
 extends Node2D
-
+var blink_timer = 0.0
 const CONVERSATION_IDS: Array[String] = [
 	"INTRO-DSTNY-0000",
 	"INTRO-DSTNY-0001",
@@ -40,10 +40,28 @@ func show_dialogue_manual(conversation_id: String) -> void:
 	for line in conversation:
 		dialogue_label.text = line["text"]
 		dialogue_label.visible_ratio = 0.0
-
+		# Si no tiene trigger no pasa nada a menos de que tenga uno en específico
+		match line["trigger"]:
+			"bar_appears":
+				pass
+			"initial_dialogue":
+				pass
+			"roots_start":
+				pass
+			"bar_blinks":
+				blink_dialogue()
+			"name_trigger_question":
+				pass
+			"yes_no_question":
+				pass
+			"roots_strengthen":
+				pass
+			"roots_cover_screen":
+				pass
+			"title_drop":
+				pass
 		var text_length: int = line["text"].length()
 		var duration: float = text_length * 0.09
-
 		var typewriter_tween := create_tween()
 		typewriter_tween.tween_property(dialogue_label, "visible_ratio", 1.0, duration)
 
@@ -70,3 +88,12 @@ func show_dialogue_manual(conversation_id: String) -> void:
 func _on_scene_finished() -> void:
 	# Solo cambia de escena - NO toca el guardado en disco
 	get_tree().change_scene_to_file("res://scenes/menu/intro/intro_scenes/scn_welcome.tscn")
+	
+func blink_dialogue(duration:float=0.55,blink_interval: float=0.1) -> void:
+	var dialogue_box = $UILayer/Control/DialogueBox
+	var time_passed: float = 0.0
+	while time_passed < duration:
+		dialogue_box.visible = not dialogue_box.visible
+		await get_tree().create_timer(blink_interval).timeout
+		time_passed += blink_interval
+	dialogue_box.visible = true

@@ -1,13 +1,18 @@
 [gd_scene format=3 uid="uid://cvn5ocelkjdfk"]
 
-[ext_resource type="Texture2D" uid="uid://r1j62camtwb5" path="res://assets/sprites/intro_scene/welcome/temp_background_DONTUSE.png" id="2_mq5wu"]
-[ext_resource type="Texture2D" uid="uid://c77373vbxv0n6" path="res://assets/sprites/intro_scene/welcome/librarian_righthand_early.png" id="3_ni6vy"]
-[ext_resource type="Texture2D" uid="uid://illc2t4ecrvf" path="res://assets/sprites/intro_scene/welcome/librarian_lefthand_early.png" id="4_x274h"]
-[ext_resource type="Texture2D" uid="uid://iqqa56ctilo4" path="res://assets/sprites/intro_scene/welcome/crowdpeople_a.png" id="5_iyc80"]
+[ext_resource type="Texture2D" uid="uid://byvl2wkeytuqr" path="res://assets/sprites/intro_scene/comic/bg_panels.png" id="1_3yv8b"]
+[ext_resource type="Script" uid="uid://cw6xun7ig5mx" path="res://scenes/menu/intro/intro scripts/sc_third_person.gd" id="1_aushr"]
+[ext_resource type="Texture2D" uid="uid://bti8g6dkq580f" path="res://assets/sprites/intro_scene/first_scene/M-godarti-STOCK-5.jpg" id="3_f23rc"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_wy64s"]
 
 [node name="TPCinematic" type="Node2D" unique_id=344024437]
+script = ExtResource("1_aushr")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=965116951]
+position = Vector2(320, 344)
+scale = Vector2(5.44, 3.4399996)
+texture = ExtResource("1_3yv8b")
 
 [node name="MemoryOverlay" type="CanvasModulate" parent="." unique_id=890874089]
 
@@ -49,6 +54,11 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
+[node name="ProgressIndicate" type="Sprite2D" parent="UILayer/Control/DialogueBox" unique_id=1276842393]
+position = Vector2(512, 88)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("3_f23rc")
+
 [node name="SpeakerBox" type="NinePatchRect" parent="UILayer/Control" unique_id=1516885751]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 1
@@ -73,24 +83,26 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="Background" type="Sprite2D" parent="." unique_id=1095987160]
-position = Vector2(320, 256)
-texture = ExtResource("2_mq5wu")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1828019086]
-
-[node name="LibrarianHandLeft" type="Sprite2D" parent="." unique_id=790485116]
-position = Vector2(220, 290)
-texture = ExtResource("3_ni6vy")
-
-[node name="LibrarianHandRight" type="Sprite2D" parent="." unique_id=1627802154]
-position = Vector2(420, 290)
-texture = ExtResource("4_x274h")
-
-[node name="BackgroundPeople" type="Sprite2D" parent="." unique_id=1388949002]
-position = Vector2(320, 256)
-texture = ExtResource("5_iyc80")
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=864426529]
 position = Vector2(320, 256)
 zoom = Vector2(2.1, 2.1)
+
+[node name="Panel1" type="Polygon2D" parent="." unique_id=1434955095]
+position = Vector2(0, 53.33333)
+scale = Vector2(1, 0.8333334)
+color = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(128, 128, 128, 320, 512, 320, 512, 128, 319.3529, 127.99999)
+
+[node name="Panel2" type="Polygon2D" parent="." unique_id=1898042687]
+position = Vector2(-89.36364, -208.00003)
+scale = Vector2(1.5795455, 1.6000001)
+polygon = PackedVector2Array(168, 240, 256, 240, 256, 240, 168, 320)
+
+[node name="Panel4" type="Polygon2D" parent="." unique_id=539825564]
+position = Vector2(-180.45506, -220.79996)
+scale = Vector2(1.5795467, 1.5999999)
+polygon = PackedVector2Array(320, 248, 408, 248, 408, 328)
+
+[node name="Panel3" type="Polygon2D" parent="." unique_id=1885688933]
+position = Vector2(0, 24)
+polygon = PackedVector2Array(320, 160, 192, 280, 448, 280)

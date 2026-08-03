@@ -18,6 +18,7 @@ func _ready() -> void:
 	$Panel1.modulate.a = 0.0
 	$Panel2.modulate.a = 0.0
 	$Panel3.modulate.a = 0.0
+	$UILayer/Control/DialogueBox/ProgressIndicate.visible = false
 
 	# La pantalla está completamente oscura
 	$MemoryOverlay.color = Color.BLACK
@@ -40,54 +41,57 @@ func _ready() -> void:
 
 func _on_scene_finished() -> void:
 	# Solo cambia de escena - NO toca el guardado en disco
-	get_tree().change_scene_to_file("res://scenes/menu/intro/intro_scenes/scn_third_person.tscn")
+	get_tree().change_scene_to_file("res://scenes/menu/intro/intro_scenes/scn_goodbye.tscn")
 
 
 func show_dialogue() -> void:
-	var conversation: Array = DialogueDatabase.get_conversation("INTRO-01")
-	var total_lines: int = conversation.size()
-	var panel_count: int = 3
-	var base: int = total_lines / panel_count
-	var remainder: int = total_lines % panel_count
-
-	var lines_per_panel: Array[int] = []
-	for panel_i in range(panel_count):
-		var count: int = base
-		if panel_i < remainder:
-			count += 1
-		lines_per_panel.append(count)
-
-	var current_panel: int = 0
-	var lines_shown_in_panel: int = 0
-
-	for i in range(conversation.size()):
-		var line = conversation[i]
-
-		# Si arrancamos un panel nuevo, lo revelamos
-		if lines_shown_in_panel == 0:
-			show_panel(current_panel)
-
+	var conversation: Array = DialogueDatabase.get_conversation("INTRO-02")
+	var progress_indicate = $UILayer/Control/DialogueBox/ProgressIndicate
+	for line in conversation:
 		# Actualizar los labels
 		$UILayer/Control/SpeakerBox/SpeakerLabel.text = line["character"]
 		$UILayer/Control/DialogueBox/DialogueLabel.text = line["text"]
+		# Son invisibles los contenidos del diálogo
 		$UILayer/Control/DialogueBox/DialogueLabel.visible_ratio = 0.0
-
+		# Calcular la velocidad dinámica basado en la longitud del texto
 		var text_length = line["text"].length()
-		var duration = text_length * 0.07
+		var duration = text_length * 0.065
+		# Si no tiene trigger no pasa nada a menos de que tenga uno en específico
+		match line["trigger"]:
+			# Se muestra el primer panel
+			"intro2_intro_panel":
+				show_panel(0)
+			"intro2_second_panel":
+				show_panel(1)
+			"intro2_second_cheer":
+				pass
+			"intro2_second_embarrassed":
+				pass
+			"intro2_second_joy":
+				pass
+			"intro2_third_panel":
+				show_panel(2)
+		# Una variable que actualiza cada letra a ser visible
 		var typewriter_tween := create_tween()
-		typewriter_tween.tween_property(
-			$UILayer/Control/DialogueBox/DialogueLabel,
-			"visible_ratio",
-			1.0,
-			duration
-		)
+		typewriter_tween.tween_property($UILayer/Control/DialogueBox/DialogueLabel,"visible_ratio",1.0,duration)
+			# Hasta que termine de escribirse todo el diálogo
 		await typewriter_tween.finished
-		await get_tree().create_timer(2.0 + (line["text"].length() * 0.009)).timeout
-
-		lines_shown_in_panel += 1
-		if lines_shown_in_panel >= lines_per_panel[current_panel]:
-			current_panel += 1
-			lines_shown_in_panel = 0
+		await get_tree().create_timer(1.5).timeout
+		# Le mostramos progress_indicate
+		progress_indicate.visible = true
+		# Guardamos el tiempo de espera para que el diálogo se pase automáticamente
+		var total_wait = 2.0 + (line["text"].length() * 0.009)
+		# Guardamos cuanto tiempo ha pasado en total
+		var time_passed = 0.0
+		# Mientras que el tiempo que ha pasado sea menor al tiempo de espera
+		while time_passed < total_wait:
+			# Si se presiona "ui_accept" se rompe el while
+			if Input.is_action_just_pressed("ui_accept"):
+				break
+			# Si eso no pasa, sumamos un frame al tiempo pasado, cuando este llegue a lo mismo que total_wait, este romperá el while
+			await get_tree().process_frame
+			time_passed += get_process_delta_time()
+	# Escondemos SpeakerBox y DialogueBox para finalizar la escena
 	$UILayer/Control/SpeakerBox.visible = false
 	$UILayer/Control/DialogueBox.visible = false
 	var screen_tween := create_tween()

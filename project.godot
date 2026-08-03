@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Tales for the Asleep"
-run/main_scene="uid://dglrvcsqvbwp4"
+run/main_scene="uid://vpujy6lqw11b"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 
 [autoload]

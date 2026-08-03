@@ -27,7 +27,7 @@ func load_dialogue(path: String) -> void:
 		var row := file.get_csv_line()
 
 		# Filas vacías al final del archivo (comunes en CSVs) - las ignoramos
-		if row.size() < 7:
+		if row.size() < 8:
 			continue
 
 		# Armamos un diccionario legible por nombre, en vez de recordar índices como row[5]
@@ -38,7 +38,8 @@ func load_dialogue(path: String) -> void:
 			"character": row[3],
 			"conversation_id": row[4],
 			"text": row[5].strip_edges(),  # Acá limpiamos el \r sobrante
-			"emotion": row[6].strip_edges()
+			"emotion": row[6].strip_edges(),
+			"trigger": row[7].strip_edges()
 		}
 
 		var conv_id: String = line_data["conversation_id"]

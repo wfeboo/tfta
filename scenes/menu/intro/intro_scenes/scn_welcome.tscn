@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c4fnspjonwdyx" path="res://scenes/menu/intro/intro scripts/sc_welcome.gd" id="1_ci655"]
 [ext_resource type="Texture2D" uid="uid://r1j62camtwb5" path="res://assets/sprites/intro_scene/welcome/temp_background_DONTUSE.png" id="2_743fy"]
+[ext_resource type="Texture2D" uid="uid://bti8g6dkq580f" path="res://assets/sprites/intro_scene/first_scene/M-godarti-STOCK-5.jpg" id="3_743fy"]
 [ext_resource type="Texture2D" uid="uid://c77373vbxv0n6" path="res://assets/sprites/intro_scene/welcome/librarian_righthand_early.png" id="3_uqo1f"]
 [ext_resource type="Texture2D" uid="uid://illc2t4ecrvf" path="res://assets/sprites/intro_scene/welcome/librarian_lefthand_early.png" id="4_musqv"]
 [ext_resource type="Texture2D" uid="uid://iqqa56ctilo4" path="res://assets/sprites/intro_scene/welcome/crowdpeople_a.png" id="5_dpcnr"]
@@ -12,6 +13,11 @@
 script = ExtResource("1_ci655")
 
 [node name="MemoryOverlay" type="CanvasModulate" parent="." unique_id=890874089]
+color = Color(1.557, 1.557, 1.557, 1)
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1095987160]
+position = Vector2(320, 256)
+texture = ExtResource("2_743fy")
 
 [node name="UILayer" type="CanvasLayer" parent="." unique_id=1695019801]
 follow_viewport_scale = 306.555
@@ -51,6 +57,11 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
+[node name="ProgressIndicate" type="Sprite2D" parent="UILayer/Control/DialogueBox" unique_id=230989318]
+position = Vector2(512, 88)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("3_743fy")
+
 [node name="SpeakerBox" type="NinePatchRect" parent="UILayer/Control" unique_id=1516885751]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 1
@@ -75,10 +86,6 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="Background" type="Sprite2D" parent="." unique_id=1095987160]
-position = Vector2(320, 256)
-texture = ExtResource("2_743fy")
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1828019086]
 
 [node name="LibrarianHandLeft" type="Sprite2D" parent="." unique_id=790485116]
@@ -90,7 +97,7 @@ position = Vector2(420, 290)
 texture = ExtResource("4_musqv")
 
 [node name="BackgroundPeople" type="Sprite2D" parent="." unique_id=1388949002]
-position = Vector2(320, 256)
+position = Vector2(320, 288)
 texture = ExtResource("5_dpcnr")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=864426529]

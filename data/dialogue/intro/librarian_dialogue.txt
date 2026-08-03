@@ -1,283 +1,286 @@
-ID,Scene,Exact Scene,Character,Situation Name,Text,Emotion
-MENU-0000,Intro,Intro Welcome,The Librarian,INTRO-00,Ladies and gentlepeople...,None
-MENU-0001,Intro,Intro Welcome,The Librarian,INTRO-00,Welcome everyone...,None
-MENU-0002,Intro,Intro Welcome,The Librarian,INTRO-00,to a once in a lifetime experience at the greatest library in the observable universe...,None
-MENU-0003,Intro,Intro Welcome,The Librarian,INTRO-00,You'll be greeted by the biggest library that has ever existed!,None
-MENU-0004,Intro,Intro Welcome,The Librarian,INTRO-00,Better than anything the universe has ever seen!,None
-MENU-0005,Intro,Intro Welcome,The Librarian,INTRO-00,You won't find a prettier...,None
-MENU-0006,Intro,Intro Welcome,The Librarian,INTRO-00,GRANDER...,None
-MENU-0007,Intro,Intro Welcome,The Librarian,INTRO-00,GIGANTIC...,None
-MENU-0008,Intro,Intro Welcome,The Librarian,INTRO-00,-er...,None
-MENU-0009,Intro,Intro Welcome,The Librarian,INTRO-00,library....,None
-MENU-0010,Intro,Intro Welcome,The Librarian,INTRO-00,ANYWHERE ELSE!,None
-MENU-0011,Intro,Intro Welcome,The Librarian,INTRO-00,IN. THE. UNIVERSE.,None
-MENU-0012,Intro,Intro Welcome,The Librarian,INTRO-00,So EEENJOOOY yourselves...,None
-MENU-0013,Intro,Intro Welcome,The Librarian,INTRO-00,Here...,None
-MENU-0014,Intro,Intro Welcome,The Librarian,INTRO-00,At the DWELLING MOON LIBRARY!,None
-MENU-0015,Intro,Intro Welcome,The Librarian,INTRO-01,We have all sorts of books here in this place.,None
-MENU-0016,Intro,Intro Welcome,The Librarian,INTRO-01,Stories told from all corners of the galaxy.,None
-MENU-0017,Intro,Intro Welcome,The Librarian,INTRO-01,"We have fiction, non-fiction, romance, dramas,",None
-MENU-0018,Intro,Intro Welcome,The Librarian,INTRO-01,"dictionarys, biographies, AUTObiographies,",None
-MENU-0019,,Intro Welcome,The Librarian,INTRO-01,"Science books, math books, fantasy, adventure, thrillers...",None
-MENU-0020,Intro,Intro Welcome,The Librarian,INTRO-01,We have everything you could ever ask for.,None
-MENU-0021,Intro,Intro Welcome,The Librarian,INTRO-01,You should rest your eyes upon the magnitude of this place...,None
-MENU-0022,Intro,Intro Welcome,The Librarian,INTRO-01,...take a good look at the great variety of books we have here at The Dwelling Moon Library.,None
-MENU-0023,Intro,Intro Welcome,The Librarian,INTRO-01,You won't regret it.,None
-MENU-0024,Intro,Intro Welcome,The Librarian,INTRO-02,"""What if I get bored?"" You might ask...",None
-MENU-0025,Intro,Intro Welcome,The Librarian,INTRO-02,You surely won't!,None
-MENU-0026,Intro,Intro Welcome,The Librarian,INTRO-02,There's a little bit of everything to make everyone's experience just the greatest. Which speaking of...,None
-MENU-0027,Intro,Intro Welcome,The Librarian,INTRO-02,Anything I could offer you to make this experience all the more pleasant?,None
-MENU-0028,Intro,Intro Welcome,The Librarian,INTRO-02,We actually don't serve any of that garbage here!,None
-MENU-0029,Intro,Intro Welcome,The Librarian,INTRO-02,I'm sure it won't be necessary!,None
-MENU-0030,Intro,Intro Welcome,The Librarian,INTRO-02,(We ran out of stock a couple of weeks ago...),None
-MENU-0031,Intro,Intro Welcome,The Librarian,INTRO-02,That won't be a problem! Here at the Dwelling Moon Library we want to be as welcoming to everyone that visits us from every place regardless of their background!,None
-MENU-0032,Intro,Intro Welcome,The Librarian,INTRO-02,Yes... Even criminals! We're sure this place of recreation could fix anyone's minds.,None
-MENU-0033,Intro,Intro Welcome,The Librarian,INTRO-02,Oh! I'm sure this book will be great for your mind little one.,None
-MENU-0034,Intro,Intro Welcome,The Librarian,INTRO-02,It's a small one that will definitely teach you a lot of stuff.,None
-MENU-0035,Intro,Intro Welcome,The Librarian,INTRO-02,About... Life...,None
-MENU-0036,Intro,Intro Welcome,The Librarian,INTRO-03,I think you've heard everything I could introduce you to!,None
-MENU-0037,Intro,Intro Welcome,The Librarian,INTRO-03,"Please, do us a favor and simply enjoy the place!",None
-MENU-0038,Intro,Intro Welcome,The Librarian,INTRO-03,If you'd EEEXCUUUSEEE me!,None
-MENU-0039,Intro,Intro Welcome,The Librarian,INTRO-03,I'll be over at the corner playing delightful melodies unlike anything you've heard before!,None
-MENU-0040,Intro,Intro Welcome,The Librarian,INTRO-03,"And if you need anything else,",None
-MENU-0041,Intro,Intro Welcome,The Librarian,INTRO-03,DOOON'T BOTHER ASKING!,None
-MENU-0042,Intro,Intro Welcome,The Librarian,INTRO-03,...,None
-MENU-0043,Intro,Intro Welcome,The Librarian,INTRO-03,I'm only kidding...,None
-MENU-0044,Intro,Intro Welcome,The Librarian,INTRO-03,I'll be over at the grand instrumental corner if anything unexpected happens.,None
-MENU-0045,Intro,Intro Welcome,The Librarian,INTRO-03,Please enjoy your STAAAY!,None
-MENU-0046,Common,Random Comment(s),The Librarian,CHATS-COM-00,"I can read this WHOOOLE book in 1,539729 seconds!!",Cheerful
-MENU-0047,Common,Random Comment(s),The Librarian,CHATS-COM-00,HBSUHBUWEBDUHBDHBE!!!,Locked in
-MENU-0048,Common,Random Comment(s),The Librarian,CHATS-COM-00,See!!,Cheerful
-MENU-0049,Common,Random Comment(s),The Librarian,CHATS-COM-01,This job can definitely get boring at times,Bored
-MENU-0050,Common,Random Comment(s),The Librarian,CHATS-COM-01,It's visitors like you that make it worth it!,Cheerful
-MENU-0051,Common,Random Comment(s),The Librarian,CHATS-COM-02,"JARONA!!
-",Cheerful
-MENU-0052,Common,Random Comment(s),The Librarian,CHATS-COM-02,"What?!
-",Confused
-MENU-0053,Common,Random Comment(s),The Librarian,CHATS-COM-02,"Isn’t that what the cool kids are saying??
-",Confused
-MENU-0054,Common,Random Comment(s),The Librarian,CHATS-COM-03,This job sure is TIIIRESOME...,Bored
-MENU-0055,Common,Random Comment(s),The Librarian,CHATS-COM-04,You should try THAT book.,Serious
-MENU-0056,Common,Random Comment(s),The Librarian,CHATS-COM-04,"You know, THAAAT one!",Locked in
-MENU-0057,Common,Random Comment(s),The Librarian,CHATS-COM-05,"We have all sort of artifacts, we don't know exactly where they all came from, or when they where from.",Happy
-MENU-0058,Common,Random Comment(s),The Librarian,CHATS-COM-06,When will that annoying dog stop barking!!,Annoyed
-MENU-0059,Common,Random Comment(s),The Librarian,CHATS-COM-07,DUST DUST DUST THERE IS ALWAYS TO MUCH DUST!!!,Annoyed
-MENU-0060,Common,Random Comment(s),The Librarian,CHATS-COM-08,"Do you know anyone that could fix this creaking floor?
-",Confused
-MENU-0061,Common,Random Comment(s),The Librarian,CHATS-COM-08,"Never mind, it’s cheaper if I do it myself.",Sighing
-MENU-0062,Common,Random Comment(s),The Librarian,CHATS-COM-09,"You know I love history and all...
-",Serious
-MENU-0063,Common,Random Comment(s),The Librarian,CHATS-COM-09,But it is a hard hobby to get into.,Serious
-MENU-0064,Common,Random Comment(s),The Librarian,CHATS-COM-09,IT NEVER ENDS!!,Annoyed
-MENU-0065,Common,Random Comment(s),The Librarian,CHATS-COM-10,(Hums a tune),Happy
-MENU-0066,Common,Random Comment(s),The Librarian,CHATS-COM-10,♪I nana be near hmm hmm♪,Happy
-MENU-0067,Common,Random Comment(s),The Librarian,CHATS-COM-10,I keep forgetting those lyrics.,Dazed
-MENU-0068,Common,Random Comment(s),The Librarian,CHATS-COM-11,"The next secret you find better be a Walkie Talkie
-",Happy
-MENU-0069,Common,Random Comment(s),The Librarian,CHATS-COM-11,"Cause’ im getting kinda lonely in here
-",Sighing
-MENU-0070,Common,Random Comment(s),The Librarian,CHATS-COM-12,You like the way I play?,Happy
-MENU-0071,Common,Random Comment(s),The Librarian,CHATS-COM-12,I certainly do! Hahaha!,Laughing
-MENU-0072,Common,Random Comment(s),The Librarian,CHATS-COM-13,Books have always been a vital part of my life.,Thoughtful
-MENU-0073,Common,Random Comment(s),The Librarian,CHATS-COM-13,At least that's what I've been lead to believe,Sighing
-MENU-0074,Common,Random Comment(s),The Librarian,CHATS-COM-14,"Look, over there!!",Shocked
-MENU-0075,Common,Random Comment(s),The Librarian,CHATS-COM-14,What? There's nothing?,Confused
-MENU-0076,Common,Random Comment(s),The Librarian,CHATS-COM-14,Must've made it up in my mind then... My bad!!,Cheerful
-MENU-0077,Common,Random Comment(s),The Librarian,CHATS-COM-15,Ready for your next literary adventure? I sure am!!,Cheerful
-MENU-0078,Common,Random Comment(s),The Librarian,CHATS-COM-16,Not many people visit this place anymore.,Thoughtful
-MENU-0079,Common,Random Comment(s),The Librarian,CHATS-COM-16,"Yet those who do, become recurrent visitors.",Happy
-MENU-0080,Common,Random Comment(s),The Librarian,CHATS-COM-17,The universe can look so big sometimes.,Dazed
-MENU-0081,Common,Random Comment(s),The Librarian,CHATS-COM-17,But no matter how far you zoom out... It's always the small things that impact you the most ain't it?,Smirk
-MENU-0082,Common,Random Comment(s),The Librarian,CHATS-COM-18,"The demon with the horns, the adventurer with the goggles and the lost girl...",Thoughtful
-MENU-0083,Common,Random Comment(s),The Librarian,CHATS-COM-19,You don't like this piece?,Confused
-MENU-0084,Common,Random Comment(s),The Librarian,CHATS-COM-19,"To bad, I LIIIIIKE IT!!",Cheerful
-MENU-0085,Common,Random Comment(s),The Librarian,CHATS-COM-20,Hope you're enjoying your STAAAY!,Cheerful
-MENU-0086,Common,Random Comment(s),The Librarian,CHATS-COM-21,What's your favorite food?,Curious
-MENU-0087,Common,Random Comment(s),The Librarian,CHATS-COM-21,"Wait, I'll try to guess...",Cheerful
-MENU-0088,Common,Random Comment(s),The Librarian,CHATS-COM-21,...,Thoughtful
-MENU-0089,Common,Random Comment(s),The Librarian,CHATS-COM-21,...,Thoughtful
-MENU-0090,Common,Random Comment(s),The Librarian,CHATS-COM-21,You're definitely vegan...,Annoyed
-MENU-0091,Rare,Random Comment(s),The Librarian,CHATS-RAR-00,One of the things we hold has a lot of power.,Serious
-MENU-0092,Rare,Random Comment(s),The Librarian,CHATS-RAR-00,"Well, they all do in a sense.",Sighing
-MENU-0093,Rare,Random Comment(s),The Librarian,CHATS-RAR-00,"Don't put too much of your mind into it,",Locked in
-MENU-0094,Rare,Random Comment(s),The Librarian,CHATS-RAR-00,or else nothing in here will make any sense!,Happy
-MENU-0095,Rare,Random Comment(s),The Librarian,CHATS-RAR-01,Sweet mother of Swuno!,Dreadful
-MENU-0096,Rare,Random Comment(s),The Librarian,CHATS-RAR-01,Sorry... ,Ashamed
-MENU-0097,Rare,Random Comment(s),The Librarian,CHATS-RAR-01,Saw a bug in between the keys!,Cheerful
-MENU-0098,Rare,Random Comment(s),The Librarian,CHATS-RAR-02,The betrayal that took place in that civil war is definitely an interesting one.,Serious
-MENU-0099,Rare,Random Comment(s),The Librarian,CHATS-RAR-02,Too bad the wrong side was crowned victor...,Ashamed
-MENU-0100,Rare,Random Comment(s),The Librarian,CHATS-RAR-03,"The bell outside this place constantly ""Chimes""!",Laughing
-MENU-0101,Rare,Random Comment(s),The Librarian,CHATS-RAR-03,I wonder why people call me cheesy.,Sighing
-MENU-0102,Rare,Random Comment(s),The Librarian,CHATS-RAR-04,Tales about siblings...,Thoughtful
-MENU-0103,Rare,Random Comment(s),The Librarian,CHATS-RAR-04,Haven't heard that in a while...,Sarcasm
-MENU-0104,Rare,Random Comment(s),The Librarian,CHATS-RAR-05,Books in here are extremely old.,Thoughtful
-MENU-0105,Rare,Random Comment(s),The Librarian,CHATS-RAR-05,"In fact,",Serious
-MENU-0106,Rare,Random Comment(s),The Librarian,CHATS-RAR-05,you're standing in front of one of the oldest tales in the entirety of the universe!,Cheerful
-MENU-0107,Rare,Random Comment(s),The Librarian,CHATS-RAR-05,(at least that I know of...),Thoughtful
-MENU-0108,Rare,Random Comment(s),The Librarian,CHATS-RAR-06,Why would anything in this place make sense...,Shadow
-MENU-0109,Rare,Random Comment(s),The Librarian,CHATS-RAR-06,It all feels so pointless.,Shadow
-MENU-0110,Rare,Random Comment(s),The Librarian,CHATS-RAR-07,"Don't ask me about anyone outside this place,",Confused
-MENU-0111,Rare,Random Comment(s),The Librarian,CHATS-RAR-07,I will barely remember your face once you're gone!,Cheerful
-MENU-0112,Rare,Random Comment(s),The Librarian,CHATS-RAR-08,How...,Curious
-MENU-0113,Rare,Random Comment(s),The Librarian,CHATS-RAR-08,How does everything look out there?,Curious
-MENU-0114,Rare,Random Comment(s),The Librarian,CHATS-RAR-08,Must be real pretty!,Cheerful
-MENU-0115,Rare,Random Comment(s),The Librarian,CHATS-RAR-09,…Life,Sighing
-MENU-0116,Rare,Random Comment(s),The Librarian,CHATS-RAR-09,Is a bit too much sometimes huh?,Upset smile
-MENU-0117,Rare,Random Comment(s),The Librarian,CHATS-RAR-09,"But stop trying to run from it.
-",Shadow
-MENU-0118,Rare,Random Comment(s),The Librarian,CHATS-RAR-09,At least you can…,Upset smile
-MENU-0119,Rare,Random Comment(s),The Librarian,CHATS-RAR-09,"You are a nice kid with a good life
-",Happy
-MENU-0120,Rare,Random Comment(s),The Librarian,CHATS-RAR-09,...,Looking downwards
-MENU-0121,Rare,Random Comment(s),The Librarian,CHATS-RAR-09,Try to live it.,Upset smile
-MENU-0122,Rare,Random Comment(s),The Librarian,CHATS-RAR-10,Lovely weather outside isn't it?,Happy
-MENU-0123,Rare,Random Comment(s),The Librarian,CHATS-RAR-10,Haha! I'm just kidding.,Laughing
-MENU-0124,Rare,Random Comment(s),The Librarian,CHATS-RAR-10,I wouldn't be able to know.,Upset smile
-MENU-0125,Rare,Random Comment(s),The Librarian,CHATS-RAR-10,"Oh! Sorry, I have some allergies.",Shocked
-MENU-0126,Rare,Random Comment(s),The Librarian,CHATS-RAR-11,I'll be right back.,Shadow
-MENU-0127,Strange,Random Comment(s),The Librarian,CHATS-STR-00,When will I be free again...,Shadow
-MENU-0128,Strange,Random Comment(s),The Librarian,CHATS-STR-01,Reading all the time makes me wonder...,Thoughtful
-MENU-0129,Strange,Random Comment(s),The Librarian,CHATS-STR-01,"if I were able to freely roam outside of this place,",Thoughtful
-MENU-0130,Strange,Random Comment(s),The Librarian,CHATS-STR-01,would I have made a difference? ,Upset smile
-MENU-0131,Strange,Random Comment(s),The Librarian,CHATS-STR-01,You know...,Shadow
-MENU-0132,Strange,Random Comment(s),The Librarian,CHATS-STR-01,Maybe things would still be as they once were.,Shadow
-MENU-0133,Strange,Random Comment(s),The Librarian,CHATS-STR-02,Could he be right? Is it all just pain??,Shadow
-MENU-0134,Strange,Random Comment(s),The Librarian,CHATS-STR-03,Something I haaate about this collection is how empty it seems.,Bored
-MENU-0135,Strange,Random Comment(s),The Librarian,CHATS-STR-04,...hey I've noticed you're a bit of an avid reader like me.,Curious
-MENU-0136,Strange,Random Comment(s),The Librarian,CHATS-STR-04,...,Serious
-MENU-0137,Strange,Random Comment(s),The Librarian,CHATS-STR-04,"Don't you feel like no matter what you read or learn, it seems like it's never enough...?",Upset smile
-MENU-0138,Strange,Random Comment(s),The Librarian,CHATS-STR-05,I miss someone.,Upset
-MENU-0139,Strange,Random Comment(s),The Librarian,CHATS-STR-05,"Who that someone is remains uncertain,",Shadow
-MENU-0140,Strange,Random Comment(s),The Librarian,CHATS-STR-05,but probably they meant a lot to my former self. Don't you think...?,Upset smile
-MENU-0141,Interaction,Interact with DESIVINTE_BOOK,The Librarian,DESIV-00,The one-winged demon far above the sky.,Smirk
-MENU-0142,Interaction,Interact with DESIVINTE_BOOK,The Librarian,DESIV-00,He who aling his wrath imposed fear upon thousands of generations.,Smirk
-MENU-0143,Interaction,Interact with DESIVINTE_BOOK,The Librarian,DESIV-00,"Loner in nature, a lot of people might relate!!",Cheerful
-MENU-0144,Interaction,Interact with DESIVINTE_BOOK,The Librarian,DESIV-01,"Right at the start, I like you already!",Cheerful
-MENU-0145,Interaction,Interact with DESIVINTE_BOOK,The Librarian,DESIV-01,"Don't take this story for granted, it might be important in the future!!",Curious
-MENU-0146,Interaction,Interact with DESIVINTE_BOOK,The Librarian,DESIV-01,Hehe...,Smirk
-MENU-0147,Interaction,Interact with DESIVINTE_BOOK,The Librarian,DESIV-02,Desivinte. His name still sends chills down anyone's spine.,Serious
-MENU-0148,Interaction,Interact with DESIVINTE_BOOK,The Librarian,DESIV-03,Hey!,Cheerful
-MENU-0149,Interaction,Interact with DESIVINTE_BOOK,The Librarian,DESIV-03,Spoiler alert...He-,Curious
-MENU-0150,Interaction,Interact with DESIVINTE_BOOK,The Librarian,DESIV-03,What?,Confused
-MENU-0151,Interaction,Interact with DESIVINTE_BOOK,The Librarian,DESIV-03,No spoilers??,Shocked
-MENU-0152,Interaction,Interact with DESIVINTE_BOOK,The Librarian,DESIV-03,Alright...,Annoyed
-MENU-0153,Interaction,Interact with KATHJULES_BOOK,The Librarian,KATHJ-00,Eager explorer always ready for his next adventure.,Cheerful
-MENU-0154,Interaction,Interact with KATHJULES_BOOK,The Librarian,KATHJ-00,"Hope you're one of those!! If so, you'll definitely like this one.",Happy
-MENU-0155,Interaction,Interact with KATHJULES_BOOK,The Librarian,KATHJ-01,"This one includes romance, journeys and...",Locked in
-MENU-0156,Interaction,Interact with KATHJULES_BOOK,The Librarian,KATHJ-01,DRAMA!?!?,Shocked
-MENU-0157,Interaction,Interact with KATHJULES_BOOK,The Librarian,KATHJ-01,Are you even into that...,Annoyed
-MENU-0158,Interaction,Interact with KATHJULES_BOOK,The Librarian,KATHJ-02,"An easy read, for sure! ",Cheerful
-MENU-0159,Interaction,Interact with KATHJULES_BOOK,The Librarian,KATHJ-02,Yet...,Happy
-MENU-0160,Interaction,Interact with KATHJULES_BOOK,The Librarian,KATHJ-02,I still feel heartbroken from a lot of things that happened in the story.,Looking downwards
-MENU-0161,Interaction,Interact with KATHJULES_BOOK,The Librarian,KATHJ-03,Hey!,Cheerful
-MENU-0162,Interaction,Interact with KATHJULES_BOOK,The Librarian,KATHJ-03,Spoiler alert...He-,Curious
-MENU-0163,Interaction,Interact with KATHJULES_BOOK,The Librarian,KATHJ-03,What?,Confused
-MENU-0164,Interaction,Interact with KATHJULES_BOOK,The Librarian,KATHJ-03,No spoilers??,Shocked
-MENU-0165,Interaction,Interact with KATHJULES_BOOK,The Librarian,KATHJ-03,Alright...,Annoyed
-MENU-0166,Interaction,Interact with HETHELINE_BOOK,The Librarian,HETHE-00,...,Shadow
-MENU-0167,Interaction,Interact with HETHELINE_BOOK,The Librarian,HETHE-00,you finally made it,Sighing
-MENU-0168,Interaction,Interact with HETHELINE_BOOK,The Librarian,HETHE-00,I didn't think anybody would be as interested in this as me,Smirk
-MENU-0169,Interaction,Interact with HETHELINE_BOOK,The Librarian,HETHE-01,"Th-this was the hardest one to read, but in the end she was just like me.",Sighing
-MENU-0170,Interaction,Interact with HETHELINE_BOOK,The Librarian,HETHE-02,...Hetheline. A brave soldier that had no idea what she was up against.,Proud
-MENU-0171,Interaction,Interact with HETHELINE_BOOK,The Librarian,HETHE-03,Hey!,Cheerful
-MENU-0172,Interaction,Interact with HETHELINE_BOOK,The Librarian,HETHE-03,Spoiler alert...She-,Curious
-MENU-0173,Interaction,Interact with HETHELINE_BOOK,The Librarian,HETHE-03,What?,Confused
-MENU-0174,Interaction,Interact with HETHELINE_BOOK,The Librarian,HETHE-03,No spoilers??,Shocked
-MENU-0175,Interaction,Interact with HETHELINE_BOOK,The Librarian,HETHE-03,Well I mean you basically already know all the major details...,Smirk
-MENU-0176,Interaction,Hover over SWORD_EXIT,The Librarian,INTER-00,It never truly was perfect...,None
-MENU-0177,Interaction,Hover over SWORD_EXIT,The Librarian,INTER-01,The blood it retained.,None
-MENU-0178,Interaction,Hover over SWORD_EXIT,The Librarian,INTER-01,I didn't know how much pain a weapon could hold.,None
-MENU-0179,Interaction,Hover over SWORD_EXIT,The Librarian,INTER-02,Look at how... How sharp it still kooks.,None
-MENU-0180,Interaction,Hover over SWORD_EXIT,The Librarian,INTER-02,No wonder it was used for so long.,None
-MENU-0181,Interaction,Hover over CRYSTAL_OBJECT,The Librarian,INTER-03,A lot of people don't have this anymore.,None
-MENU-0182,Interaction,Hover over CRYSTAL_OBJECT,The Librarian,INTER-04,DON'T!!!!,None
-MENU-0183,Interaction,Hover over CRYSTAL_OBJECT,The Librarian,INTER-04,touch that…,None
-MENU-0184,Interaction,Hover over CANDLES_OBJECT,The Librarian,INTER-05,"A light, the burning light",None
-MENU-0185,Interaction,Hover over CANDLES_OBJECT,The Librarian,INTER-05,A reflection of a living being's soul.,None
-MENU-0186,Interaction,Hover over CANDLES_OBJECT,The Librarian,INTER-05,Poetic huh?,None
-MENU-0187,Interaction,Hover over CANDLES_OBJECT,The Librarian,INTER-06,"You should avoid touching it, isn't it burning hot?",None
-MENU-0188,Interaction,Hover over CANDLES_OBJECT,The Librarian,INTER-07,"This part of the library, the fact it's only being lit by this small candles says a lot about this place.",None
-MENU-0189,Interaction,Repetitive touch CANDLES_OBJECT,The Librarian,INTER-08,Stop touching it!?,None
-MENU-0190,Interaction,Repetitive touch CANDLES_OBJECT,The Librarian,INTER-08,Dosen't it hurt??,None
-MENU-0191,Interaction,Hover over BANDANA_ACHIEVEMENTS,The Librarian,INTER-09,I like the changes,None
-MENU-0192,Interaction,Hover over BANDANA_ACHIEVEMENTS,The Librarian,INTER-09,Too bad the rest of it was burned,None
-MENU-0193,Interaction,Hover over BANDANA_ACHIEVEMENTS,The Librarian,INTER-10,"I wouldn't put it on if I were you,",None
-MENU-0194,Interaction,Hover over BANDANA_ACHIEVEMENTS,The Librarian,INTER-10,it really hasn't been used in years! ,None
-MENU-0195,Interaction,Hover over BANDANA_ACHIEVEMENTS,The Librarian,INTER-10,Wonder how people got it back in the first place.,None
-MENU-0196,Interaction,Hover over HAMMER_ARCADE,The Librarian,INTER-11,"Deeply elegant in its nature, truly a disappointment that its wielder turned out to be such a bum.",None
-MENU-0197,Interaction,Hover over HAMMER_ARCADE,The Librarian,INTER-12,"It still amazes me how much power it could hold, far beyond the concept of the universe yet was never used to its true potential.",None
-MENU-0198,Interaction,Hover over HAMMER_ARCADE,The Librarian,INTER-13,Pristine condition! ,None
-MENU-0199,Interaction,Hover over HAMMER_ARCADE,The Librarian,INTER-13,Besides the dents left by that one time a soldier held back against its blow.,None
-MENU-0200,Interaction,Hover over GOGGLES_SETTINGS,The Librarian,INTER-14,Do they even work?,None
-MENU-0201,Interaction,Hover over GOGGLES_SETTINGS,The Librarian,INTER-14,They seem pretty uncomfortable to wear.,None
-MENU-0202,Interaction,Hover over GOGGLES_SETTINGS,The Librarian,INTER-15,Probably just a gimmick for the person who wore them.,None
-MENU-0203,Interaction,Hover over GOGGLES_SETTINGS,The Librarian,INTER-16,"They're so big, why would anyone craft this thing??",None
-MENU-0204,Interaction,Hover over RUNE_OBJECT,The Librarian,INTER-17,"Don't get too attached, or else something might take over your BOOODY...",None
-MENU-0205,Interaction,Hover over RUNE_OBJECT,The Librarian,INTER-17,HA! ,None
-MENU-0206,Interaction,Hover over RUNE_OBJECT,The Librarian,INTER-17,You thought I was serious?!,None
-MENU-0207,Interaction,Hover over RUNE_OBJECT,The Librarian,INTER-17,Nobody actually knows what this ones for anyway,None
-MENU-0208,Interaction,Hover over RUNE_OBJECT,The Librarian,INTER-18,"I should really clean these shelves, shouldn't I?",None
-MENU-0209,Up shelf,Random Comment(s),The Librarian,INTER-19,"Personally, I don't  think anyone besides YOU has ever seen what's there.",Sarcasm
-MENU-0210,Up shelf,Random Comment(s),The Librarian,CHATS-37,Any dead creatures I should know about?,Curious
-MENU-0211,Up shelf,Random Comment(s),The Librarian,CHATS-37,I'm just kidding!!,Cheerful
-MENU-0212,Up shelf,Random Comment(s),The Librarian,CHATS-38,Need help reaching the top?,Curious
-MENU-0213,Up shelf,Random Comment(s),The Librarian,CHATS-39,Is there really anything interesting up there? Oh there is?,Curious
-MENU-0214,Up shelf,Random Comment(s),The Librarian,CHATS-39,No?,Shocked
-MENU-0215,Up shelf,Random Comment(s),The Librarian,CHATS-39,Then I misheard you.,Ashamed
-MENU-0216,Down shelf,Random Comment(s),The Librarian,CHATS-40,WHAT!! How... how did that one get here...,Shocked
-MENU-0217,Down shelf,Random Comment(s),The Librarian,CHATS-41,Oh that?!,Shocked
-MENU-0218,Down shelf,Random Comment(s),The Librarian,CHATS-41,I'm not even sure it's real. Nobody knows where it came from...,Dazed
-MENU-0219,Down shelf,Random Comment(s),The Librarian,CHATS-41,You really shoudn't read that one... It's not worth YOUR time.,Serious
-MENU-0220,Down shelf,Random Comment(s),The Librarian,CHATS-42,"It has this weird myst surrounding it, dont you think?",Thoughtful
-MENU-0221,Interaction,Finish Desivinte Part I,The Librarian,DESIV-04,"And to say that the saga is just starting! Crazy, right?",Cheerful
-MENU-0222,Interaction,Finish Desivinte Part II,The Librarian,DESIV-04,"If I could only tell you what happens next, but I wouldn't want to spoil that for you!",Happy
-MENU-0223,Interaction,Finish Kath-Jules Part I,The Librarian,KATHJ-04,These stories let us know that purpose is probably something that is definitely found from within.,Proud
-MENU-0224,Interaction,Finish Kath-Jules Part II,The Librarian,KATHJ-04,If it all could've just ended there...,Shadow
-MENU-0225,Interaction,Finish Hetheline Part I,The Librarian,HETHE-04,...pain,Shadow
-MENU-0226,Interaction,Finish Hetheline Part I,The Librarian,HETHE-04,Like if I haven't heard enough of that...,Sarcasm
-MENU-0227,Interaction,Finish Hetheline Part II,The Librarian,HETHE-05,And it all went downhill from there,Shadow
-MENU-0228,Interaction,About to exit,The Librarian,INTER-20,"No! Don't leave,",Shocked
-MENU-0229,Interaction,About to exit,The Librarian,INTER-20,I haven't finished the tale for the asleep!,Sarcasm
-MENU-0230,Interaction,About to exit,The Librarian,INTER-21,I knew it...,Disappointed
-MENU-0231,Interaction,About to exit,The Librarian,INTER-21,Nobody likes books as much as I do!,Sarcasm
-MENU-0232,Interaction,About to exit,The Librarian,INTER-22,Farewell avid reader!,Cheerful
-MENU-0233,Interaction,About to exit,The Librarian,INTER-22,If you could call yourself that...,Looking downwards
-MENU-0234,Interaction,About to exit,The Librarian,INTER-23,No please! Don't leave!,Dreadful
-MENU-0235,Interaction,About to exit,The Librarian,INTER-23,"Well, I probably won't remember your face anyway!",Smirk
-MENU-0236,Interaction,Unlocks Kath Jules,The Librarian,KATHJ-05,Do you like quirkiness?,Thoughtful
-MENU-0237,Interaction,Unlocks Kath Jules,The Librarian,KATHJ-05,Because I know a bunch of quirky gents...,Cheerful
-MENU-0238,Interaction,Unlocks Kath Jules,The Librarian,KATHJ-06,Ha! You'll ADOOORE this one!,Cheerful
-MENU-0239,Interaction,Unlocks Kath Jules,The Librarian,KATHJ-06,Well... At least I hope you do.,Laughing
-MENU-0240,Interaction,Unlocks Kath Jules,The Librarian,KATHJ-06,No?,Thoughtful
-MENU-0241,Interaction,Unlocks Kath Jules,The Librarian,KATHJ-06,Dang it... I really gotta stop being so cheesy,Looking downwards
-MENU-0242,Interaction,Unlocks Hetheline,The Librarian,HETHE-06,(Stops playing) Do you play any instruments?,Curious
-MENU-0243,Interaction,Unlocks Hetheline,The Librarian,HETHE-07,Oh that’s splendid!! ,Cheerful
-MENU-0244,Interaction,Unlocks Hetheline,The Librarian,HETHE-07,At first I wasn’t much of a musician.,Happy
-MENU-0245,Interaction,Unlocks Hetheline,The Librarian,HETHE-07,But as time wore on I grew to love its beauty and power.,Cheerful
-MENU-0246,Interaction,Unlocks Hetheline,The Librarian,HETHE-08,"Hmmm, that’s too bad. 
-",Ashamed
-MENU-0247,Interaction,Unlocks Hetheline,The Librarian,HETHE-08,I hope one day you could try it… music can give you so much.,Happy
-MENU-0248,Interaction,All books completed,The Librarian,CHATS-42,"These stories end
-",Shadow
-MENU-0249,Interaction,All books completed,The Librarian,CHATS-42,…,Shadow
-MENU-0250,Interaction,All books completed,The Librarian,CHATS-42,"But ours just began.
-",Smirk
-MENU-0251,Interaction,Easter Egg D_&_B,The Librarian,CHATS-43,Who are those two?,Shocked
-MENU-0252,Interaction,Easter Egg D_&_B,The Librarian,CHATS-43,Some kind of Dolly and Button?,Curious
-MENU-0253,Interaction,Easter Egg D_&_B,The Librarian,CHATS-44,...,Smirk
-MENU-0254,Interaction,Easter Egg D_&_B,The Librarian,CHATS-44,A tale of a good and a wicked witch...,Curious
-MENU-0255,Interaction,Easter Egg D_&_B,The Librarian,CHATS-44,Wonder if we have something like that over here...,Curious
-MENU-0256,Interaction,Easter Egg D_&_B,The Librarian,CHATS-44,...,Smirk
-MENU-0257,Interaction,Interact with DESIVINTE_BOOK_PT_TWO locked,The Librarian,DESIV-05,"You know, I think it's better if you read the first part...",Sighing
-MENU-0258,Interaction,Interact with DESIVINTE_BOOK_PT_TWO locked,The Librarian,DESIV-05,"well, first. (Duuhhh)",Annoyed
-MENU-0259,Interaction,Interact with KATHJULES_BOOK_PT_ONE locked,The Librarian,KATHJ-07,I think you aren't ready for that one yet.,Serious
-MENU-0260,Interaction,Interact with KATHJULES_BOOK_PT_ONE locked,The Librarian,KATHJ-07,"Why? Well, just because!",Laughing
-MENU-0261,Interaction,Interact with KATHJULES_BOOK_PT_ONE locked,The Librarian,KATHJ-07,"No but seriously, you'll enjoy this one better if you know a bit of background info first.",Serious
-MENU-0262,Interaction,Interact with KATHJULES_BOOK_PT_TWO locked,The Librarian,KATHJ-08,Do you really want to read this part already?,Shocked
-MENU-0263,Interaction,Interact with KATHJULES_BOOK_PT_TWO locked,The Librarian,KATHJ-08,Don't you want to wait a little bit more?,Thoughtful
-MENU-0264,Interaction,Interact with HETHELINE_BOOK_PT_ONE locked,The Librarian,HETHE-09,"Trust me, I love this story as much as you'll get to love it.",Happy
-MENU-0265,Interaction,Interact with HETHELINE_BOOK_PT_ONE locked,The Librarian,HETHE-09,"Just, wait a bit more.",Serious
-MENU-0266,Interaction,Interact with HETHELINE_BOOK_PT_ONE locked,The Librarian,HETHE-09,Okay?,Serious
-MENU-0267,Interaction,Interact with HETHELINE_BOOK_PT_TWO locked,The Librarian,HETHE-10,This one's my favorite.,Happy
-MENU-0268,Interaction,Interact with HETHELINE_BOOK_PT_TWO locked,The Librarian,HETHE-10,But I don't think you're ready to read the final book on this shelf.,Serious
-MENU-0269,Interaction,Repetitive touch locked_books,The Librarian,INTER-24,Need I say more?,Irritated
+ID,Scene,Exact Scene,Character,Situation Name,Text,Emotion,Trigger
+MENU-0000,Intro,Intro Welcome,The Librarian,INTRO-00,Ladies and gentlepeople...,None,
+MENU-0001,Intro,Intro Welcome,The Librarian,INTRO-00,Welcome everyone...,None,
+MENU-0002,Intro,Intro Welcome,The Librarian,INTRO-00,to a once in a lifetime experience at the greatest library in the observable universe...,None,eyes_open
+MENU-0003,Intro,Intro Welcome,The Librarian,INTRO-00,You'll be greeted by the biggest library that has ever existed!,None,
+MENU-0004,Intro,Intro Welcome,The Librarian,INTRO-00,Better than anything the universe has ever seen!,None,
+MENU-0005,Intro,Intro Welcome,The Librarian,INTRO-00,You won't find a prettier...,None,
+MENU-0006,Intro,Intro Welcome,The Librarian,INTRO-00,GRANDER...,None,
+MENU-0007,Intro,Intro Welcome,The Librarian,INTRO-00,GIGANTIC...,None,
+MENU-0008,Intro,Intro Welcome,The Librarian,INTRO-00,-er...,None,
+MENU-0009,Intro,Intro Welcome,The Librarian,INTRO-00,library....,None,
+MENU-0010,Intro,Intro Welcome,The Librarian,INTRO-00,ANYWHERE ELSE!,None,
+MENU-0011,Intro,Intro Welcome,The Librarian,INTRO-00,IN. THE. UNIVERSE.,None,
+MENU-0012,Intro,Intro Welcome,The Librarian,INTRO-00,So EEENJOOOY yourselves...,None,
+MENU-0013,Intro,Intro Welcome,The Librarian,INTRO-00,Here...,None,
+MENU-0014,Intro,Intro Welcome,The Librarian,INTRO-00,At the DWELLING MOON LIBRARY!,None,
+MENU-0015,Intro,Intro Welcome,The Librarian,INTRO-01,We have all sorts of books here in this place.,None,intro1_first_panel
+MENU-0016,Intro,Intro Welcome,The Librarian,INTRO-01,Stories told from all corners of the galaxy.,None,
+MENU-0017,Intro,Intro Welcome,The Librarian,INTRO-01,"Tales that surround themselves in action and violence,",None,intro1_desivinte_panel
+MENU-0018,Intro,Intro Welcome,The Librarian,INTRO-01,"tales that focus on companionship and the value of teamwork,",None,intro1_kathjules_panel
+MENU-0019,Intro,Intro Welcome,The Librarian,INTRO-01,tales that want you to learn and grow along its characters. ,None,intro1_hetheline_panel
+MENU-0020,Intro,Intro Welcome,The Librarian,INTRO-01,We have everything you could ever ask for.,None,
+MENU-0021,Intro,Intro Welcome,The Librarian,INTRO-01,A little bit of everything...,None,
+MENU-0022,Intro,Intro Welcome,The Librarian,INTRO-01,...for everyone.,None,
+MENU-0023,Intro,Intro Welcome,The Librarian,INTRO-01,...take a good look at our great variety of books.,None,
+MENU-0024,Intro,Intro Welcome,The Librarian,INTRO-01,You definitely won't regret it!,None,
+MENU-0025,Intro,Intro Welcome,The Librarian,INTRO-02,"""What if I get bored?"" You might ask...",None,intro2_intro_panel
+MENU-0026,Intro,Intro Welcome,The Librarian,INTRO-02,You surely won't!,None,
+MENU-0027,Intro,Intro Welcome,The Librarian,INTRO-02,There's a little bit of everything to make everyone's experience just the greatest. ,None,
+MENU-0028,Intro,Intro Welcome,The Librarian,INTRO-02,Anything I could offer you to make this experience all the more pleasant?,None,intro2_second_panel
+MENU-0029,Intro,Intro Welcome,The Librarian,INTRO-02,We actually don't serve any of that garbage in here!,None,
+MENU-0030,Intro,Intro Welcome,The Librarian,INTRO-02,I'm sure it won't be necessary!,None,intro2_second_cheer
+MENU-0031,Intro,Intro Welcome,The Librarian,INTRO-02,(We ran out of stock a couple of weeks ago...),None,intro2_second_embarrassed
+MENU-0032,Intro,Intro Welcome,The Librarian,INTRO-02,That surely won't be a problem!,None,intro2_second_joy
+MENU-0033,Intro,Intro Welcome,The Librarian,INTRO-02,Oh! I'm sure these books will be great for your minds.,None,intro2_third_panel
+MENU-0034,Intro,Intro Welcome,The Librarian,INTRO-02,They surely teach you a lot...,None,
+MENU-0035,Intro,Intro Welcome,The Librarian,INTRO-02,About... Life...,None,
+MENU-0036,Intro,Intro Welcome,The Librarian,INTRO-03,I think you've heard everything I could introduce you to!,None,intro3_fade_back
+MENU-0037,Intro,Intro Welcome,The Librarian,INTRO-03,"Please, do us a favor and simply enjoy the place!",None,
+MENU-0038,Intro,Intro Welcome,The Librarian,INTRO-03,If you'd EEEXCUUUSEEE me!,None,librarian_great_pose
+MENU-0039,Intro,Intro Welcome,The Librarian,INTRO-03,I'll be over at the corner playing delightful melodies,None,
+MENU-0040,Intro,Intro Welcome,The Librarian,INTRO-03,unlike anything you've heard before!,None,
+MENU-0041,Intro,Intro Welcome,The Librarian,INTRO-03,"And if you need anything else,",None,
+MENU-0042,Intro,Intro Welcome,The Librarian,INTRO-03,DOOON'T BOTHER ASKING!,None,
+MENU-0043,Intro,Intro Welcome,The Librarian,INTRO-03,...,None,
+MENU-0044,Intro,Intro Welcome,The Librarian,INTRO-03,I'm only kidding...,None,
+MENU-0045,Intro,Intro Welcome,The Librarian,INTRO-03,I'll be over at the grand instrumental corner if anything unexpected happens.,None,
+MENU-0046,Intro,Intro Welcome,The Librarian,INTRO-03,Please enjoy your STAAAY!,None,black_screen_thud
+MENU-0047,Common,Random Comment(s),The Librarian,CHATS-COM-00,"I can read this WHOOOLE book in 1,539729 seconds!!",Cheerful,
+MENU-0048,Common,Random Comment(s),The Librarian,CHATS-COM-00,HBSUHBUWEBDUHBDHBE!!!,Locked in,
+MENU-0049,Common,Random Comment(s),The Librarian,CHATS-COM-00,See!!,Cheerful,
+MENU-0050,Common,Random Comment(s),The Librarian,CHATS-COM-01,This job can definitely get boring at times,Bored,
+MENU-0051,Common,Random Comment(s),The Librarian,CHATS-COM-01,It's visitors like you that make it worth it!,Cheerful,
+MENU-0052,Common,Random Comment(s),The Librarian,CHATS-COM-02,"JARONA!!
+",Cheerful,
+MENU-0053,Common,Random Comment(s),The Librarian,CHATS-COM-02,"What?!
+",Confused,
+MENU-0054,Common,Random Comment(s),The Librarian,CHATS-COM-02,"Isn’t that what the cool kids are saying??
+",Confused,
+MENU-0055,Common,Random Comment(s),The Librarian,CHATS-COM-03,This job sure is TIIIRESOME...,Bored,
+MENU-0056,Common,Random Comment(s),The Librarian,CHATS-COM-04,You should try THAT book.,Serious,
+MENU-0057,Common,Random Comment(s),The Librarian,CHATS-COM-04,"You know, THAAAT one!",Locked in,
+MENU-0058,Common,Random Comment(s),The Librarian,CHATS-COM-05,"We have all sort of artifacts, we don't know exactly where they all came from, or when they where from.",Happy,
+MENU-0059,Common,Random Comment(s),The Librarian,CHATS-COM-06,When will that annoying dog stop barking!!,Annoyed,
+MENU-0060,Common,Random Comment(s),The Librarian,CHATS-COM-07,DUST DUST DUST THERE IS ALWAYS TO MUCH DUST!!!,Annoyed,
+MENU-0061,Common,Random Comment(s),The Librarian,CHATS-COM-08,"Do you know anyone that could fix this creaking floor?
+",Confused,
+MENU-0062,Common,Random Comment(s),The Librarian,CHATS-COM-08,"Never mind, it’s cheaper if I do it myself.",Sighing,
+MENU-0063,Common,Random Comment(s),The Librarian,CHATS-COM-09,"You know I love history and all...
+",Serious,
+MENU-0064,Common,Random Comment(s),The Librarian,CHATS-COM-09,But it is a hard hobby to get into.,Serious,
+MENU-0065,Common,Random Comment(s),The Librarian,CHATS-COM-09,IT NEVER ENDS!!,Annoyed,
+MENU-0066,Common,Random Comment(s),The Librarian,CHATS-COM-10,(Hums a tune),Happy,
+MENU-0067,Common,Random Comment(s),The Librarian,CHATS-COM-10,♪I nana be near hmm hmm♪,Happy,
+MENU-0068,Common,Random Comment(s),The Librarian,CHATS-COM-10,I keep forgetting those lyrics.,Dazed,
+MENU-0069,Common,Random Comment(s),The Librarian,CHATS-COM-11,"The next secret you find better be a Walkie Talkie
+",Happy,
+MENU-0070,Common,Random Comment(s),The Librarian,CHATS-COM-11,"Cause’ im getting kinda lonely in here
+",Sighing,
+MENU-0071,Common,Random Comment(s),The Librarian,CHATS-COM-12,You like the way I play?,Happy,
+MENU-0072,Common,Random Comment(s),The Librarian,CHATS-COM-12,I certainly do! Hahaha!,Laughing,
+MENU-0073,Common,Random Comment(s),The Librarian,CHATS-COM-13,Books have always been a vital part of my life.,Thoughtful,
+MENU-0074,Common,Random Comment(s),The Librarian,CHATS-COM-13,At least that's what I've been lead to believe,Sighing,
+MENU-0075,Common,Random Comment(s),The Librarian,CHATS-COM-14,"Look, over there!!",Shocked,
+MENU-0076,Common,Random Comment(s),The Librarian,CHATS-COM-14,What? There's nothing?,Confused,
+MENU-0077,Common,Random Comment(s),The Librarian,CHATS-COM-14,Must've made it up in my mind then... My bad!!,Cheerful,
+MENU-0078,Common,Random Comment(s),The Librarian,CHATS-COM-15,Ready for your next literary adventure? I sure am!!,Cheerful,
+MENU-0079,Common,Random Comment(s),The Librarian,CHATS-COM-16,Not many people visit this place anymore.,Thoughtful,
+MENU-0080,Common,Random Comment(s),The Librarian,CHATS-COM-16,"Yet those who do, become recurrent visitors.",Happy,
+MENU-0081,Common,Random Comment(s),The Librarian,CHATS-COM-17,The universe can look so big sometimes.,Dazed,
+MENU-0082,Common,Random Comment(s),The Librarian,CHATS-COM-17,But no matter how far you zoom out... It's always the small things that impact you the most ain't it?,Smirk,
+MENU-0083,Common,Random Comment(s),The Librarian,CHATS-COM-18,"The demon with the horns, the adventurer with the goggles and the lost girl...",Thoughtful,
+MENU-0084,Common,Random Comment(s),The Librarian,CHATS-COM-19,You don't like this piece?,Confused,
+MENU-0085,Common,Random Comment(s),The Librarian,CHATS-COM-19,"To bad, I LIIIIIKE IT!!",Cheerful,
+MENU-0086,Common,Random Comment(s),The Librarian,CHATS-COM-20,Hope you're enjoying your STAAAY!,Cheerful,
+MENU-0087,Common,Random Comment(s),The Librarian,CHATS-COM-21,What's your favorite food?,Curious,
+MENU-0088,Common,Random Comment(s),The Librarian,CHATS-COM-21,"Wait, I'll try to guess...",Cheerful,
+MENU-0089,Common,Random Comment(s),The Librarian,CHATS-COM-21,...,Thoughtful,
+MENU-0090,Common,Random Comment(s),The Librarian,CHATS-COM-21,...,Thoughtful,
+MENU-0091,Common,Random Comment(s),The Librarian,CHATS-COM-21,You're definitely vegan...,Annoyed,
+MENU-0092,Rare,Random Comment(s),The Librarian,CHATS-RAR-00,One of the things we hold has a lot of power.,Serious,
+MENU-0093,Rare,Random Comment(s),The Librarian,CHATS-RAR-00,"Well, they all do in a sense.",Sighing,
+MENU-0094,Rare,Random Comment(s),The Librarian,CHATS-RAR-00,"Don't put too much of your mind into it,",Locked in,
+MENU-0095,Rare,Random Comment(s),The Librarian,CHATS-RAR-00,or else nothing in here will make any sense!,Happy,
+MENU-0096,Rare,Random Comment(s),The Librarian,CHATS-RAR-01,Sweet mother of Swuno!,Dreadful,
+MENU-0097,Rare,Random Comment(s),The Librarian,CHATS-RAR-01,Sorry... ,Ashamed,
+MENU-0098,Rare,Random Comment(s),The Librarian,CHATS-RAR-01,Saw a bug in between the keys!,Cheerful,
+MENU-0099,Rare,Random Comment(s),The Librarian,CHATS-RAR-02,The betrayal that took place in that civil war is definitely an interesting one.,Serious,
+MENU-0100,Rare,Random Comment(s),The Librarian,CHATS-RAR-02,Too bad the wrong side was crowned victor...,Ashamed,
+MENU-0101,Rare,Random Comment(s),The Librarian,CHATS-RAR-03,"The bell outside this place constantly ""Chimes""!",Laughing,
+MENU-0102,Rare,Random Comment(s),The Librarian,CHATS-RAR-03,I wonder why people call me cheesy.,Sighing,
+MENU-0103,Rare,Random Comment(s),The Librarian,CHATS-RAR-04,Tales about siblings...,Thoughtful,
+MENU-0104,Rare,Random Comment(s),The Librarian,CHATS-RAR-04,Haven't heard that in a while...,Sarcasm,
+MENU-0105,Rare,Random Comment(s),The Librarian,CHATS-RAR-05,Books in here are extremely old.,Thoughtful,
+MENU-0106,Rare,Random Comment(s),The Librarian,CHATS-RAR-05,"In fact,",Serious,
+MENU-0107,Rare,Random Comment(s),The Librarian,CHATS-RAR-05,you're standing in front of one of the oldest tales in the entirety of the universe!,Cheerful,
+MENU-0108,Rare,Random Comment(s),The Librarian,CHATS-RAR-05,(at least that I know of...),Thoughtful,
+MENU-0109,Rare,Random Comment(s),The Librarian,CHATS-RAR-06,Why would anything in this place make sense...,Shadow,
+MENU-0110,Rare,Random Comment(s),The Librarian,CHATS-RAR-06,It all feels so pointless.,Shadow,
+MENU-0111,Rare,Random Comment(s),The Librarian,CHATS-RAR-07,"Don't ask me about anyone outside this place,",Confused,
+MENU-0112,Rare,Random Comment(s),The Librarian,CHATS-RAR-07,I will barely remember your face once you're gone!,Cheerful,
+MENU-0113,Rare,Random Comment(s),The Librarian,CHATS-RAR-08,How...,Curious,
+MENU-0114,Rare,Random Comment(s),The Librarian,CHATS-RAR-08,How does everything look out there?,Curious,
+MENU-0115,Rare,Random Comment(s),The Librarian,CHATS-RAR-08,Must be real pretty!,Cheerful,
+MENU-0116,Rare,Random Comment(s),The Librarian,CHATS-RAR-09,…Life,Sighing,
+MENU-0117,Rare,Random Comment(s),The Librarian,CHATS-RAR-09,Is a bit too much sometimes huh?,Upset smile,
+MENU-0118,Rare,Random Comment(s),The Librarian,CHATS-RAR-09,"But stop trying to run from it.
+",Shadow,
+MENU-0119,Rare,Random Comment(s),The Librarian,CHATS-RAR-09,At least you can…,Upset smile,
+MENU-0120,Rare,Random Comment(s),The Librarian,CHATS-RAR-09,"You are a nice kid with a good life
+",Happy,
+MENU-0121,Rare,Random Comment(s),The Librarian,CHATS-RAR-09,...,Looking downwards,
+MENU-0122,Rare,Random Comment(s),The Librarian,CHATS-RAR-09,Try to live it.,Upset smile,
+MENU-0123,Rare,Random Comment(s),The Librarian,CHATS-RAR-10,Lovely weather outside isn't it?,Happy,
+MENU-0124,Rare,Random Comment(s),The Librarian,CHATS-RAR-10,Haha! I'm just kidding.,Laughing,
+MENU-0125,Rare,Random Comment(s),The Librarian,CHATS-RAR-10,I wouldn't be able to know.,Upset smile,
+MENU-0126,Rare,Random Comment(s),The Librarian,CHATS-RAR-10,"Oh! Sorry, I have some allergies.",Shocked,
+MENU-0127,Rare,Random Comment(s),The Librarian,CHATS-RAR-11,I'll be right back.,Shadow,librarian_leaves
+MENU-0128,Strange,Random Comment(s),The Librarian,CHATS-STR-00,When will I be free again...,Shadow,
+MENU-0129,Strange,Random Comment(s),The Librarian,CHATS-STR-01,Reading all the time makes me wonder...,Thoughtful,
+MENU-0130,Strange,Random Comment(s),The Librarian,CHATS-STR-01,"if I were able to freely roam outside of this place,",Thoughtful,
+MENU-0131,Strange,Random Comment(s),The Librarian,CHATS-STR-01,would I have made a difference? ,Upset smile,
+MENU-0132,Strange,Random Comment(s),The Librarian,CHATS-STR-01,You know...,Shadow,
+MENU-0133,Strange,Random Comment(s),The Librarian,CHATS-STR-01,Maybe things would still be as they once were.,Shadow,
+MENU-0134,Strange,Random Comment(s),The Librarian,CHATS-STR-02,Could he be right? Is it all just pain??,Shadow,
+MENU-0135,Strange,Random Comment(s),The Librarian,CHATS-STR-03,Something I haaate about this collection is how empty it seems.,Bored,
+MENU-0136,Strange,Random Comment(s),The Librarian,CHATS-STR-04,...hey I've noticed you're a bit of an avid reader like me.,Curious,
+MENU-0137,Strange,Random Comment(s),The Librarian,CHATS-STR-04,...,Serious,
+MENU-0138,Strange,Random Comment(s),The Librarian,CHATS-STR-04,"Don't you feel like no matter what you read or learn, it seems like it's never enough...?",Upset smile,
+MENU-0139,Strange,Random Comment(s),The Librarian,CHATS-STR-05,I miss someone.,Upset,
+MENU-0140,Strange,Random Comment(s),The Librarian,CHATS-STR-05,"Who that someone is remains uncertain,",Shadow,
+MENU-0141,Strange,Random Comment(s),The Librarian,CHATS-STR-05,but probably they meant a lot to my former self. Don't you think...?,Upset smile,
+MENU-0142,Interaction,Interact with Desivinte's book,The Librarian,DESIV-00,The one-winged demon far above the sky.,Smirk,
+MENU-0143,Interaction,Interact with Desivinte's book,The Librarian,DESIV-00,He who aling his wrath imposed fear upon thousands of generations.,Smirk,
+MENU-0144,Interaction,Interact with Desivinte's book,The Librarian,DESIV-00,"Loner in nature, a lot of people might relate!!",Cheerful,
+MENU-0145,Interaction,Interact with Desivinte's book,The Librarian,DESIV-01,"Right at the start, I like you already!",Cheerful,
+MENU-0146,Interaction,Interact with Desivinte's book,The Librarian,DESIV-01,"Don't take this story for granted, it might be important in the future!!",Curious,
+MENU-0147,Interaction,Interact with Desivinte's book,The Librarian,DESIV-01,Hehe...,Smirk,
+MENU-0148,Interaction,Interact with Desivinte's book,The Librarian,DESIV-02,Desivinte. His name still sends chills down anyone's spine.,Serious,
+MENU-0149,Interaction,Interact with Desivinte's book,The Librarian,DESIV-03,Hey!,Cheerful,
+MENU-0150,Interaction,Interact with Desivinte's book,The Librarian,DESIV-03,Spoiler alert...He-,Curious,
+MENU-0151,Interaction,Interact with Desivinte's book,The Librarian,DESIV-03,What?,Confused,
+MENU-0152,Interaction,Interact with Desivinte's book,The Librarian,DESIV-03,No spoilers??,Shocked,
+MENU-0153,Interaction,Interact with Desivinte's book,The Librarian,DESIV-03,Alright...,Annoyed,
+MENU-0154,Interaction,Interact with Kath Jules' book,The Librarian,KATHJ-00,Eager explorer always ready for his next adventure.,Cheerful,
+MENU-0155,Interaction,Interact with Kath Jules' book,The Librarian,KATHJ-00,"Hope you're one of those!! If so, you'll definitely like this one.",Happy,
+MENU-0156,Interaction,Interact with Kath Jules' book,The Librarian,KATHJ-01,"This one includes romance, journeys and...",Locked in,
+MENU-0157,Interaction,Interact with Kath Jules' book,The Librarian,KATHJ-01,DRAMA!?!?,Shocked,
+MENU-0158,Interaction,Interact with Kath Jules' book,The Librarian,KATHJ-01,Are you even into that...,Annoyed,
+MENU-0159,Interaction,Interact with Kath Jules' book,The Librarian,KATHJ-02,"An easy read, for sure! ",Cheerful,
+MENU-0160,Interaction,Interact with Kath Jules' book,The Librarian,KATHJ-02,Yet...,Happy,
+MENU-0161,Interaction,Interact with Kath Jules' book,The Librarian,KATHJ-02,I still feel heartbroken from a lot of things that happened in the story.,Looking downwards,
+MENU-0162,Interaction,Interact with Kath Jules' book,The Librarian,KATHJ-03,Hey!,Cheerful,
+MENU-0163,Interaction,Interact with Kath Jules' book,The Librarian,KATHJ-03,Spoiler alert...He-,Curious,
+MENU-0164,Interaction,Interact with Kath Jules' book,The Librarian,KATHJ-03,What?,Confused,
+MENU-0165,Interaction,Interact with Kath Jules' book,The Librarian,KATHJ-03,No spoilers??,Shocked,
+MENU-0166,Interaction,Interact with Kath Jules' book,The Librarian,KATHJ-03,Alright...,Annoyed,
+MENU-0167,Interaction,Interact with Hetheline's book,The Librarian,HETHE-00,...,Shadow,
+MENU-0168,Interaction,Interact with Hetheline's book,The Librarian,HETHE-00,you finally made it,Sighing,
+MENU-0169,Interaction,Interact with Hetheline's book,The Librarian,HETHE-00,I didn't think anybody would be as interested in this as me,Smirk,
+MENU-0170,Interaction,Interact with Hetheline's book,The Librarian,HETHE-01,"Th-this was the hardest one to read, but in the end she was just like me.",Sighing,
+MENU-0171,Interaction,Interact with Hetheline's book,The Librarian,HETHE-02,...Hetheline. A brave soldier that had no idea what she was up against.,Proud,
+MENU-0172,Interaction,Interact with Hetheline's book,The Librarian,HETHE-03,Hey!,Cheerful,
+MENU-0173,Interaction,Interact with Hetheline's book,The Librarian,HETHE-03,Spoiler alert...She-,Curious,
+MENU-0174,Interaction,Interact with Hetheline's book,The Librarian,HETHE-03,What?,Confused,
+MENU-0175,Interaction,Interact with Hetheline's book,The Librarian,HETHE-03,No spoilers??,Shocked,
+MENU-0176,Interaction,Interact with Hetheline's book,The Librarian,HETHE-03,Well I mean you basically already know all the major details...,Smirk,
+MENU-0177,Interaction,Hover over the sword,The Librarian,INTER-00,It never truly was perfect...,None,
+MENU-0178,Interaction,Hover over the sword,The Librarian,INTER-01,The blood it retained.,None,
+MENU-0179,Interaction,Hover over the sword,The Librarian,INTER-01,I didn't know how much pain a weapon could hold.,None,
+MENU-0180,Interaction,Hover over the sword,The Librarian,INTER-02,Look at how... How sharp it still kooks.,None,
+MENU-0181,Interaction,Hover over the sword,The Librarian,INTER-02,No wonder it was used for so long.,None,
+MENU-0182,Interaction,Hover over the crystal,The Librarian,INTER-03,A lot of people don't have this anymore.,None,
+MENU-0183,Interaction,Hover over the crystal,The Librarian,INTER-04,DON'T!!!!,None,
+MENU-0184,Interaction,Hover over the crystal,The Librarian,INTER-04,touch that…,None,
+MENU-0185,Interaction,Hover over the candle,The Librarian,INTER-05,"A light, the burning light",None,
+MENU-0186,Interaction,Hover over the candle,The Librarian,INTER-05,A reflection of a living being's soul.,None,
+MENU-0187,Interaction,Hover over the candle,The Librarian,INTER-05,Poetic huh?,None,
+MENU-0188,Interaction,Hover over the candle,The Librarian,INTER-06,"You should avoid touching it, isn't it burning hot?",None,
+MENU-0189,Interaction,Hover over the candle,The Librarian,INTER-07,"This part of the library, the fact it's only being lit by this small candles says a lot about this place.",None,
+MENU-0190,Interaction,Repetitive touch over the candle,The Librarian,INTER-08,Stop touching it!?,None,
+MENU-0191,Interaction,Repetitive touch over the candle,The Librarian,INTER-08,Dosen't it hurt??,None,
+MENU-0192,Interaction,Hover over the bandana,The Librarian,INTER-09,I like the changes,None,
+MENU-0193,Interaction,Hover over the bandana,The Librarian,INTER-09,Too bad the rest of it was burned,None,
+MENU-0194,Interaction,Hover over the bandana,The Librarian,INTER-10,"I wouldn't put it on if I were you,",None,
+MENU-0195,Interaction,Hover over the bandana,The Librarian,INTER-10,it really hasn't been used in years! ,None,
+MENU-0196,Interaction,Hover over the bandana,The Librarian,INTER-10,Wonder how people got it back in the first place.,None,
+MENU-0197,Interaction,Hover over the hammer,The Librarian,INTER-11,"Deeply elegant in its nature, truly a disappointment that its wielder turned out to be such a bum.",None,
+MENU-0198,Interaction,Hover over the hammer,The Librarian,INTER-12,"It still amazes me how much power it could hold, far beyond the concept of the universe yet was never used to its true potential.",None,
+MENU-0199,Interaction,Hover over the hammer,The Librarian,INTER-13,Pristine condition! ,None,
+MENU-0200,Interaction,Hover over the hammer,The Librarian,INTER-13,Besides the dents left by that one time a soldier held back against its blow.,None,
+MENU-0201,Interaction,Hover over the goggles,The Librarian,INTER-14,Do they even work?,None,
+MENU-0202,Interaction,Hover over the goggles,The Librarian,INTER-14,They seem pretty uncomfortable to wear.,None,
+MENU-0203,Interaction,Hover over the goggles,The Librarian,INTER-15,Probably just a gimmick for the person who wore them.,None,
+MENU-0204,Interaction,Hover over the goggles,The Librarian,INTER-16,"They're so big, why would anyone craft this thing??",None,
+MENU-0205,Interaction,Hover over the rune,The Librarian,INTER-17,"Don't get too attached, or else something might take over your BOOODY...",None,
+MENU-0206,Interaction,Hover over the rune,The Librarian,INTER-17,HA! ,None,
+MENU-0207,Interaction,Hover over the rune,The Librarian,INTER-17,You thought I was serious?!,None,
+MENU-0208,Interaction,Hover over the rune,The Librarian,INTER-17,Nobody actually knows what this ones for anyway,None,
+MENU-0209,Interaction,Hover over the rune,The Librarian,INTER-18,"I should really clean these shelves, shouldn't I?",None,
+MENU-0210,Top Shelves,Random Comment(s),The Librarian,INTER-19,"Personally, I don't  think anyone besides YOU has ever seen what's there.",Sarcasm,
+MENU-0211,Top Shelves,Random Comment(s),The Librarian,CHATS-37,Any dead creatures I should know about?,Curious,
+MENU-0212,Top Shelves,Random Comment(s),The Librarian,CHATS-37,I'm just kidding!!,Cheerful,
+MENU-0213,Top Shelves,Random Comment(s),The Librarian,CHATS-38,Need help reaching the top?,Curious,
+MENU-0214,Top Shelves,Random Comment(s),The Librarian,CHATS-39,Is there really anything interesting up there? Oh there is?,Curious,
+MENU-0215,Top Shelves,Random Comment(s),The Librarian,CHATS-39,No?,Shocked,
+MENU-0216,Top Shelves,Random Comment(s),The Librarian,CHATS-39,Then I misheard you.,Ashamed,
+MENU-0217,Bottom shelves,Random Comment(s),The Librarian,CHATS-40,WHAT!! How... how did that one get here...,Shocked,
+MENU-0218,Bottom shelves,Random Comment(s),The Librarian,CHATS-41,Oh that?!,Shocked,
+MENU-0219,Bottom shelves,Random Comment(s),The Librarian,CHATS-41,I'm not even sure it's real. Nobody knows where it came from...,Dazed,
+MENU-0220,Bottom shelves,Random Comment(s),The Librarian,CHATS-41,You really shoudn't read that one... It's not worth YOUR time.,Serious,
+MENU-0221,Bottom shelves,Random Comment(s),The Librarian,CHATS-42,"It has this weird myst surrounding it, dont you think?",Thoughtful,
+MENU-0222,Interaction,Finish Desivinte Part I,The Librarian,DESIV-04,"And to say that the saga is just starting! Crazy, right?",Cheerful,finish_desivinte_1
+MENU-0223,Interaction,Finish Desivinte Part II,The Librarian,DESIV-05,"If I could only tell you what happens next, but I wouldn't want to spoil that for you!",Happy,finish_desivinte_2
+MENU-0224,Interaction,Finish Kath-Jules Part I,The Librarian,KATHJ-04,These stories let us know that purpose is probably something that is definitely found from within.,Proud,finish_kathjules_1
+MENU-0225,Interaction,Finish Kath-Jules Part II,The Librarian,KATHJ-05,If it all could've just ended there...,Shadow,finish_kathjules_2
+MENU-0226,Interaction,Finish Hetheline Part I,The Librarian,HETHE-04,...pain,Shadow,
+MENU-0227,Interaction,Finish Hetheline Part I,The Librarian,HETHE-04,Like if I haven't heard enough of that...,Sarcasm,finish_hetheline_1
+MENU-0228,Interaction,Finish Hetheline Part II,The Librarian,HETHE-05,And it all went downhill from there,Shadow,finish_hetheline_2
+MENU-0229,Interaction,About to exit,The Librarian,INTER-20,"No! Don't leave,",Shocked,
+MENU-0230,Interaction,About to exit,The Librarian,INTER-20,I haven't finished the tale for the asleep!,Sarcasm,
+MENU-0231,Interaction,About to exit,The Librarian,INTER-21,I knew it...,Disappointed,
+MENU-0232,Interaction,About to exit,The Librarian,INTER-21,Nobody likes books as much as I do!,Sarcasm,
+MENU-0233,Interaction,About to exit,The Librarian,INTER-22,Farewell avid reader!,Cheerful,
+MENU-0234,Interaction,About to exit,The Librarian,INTER-22,If you could call yourself that...,Looking downwards,
+MENU-0235,Interaction,About to exit,The Librarian,INTER-23,No please! Don't leave!,Dreadful,
+MENU-0236,Interaction,About to exit,The Librarian,INTER-23,"Well, I probably won't remember your face anyway!",Smirk,
+MENU-0237,Interaction,Unlocks Kath Jules,The Librarian,KATHJ-06,Do you like quirkiness?,Thoughtful,
+MENU-0238,Interaction,Unlocks Kath Jules,The Librarian,KATHJ-06,Because I know a bunch of quirky gents...,Cheerful,
+MENU-0239,Interaction,Unlocks Kath Jules,The Librarian,KATHJ-07,Ha! You'll ADOOORE this one!,Cheerful,
+MENU-0240,Interaction,Unlocks Kath Jules,The Librarian,KATHJ-07,Well... At least I hope you do.,Laughing,
+MENU-0241,Interaction,Unlocks Kath Jules,The Librarian,KATHJ-07,No?,Thoughtful,
+MENU-0242,Interaction,Unlocks Kath Jules,The Librarian,KATHJ-07,Dang it... I really gotta stop being so cheesy,Looking downwards,
+MENU-0243,Interaction,Unlocks Hetheline,The Librarian,HETHE-06,(Stops playing) Do you play any instruments?,Curious,
+MENU-0244,Interaction,Unlocks Hetheline,The Librarian,HETHE-07,Oh that’s splendid!! ,Cheerful,
+MENU-0245,Interaction,Unlocks Hetheline,The Librarian,HETHE-07,At first I wasn’t much of a musician.,Happy,
+MENU-0246,Interaction,Unlocks Hetheline,The Librarian,HETHE-07,But as time wore on I grew to love its beauty and power.,Cheerful,
+MENU-0247,Interaction,Unlocks Hetheline,The Librarian,HETHE-08,"Hmmm, that’s too bad. 
+",Ashamed,
+MENU-0248,Interaction,Unlocks Hetheline,The Librarian,HETHE-08,I hope one day you could try it… music can give you so much.,Happy,
+MENU-0249,Interaction,All books completed,The Librarian,CHATS-42,"These stories end
+",Shadow,
+MENU-0250,Interaction,All books completed,The Librarian,CHATS-42,…,Shadow,
+MENU-0251,Interaction,All books completed,The Librarian,CHATS-42,"But ours just began.
+",Smirk,finish_all_books
+MENU-0252,Interaction,Easter Egg D_&_B,The Librarian,CHATS-43,Who are those two?,Shocked,
+MENU-0253,Interaction,Easter Egg D_&_B,The Librarian,CHATS-43,Some kind of Dolly and Button?,Curious,
+MENU-0254,Interaction,Easter Egg D_&_B,The Librarian,CHATS-43,...,Smirk,
+MENU-0255,Interaction,Easter Egg D_&_B,The Librarian,CHATS-44,A tale of a good and a wicked witch...,Curious,
+MENU-0256,Interaction,Easter Egg D_&_B,The Librarian,CHATS-44,Wonder if we have something like that over here...,Curious,
+MENU-0257,Interaction,Easter Egg D_&_B,The Librarian,CHATS-44,...,Smirk,
+MENU-0258,Interaction,Interact with locked Desivinte Book II,The Librarian,DESIV-06,"You know, I think it's better if you read the first part...",Sighing,
+MENU-0259,Interaction,Interact with locked Desivinte Book II,The Librarian,DESIV-06,"well, first. (Duuhhh)",Annoyed,
+MENU-0260,Interaction,Interact with locked Kath Jules Book I,The Librarian,KATHJ-08,I think you aren't ready for that one yet.,Serious,
+MENU-0261,Interaction,Interact with locked Kath Jules Book I,The Librarian,KATHJ-08,"Why? Well, just because!",Laughing,
+MENU-0262,Interaction,Interact with locked Kath Jules Book I,The Librarian,KATHJ-08,"No but seriously, you'll enjoy this one better if you know a bit of background info first.",Serious,
+MENU-0263,Interaction,Interact with locked Kath Jules Book II,The Librarian,KATHJ-09,Do you really want to read this part already?,Shocked,
+MENU-0264,Interaction,Interact with locked Kath Jules Book II,The Librarian,KATHJ-09,Don't you want to wait a little bit more?,Thoughtful,
+MENU-0265,Interaction,Interact with locked Hetheline Book I,The Librarian,HETHE-09,"Trust me, I love this story as much as you'll get to love it.",Happy,
+MENU-0266,Interaction,Interact with locked Hetheline Book I,The Librarian,HETHE-09,"Just, wait a bit more.",Serious,
+MENU-0267,Interaction,Interact with locked Hetheline Book I,The Librarian,HETHE-09,Okay?,Serious,
+MENU-0268,Interaction,Interact with locked Hetheline Book II,The Librarian,HETHE-10,This one's my favorite.,Happy,
+MENU-0269,Interaction,Interact with locked Hetheline Book II,The Librarian,HETHE-10,But I don't think you're ready to read the final book on this shelf.,Serious,
+MENU-0270,Interaction,Repetitive touch with locked books,The Librarian,INTER-24,Need I say more?,Irritated,
+MENU-0271,Interaction,Repetitive touch with locked books,The Librarian,INTER-24,Really?,Irritated,
+MENU-0272,Interaction,Repetitive touch with locked books,The Librarian,INTER-24,Didn't you hear me already?,Irritated,

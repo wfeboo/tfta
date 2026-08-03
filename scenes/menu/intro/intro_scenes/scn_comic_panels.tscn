@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://bo4jkl7h7tplo"]
 
-[ext_resource type="Script" uid="uid://bn01t1221eqj2" path="res://scenes/menu/intro/intro_scenes/scn_comic_panels.gd" id="1_3bh2x"]
+[ext_resource type="Script" uid="uid://bn01t1221eqj2" path="res://scenes/menu/intro/intro scripts/sc_comic_panels.gd" id="1_3bh2x"]
 [ext_resource type="Texture2D" uid="uid://byvl2wkeytuqr" path="res://assets/sprites/intro_scene/comic/bg_panels.png" id="2_b4ifl"]
 [ext_resource type="Texture2D" uid="uid://c82juw1rfajcx" path="res://assets/sprites/intro_scene/comic/temp_panels/images.jpg" id="3_3bh2x"]
+[ext_resource type="Texture2D" uid="uid://bti8g6dkq580f" path="res://assets/sprites/intro_scene/first_scene/M-godarti-STOCK-5.jpg" id="3_r7j0w"]
 [ext_resource type="Texture2D" uid="uid://cemh8au1tr6f2" path="res://assets/sprites/intro_scene/comic/temp_panels/54bbe826e34e6073d931ba3e00042b81.jpg" id="4_r7j0w"]
 [ext_resource type="Texture2D" uid="uid://dp2x3tc0bm0a0" path="res://assets/sprites/intro_scene/comic/temp_panels/5feb400d7699f53572cfe1170ca05a7d.jpg" id="5_dha43"]
 
@@ -10,6 +11,11 @@
 
 [node name="ComicCinematic" type="Node2D" unique_id=344024437]
 script = ExtResource("1_3bh2x")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=2015987324]
+position = Vector2(320, 335.99997)
+scale = Vector2(5.44, 3.4399996)
+texture = ExtResource("2_b4ifl")
 
 [node name="MemoryOverlay" type="CanvasModulate" parent="." unique_id=890874089]
 
@@ -51,6 +57,11 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
+[node name="ProgressIndicate" type="Sprite2D" parent="UILayer/Control/DialogueBox" unique_id=1185087851]
+position = Vector2(512, 88)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("3_r7j0w")
+
 [node name="SpeakerBox" type="NinePatchRect" parent="UILayer/Control" unique_id=1516885751]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 1
@@ -81,14 +92,9 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(320, 256)
 zoom = Vector2(2.1, 2.1)
 
-[node name="Background" type="Sprite2D" parent="." unique_id=2015987324]
-position = Vector2(320, 335.99997)
-scale = Vector2(5.44, 3.4399996)
-texture = ExtResource("2_b4ifl")
-
 [node name="Panel1" type="Polygon2D" parent="." unique_id=1608109175]
-position = Vector2(387.00006, 248)
-scale = Vector2(0.5625001, 1)
+position = Vector2(373.49997, 248)
+scale = Vector2(0.5312499, 1)
 texture = ExtResource("3_3bh2x")
 texture_offset = Vector2(430, 140)
 texture_scale = Vector2(1.7, 1.7)
@@ -106,8 +112,8 @@ polygon = PackedVector2Array(-368, -120, -301.12964, -120, -176, -120, -217.4133
 uv = PackedVector2Array(-366, -49, -175, -48, -255, 67, -465, 66)
 
 [node name="Panel3" type="Polygon2D" parent="." unique_id=1172200531]
-position = Vector2(594.99994, 248)
-scale = Vector2(0.5624998, 1)
+position = Vector2(589.49994, 248)
+scale = Vector2(0.53124994, 1)
 texture = ExtResource("5_dha43")
 texture_offset = Vector2(410, 140)
 texture_scale = Vector2(3.5, 3.5)

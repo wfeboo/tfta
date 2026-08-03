@@ -1,57 +1,58 @@
 extends Node2D
 
-const CROWD_A = preload("res://assets/sprites/intro_scene/welcome/crowdpeople_a.png") 
-const CROWD_B = preload("res://assets/sprites/intro_scene/welcome/crowdpeople_b.png") 
-const CROWD_C = preload("res://assets/sprites/intro_scene/welcome/crowdpeople_c.png")
+# Guardamos los paneles en una función
+func show_panel(panel_index: int) -> void:
+	var panels: Array = [$Panel1, $Panel2, $Panel3,$Panel4]
+	for i in range(panels.size()):
+		# Si la "i" se refiere a x panel en la lista, este será visible y hará un fade_in
+		# Así si llamamos "show_panel(0)" hará todo esto para $Panel1
+		if i == panel_index:
+			panels[i].visible = true
+			panels[i].modulate.a = 0.0
+			var panel_tween := create_tween()
+			panel_tween.tween_property(panels[i], "modulate:a", 1.0, 0.8)
 
-var animation_speed : float = 0.9
-var time_passed : float = 0.0
-var showing_sprite_a : bool = true
-
-func _process(delta):
-	time_passed += delta
-	if time_passed >= animation_speed:
-		time_passed = 0.0
-		showing_sprite_a = !showing_sprite_a
-		if showing_sprite_a:
-			$BackgroundPeople.texture = CROWD_A
-		else:
-			if randf() <= 0.03:
-				$BackgroundPeople.texture = CROWD_B
-			else:
-				$BackgroundPeople.texture = CROWD_C
 
 func _ready() -> void:
-	# Instanciar las cajas pero son invisibles
+	# Configuramos la visibilidad de los objetos a invisibles por medio de _ready
 	$UILayer/Control/SpeakerBox.modulate.a = 0.0
 	$UILayer/Control/DialogueBox.modulate.a = 0.0
+	$Panel1.modulate.a = 0.0
+	$Panel2.modulate.a = 0.0
+	$Panel3.modulate.a = 0.0
+	$Panel4.modulate.a = 0.0
 	$UILayer/Control/DialogueBox/ProgressIndicate.visible = false
 
 	# La pantalla está completamente oscura
 	$MemoryOverlay.color = Color.BLACK
-	
-	
-	
+
+	# La pantalla aparece con una transición
+	var screen_tween := create_tween()
+	screen_tween.tween_property($MemoryOverlay, "color", Color.WHITE, 2.0)
+	await screen_tween.finished
+
 	# Con un segundo de transición, aparecen las cajas
 	var ui_tween := create_tween()
-	# Que aparezcan al mismo tiempo con set_parallel
-	ui_tween.set_parallel(true) 
-	ui_tween.tween_property($UILayer/Control/SpeakerBox, "modulate:a", 1.0,2)
-	ui_tween.tween_property($UILayer/Control/DialogueBox, "modulate:a", 1.0, 2)
+	ui_tween.set_parallel(true)
+	ui_tween.tween_property($UILayer/Control/SpeakerBox, "modulate:a", 1.0, 1)
+	ui_tween.tween_property($UILayer/Control/DialogueBox, "modulate:a", 1.0, 1)
 	await ui_tween.finished
-	
+
 	# Iniciar el diálogo
 	show_dialogue()
 
+
 func _on_scene_finished() -> void:
 	# Solo cambia de escena - NO toca el guardado en disco
-	get_tree().change_scene_to_file("res://scenes/menu/intro/intro_scenes/scn_third_person.tscn")
-
+	get_tree().change_scene_to_file("res://scenes/menu/intro/intro_scenes/scn_comic_panels.tscn")
 
 
 func show_dialogue() -> void:
-	var conversation: Array = DialogueDatabase.get_conversation("INTRO-00")
+	# Conseguimos la conversación que queremos mostrar para esta escena
+	var conversation: Array = DialogueDatabase.get_conversation("INTRO-01")
+	# Guardamos ProgressIndicate en una variable para que sea más fácil de editar
 	var progress_indicate = $UILayer/Control/DialogueBox/ProgressIndicate
+	# Por todas las líneas en la conversación, al inicio ocultaremos progress_indicate
 	for line in conversation:
 		progress_indicate.visible = false
 		# Actualizar los labels
@@ -62,19 +63,28 @@ func show_dialogue() -> void:
 		# Calcular la velocidad dinámica basado en la longitud del texto
 		var text_length = line["text"].length()
 		var duration = text_length * 0.065
-		
+		# Si no tiene trigger no pasa nada a menos de que tenga uno en específico
 		match line["trigger"]:
-			"eyes_open":
-				# La pantalla aparece con una transición
-				var memory_tween := create_tween()
-				memory_tween.tween_property($MemoryOverlay, "color", Color.WHITE, 3.0)
-				await memory_tween.finished
-		
+			# Se muestra el primer panel
+			"intro1_first_panel":
+				show_panel(0)
+			# Se muestra Vint y se oscurece el primer panel
+			"intro1_desivinte_panel":
+				var panel_tween := create_tween()
+				panel_tween.tween_property($Panel1, "modulate:a", 0.3, 1)
+				show_panel(1)
+			# Se muestra KJ
+			"intro1_kathjules_panel":
+				show_panel(2)
+			# Se muestra Heth
+			"intro1_hetheline_panel":
+				show_panel(3)
 		# Una variable que actualiza cada letra a ser visible
 		var typewriter_tween := create_tween()
 		typewriter_tween.tween_property($UILayer/Control/DialogueBox/DialogueLabel,"visible_ratio",1.0,duration)
 		# Hasta que termine de escribirse todo el diálogo
 		await typewriter_tween.finished
+		# Esperamos un segundo hasta para que el jugador pueda pasar de línea
 		await get_tree().create_timer(1.0).timeout
 		# Le mostramos progress_indicate
 		progress_indicate.visible = true
@@ -93,7 +103,9 @@ func show_dialogue() -> void:
 	# Escondemos SpeakerBox y DialogueBox para finalizar la escena
 	$UILayer/Control/SpeakerBox.visible = false
 	$UILayer/Control/DialogueBox.visible = false
+	# Al igual que la pantalla entró, saldrá con un fade out
 	var screen_tween := create_tween()
 	screen_tween.tween_property($MemoryOverlay, "color", Color("1a1a1a"), 2.0)
+	# Esperamos a que esto termine para pasar a la siguiente escena
 	await screen_tween.finished
 	_on_scene_finished()

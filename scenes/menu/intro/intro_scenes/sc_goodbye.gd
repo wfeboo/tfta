@@ -8,25 +8,13 @@ var animation_speed : float = 0.9
 var time_passed : float = 0.0
 var showing_sprite_a : bool = true
 
-func _process(delta):
-	time_passed += delta
-	if time_passed >= animation_speed:
-		time_passed = 0.0
-		showing_sprite_a = !showing_sprite_a
-		if showing_sprite_a:
-			$BackgroundPeople.texture = CROWD_A
-		else:
-			if randf() <= 0.03:
-				$BackgroundPeople.texture = CROWD_B
-			else:
-				$BackgroundPeople.texture = CROWD_C
 
 func _ready() -> void:
 	# Instanciar las cajas pero son invisibles
 	$UILayer/Control/SpeakerBox.modulate.a = 0.0
 	$UILayer/Control/DialogueBox.modulate.a = 0.0
 	$UILayer/Control/DialogueBox/ProgressIndicate.visible = false
-
+	$Librarian.modulate.a = 0.0
 	# La pantalla está completamente oscura
 	$MemoryOverlay.color = Color.BLACK
 	
@@ -50,7 +38,7 @@ func _on_scene_finished() -> void:
 
 
 func show_dialogue() -> void:
-	var conversation: Array = DialogueDatabase.get_conversation("INTRO-00")
+	var conversation: Array = DialogueDatabase.get_conversation("INTRO-03")
 	var progress_indicate = $UILayer/Control/DialogueBox/ProgressIndicate
 	for line in conversation:
 		progress_indicate.visible = false
@@ -64,11 +52,15 @@ func show_dialogue() -> void:
 		var duration = text_length * 0.065
 		
 		match line["trigger"]:
-			"eyes_open":
+			"intro3_fade_back":
 				# La pantalla aparece con una transición
 				var memory_tween := create_tween()
 				memory_tween.tween_property($MemoryOverlay, "color", Color.WHITE, 3.0)
 				await memory_tween.finished
+			"librarian_great_pose":
+				var character_tween := create_tween()
+				character_tween.tween_property($Librarian,"modulate:a", 1.0,2)
+				await character_tween.finished
 		
 		# Una variable que actualiza cada letra a ser visible
 		var typewriter_tween := create_tween()
