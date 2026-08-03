@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmjlo2wx86vb6"
-path="res://.godot/imported/temp_background_goodbye_DONTUSE.png.jpg-bc6ffd90bbe0b4102db99402319ef0a5.ctex"
+path="res://.godot/imported/temp_background_goodbye_DONTUSE.jpg-523715b51a945af0a75f9c01fa28a96e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/intro_scene/goodbye/temp_background_goodbye_DONTUSE.png.jpg"
-dest_files=["res://.godot/imported/temp_background_goodbye_DONTUSE.png.jpg-bc6ffd90bbe0b4102db99402319ef0a5.ctex"]
+source_file="res://assets/sprites/intro_scene/goodbye/temp_background_goodbye_DONTUSE.jpg"
+dest_files=["res://.godot/imported/temp_background_goodbye_DONTUSE.jpg-523715b51a945af0a75f9c01fa28a96e.ctex"]
 
 [params]
 

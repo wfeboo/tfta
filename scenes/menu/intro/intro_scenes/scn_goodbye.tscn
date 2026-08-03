@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bntw5bcn2jg4l" path="res://scenes/menu/intro/intro_scenes/sc_goodbye.gd" id="1_kdocs"]
 [ext_resource type="Texture2D" uid="uid://bti8g6dkq580f" path="res://assets/sprites/intro_scene/first_scene/M-godarti-STOCK-5.jpg" id="2_281rf"]
-[ext_resource type="Texture2D" uid="uid://dmjlo2wx86vb6" path="res://assets/sprites/intro_scene/goodbye/temp_background_goodbye_DONTUSE.png.jpg" id="2_kdocs"]
+[ext_resource type="Texture2D" uid="uid://dmjlo2wx86vb6" path="res://assets/sprites/intro_scene/goodbye/temp_background_goodbye_DONTUSE.jpg" id="2_kdocs"]
 [ext_resource type="Texture2D" uid="uid://brgcbo1r86tj" path="res://assets/sprites/intro_scene/goodbye/uhhhhh.png" id="4_rk62p"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_wy64s"]
