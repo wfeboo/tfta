@@ -48,6 +48,7 @@ func show_dialogue() -> void:
 	var conversation: Array = DialogueDatabase.get_conversation("INTRO-02")
 	var progress_indicate = $UILayer/Control/DialogueBox/ProgressIndicate
 	for line in conversation:
+		progress_indicate.visible = false
 		# Actualizar los labels
 		$UILayer/Control/SpeakerBox/SpeakerLabel.text = line["character"]
 		$UILayer/Control/DialogueBox/DialogueLabel.text = line["text"]
