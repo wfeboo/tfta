@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cb4iw38gb0ytx"]
+
+[ext_resource type="Script" uid="uid://sy5fa34rbooe" path="res://scenes/menu/intro/intro scripts/intro_sequence_scripts/sc_logo.gd" id="1_hpsye"]
+
+[node name="ScnLogo" type="Node2D" unique_id=1504059060]
+script = ExtResource("1_hpsye")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1995284803]
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

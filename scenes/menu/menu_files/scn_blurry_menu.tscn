@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://bh8h3xhvwvryx"]
+
+[ext_resource type="Texture2D" uid="uid://dk0wroqkh3n2m" path="res://assets/sprites/menu/blurry_menu/images (1).jpg" id="1_up7b3"]
+[ext_resource type="Texture2D" uid="uid://h1jmd8avehop" path="res://assets/sprites/menu/Logos_Tales_For_The_Asleep_TFTA_17.png" id="2_cv1ra"]
+
+[node name="BlurryMenu" type="Node2D" unique_id=93436753]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1104906873]
+position = Vector2(320, 256)
+zoom = Vector2(2.1, 2.1)
+
+[node name="BlurryBackground" type="Sprite2D" parent="Camera2D" unique_id=904024547]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_up7b3")
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D" unique_id=1939751786]
+custom_minimum_size = Vector2(640, 512)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -256.0
+offset_right = 320.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.096204735, 0.09620475, 0.096204735, 0.4117647)
+metadata/_edit_use_anchors_ = true
+
+[node name="LogosTalesForTheAsleepTfta17" type="Sprite2D" parent="Camera2D" unique_id=1633246745]
+position = Vector2(3, -70)
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("2_cv1ra")
+
+[node name="Button2" type="Button" parent="Camera2D" unique_id=16250409]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.5
+offset_top = -15.5
+offset_right = 20.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play"
+
+[node name="Button" type="Button" parent="Camera2D" unique_id=560812103]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = 60.0
+offset_right = 21.0
+offset_bottom = 91.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play"

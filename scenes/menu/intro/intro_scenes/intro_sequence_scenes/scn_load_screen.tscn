@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://0bo274cart1b"]
+
+[ext_resource type="Script" uid="uid://ntqa8yk0tqai" path="res://scenes/menu/intro/intro scripts/intro_sequence_scripts/sc_load_screen.gd" id="1_amrwf"]
+
+[node name="ScnLoadScreen" type="Node2D" unique_id=56186443]
+script = ExtResource("1_amrwf")
