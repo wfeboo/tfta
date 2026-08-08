@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://tqqscrt7ar60"]
+
+[ext_resource type="Script" uid="uid://bl74kujkgmsi4" path="res://scenes/desivinte/player/regular/sc_desivinte_regular.gd" id="1_x44ob"]
+
+[node name="ScnDesivinte" type="CharacterBody2D" unique_id=935461782]
+script = ExtResource("1_x44ob")
