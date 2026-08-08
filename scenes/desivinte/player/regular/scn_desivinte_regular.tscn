@@ -1,6 +1,17 @@
 [gd_scene format=3 uid="uid://tqqscrt7ar60"]
 
 [ext_resource type="Script" uid="uid://bl74kujkgmsi4" path="res://scenes/desivinte/player/regular/sc_desivinte_regular.gd" id="1_x44ob"]
+[ext_resource type="Texture2D" uid="uid://bti8g6dkq580f" path="res://assets/sprites/intro_scene/intro_sequence/first_scene/M-godarti-STOCK-5.jpg" id="2_743oy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x44ob"]
+height = 32.0
 
 [node name="ScnDesivinte" type="CharacterBody2D" unique_id=935461782]
 script = ExtResource("1_x44ob")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=558984855]
+shape = SubResource("CapsuleShape2D_x44ob")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1304093446]
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("2_743oy")
