@@ -1,49 +1,32 @@
 [gd_scene format=3 uid="uid://cj23tar5xrcu8"]
 
 [ext_resource type="Script" uid="uid://b0u2l2kgjku7p" path="res://scenes/menu/menu_files/sc_main_menu.gd" id="1_fud3j"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wo33o"]
-bg_color = Color(0.2879556, 0.28343767, 0.590387, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3kl5p"]
+[ext_resource type="Script" uid="uid://dgjhrdruisjfs" path="res://scenes/menu/menu_files/node_2d.gd" id="2_m700u"]
 
 [node name="MainMenu" type="Node2D" unique_id=4265079]
 script = ExtResource("1_fud3j")
 
-[node name="Button" type="Button" parent="." unique_id=988327955]
-offset_left = 106.0
-offset_top = 62.999996
-offset_right = 121.0
-offset_bottom = 99.0
-scale = Vector2(6.0584803, 10.708772)
-theme_override_font_sizes/font_size = 26
-theme_override_styles/normal = SubResource("StyleBoxFlat_wo33o")
+[node name="Node2D" type="Node2D" parent="." unique_id=2026924866]
+script = ExtResource("2_m700u")
+
+[node name="Book1" type="Button" parent="Node2D" unique_id=962310560]
+offset_left = 94.0
+offset_top = 61.0
+offset_right = 229.0
+offset_bottom = 447.0
+theme_override_colors/font_color = Color(0.89257044, 0.8674368, 0.8737566, 1)
 text = "1"
 
-[node name="Button2" type="Button" parent="." unique_id=970993026]
-offset_left = 283.0
-offset_top = 65.0
-offset_right = 298.0
-offset_bottom = 101.0
-scale = Vector2(6.0584803, 10.708772)
-theme_override_font_sizes/font_size = 26
-theme_override_styles/normal = SubResource("StyleBoxFlat_wo33o")
+[node name="Book2" type="Button" parent="Node2D" unique_id=1284199548]
+offset_left = 273.0
+offset_top = 60.0
+offset_right = 395.0
+offset_bottom = 443.0
 text = "2"
 
-[node name="Button3" type="Button" parent="." unique_id=1954897277]
-offset_left = 461.0
-offset_top = 59.999996
-offset_right = 476.0
-offset_bottom = 96.0
-scale = Vector2(6.0584803, 10.708772)
-theme_override_font_sizes/font_size = 26
-theme_override_styles/normal = SubResource("StyleBoxFlat_wo33o")
+[node name="Book3" type="Button" parent="Node2D" unique_id=271857327]
+offset_left = 449.0
+offset_top = 61.0
+offset_right = 565.0
+offset_bottom = 444.0
 text = "3"
-
-[node name="Panel" type="Panel" parent="." unique_id=1328902472]
-modulate = Color(0.2995682, 0.27696148, 0.22976995, 1)
-show_behind_parent = true
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(16.067995, 12.735764)
-theme_override_styles/panel = SubResource("StyleBoxFlat_3kl5p")
