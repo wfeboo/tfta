@@ -2,14 +2,12 @@ extends Node2D
 
 func show_panel(panel_index: int) -> void:
 	var panels: Array = [$Panel1, $Panel2, $Panel3]
-
 	for i in range(panels.size()):
 		if i == panel_index:
 			panels[i].visible = true
 			panels[i].modulate.a = 0.0
 			var panel_tween := create_tween()
 			panel_tween.tween_property(panels[i], "modulate:a", 1.0, 0.8)
-
 
 func _ready() -> void:
 	# Instanciar las cajas pero son invisibles

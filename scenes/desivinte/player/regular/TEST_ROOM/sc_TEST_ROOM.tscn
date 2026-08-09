@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://vknacdmbidox"]
 
+[ext_resource type="Texture2D" uid="uid://c82juw1rfajcx" path="res://assets/sprites/intro_scene/intro_sequence/comic/temp_panels/images.jpg" id="1_7my0a"]
 [ext_resource type="PackedScene" uid="uid://tqqscrt7ar60" path="res://scenes/desivinte/player/regular/scn_desivinte_regular.tscn" id="1_ox3d7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7my0a"]
@@ -10,6 +11,11 @@ size = Vector2(639.5, 109)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1350729779]
 position = Vector2(319.25, 455)
 shape = SubResource("RectangleShape2D_7my0a")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=1475707152]
+position = Vector2(1.2500076, 0.9999924)
+scale = Vector2(1.6511629, 0.21317823)
+texture = ExtResource("1_7my0a")
 
 [node name="ScnDesivinte" parent="." unique_id=935461782 instance=ExtResource("1_ox3d7")]
 position = Vector2(313, 157)

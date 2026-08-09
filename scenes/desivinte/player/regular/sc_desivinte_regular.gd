@@ -7,6 +7,7 @@ enum States {IDLE, WALK, JOG, JUMP, FALL}
 
 var can_doublejump = false
 var current_state: States = States.IDLE
+var nearby_interactable: Area2D = null
 
 func _physics_process(delta: float) -> void:
 # --- FÍSICA: gravedad, salto, doble salto ---
@@ -14,20 +15,23 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 	elif is_on_floor():
 		can_doublejump = false
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor() and not DialogueUI.dialogue_active:
 		velocity.y = JUMP_VELOCITY
 		can_doublejump = true
-	if Input.is_action_just_pressed("jump") and not is_on_floor() and can_doublejump:
+	if Input.is_action_just_pressed("jump") and not is_on_floor() and can_doublejump and not DialogueUI.dialogue_active:
 		velocity.y = JUMP_VELOCITY
 		can_doublejump = false
 	var direction := Input.get_axis("move_left", "move_right")
-	if direction:
-		if Input.is_action_pressed("modifier"):
-			velocity.x = direction * JOG_SPEED
-		else:
-			velocity.x = direction * WALK_SPEED
+	if DialogueUI.dialogue_active:
+		velocity.x = 0
 	else:
-		velocity.x = move_toward(velocity.x, 0, WALK_SPEED)
+		if direction:
+			if Input.is_action_pressed("modifier"):
+				velocity.x = direction * JOG_SPEED
+			else:
+				velocity.x = direction * WALK_SPEED
+		else:
+			velocity.x = move_toward(velocity.x, 0, WALK_SPEED)
 # --- ESTADO: se decide DESPUÉS de que la física ya se resolvió ---
 	if is_on_floor():
 		if abs(velocity.x) < 1:
@@ -40,5 +44,23 @@ func _physics_process(delta: float) -> void:
 		current_state = States.JUMP
 	else:
 		current_state = States.FALL
+	
+# --- INTERACTUAR --- 
+	if Input.is_action_just_pressed("interact") and not DialogueUI.dialogue_active:
+		if nearby_interactable != null:
+			nearby_interactable.interact()
+		else:
+			DialogueUI.show_dialogue("INTER-DESIV-0000",self)
 
 	move_and_slide()
+
+func handle_trigger(trigger: String) -> void:
+	pass
+	
+func _on_interaction_area_area_entered(area: Area2D) -> void:
+	nearby_interactable = area
+
+
+func _on_interaction_area_area_exited(area: Area2D) -> void:
+	if area == nearby_interactable:
+		nearby_interactable = null

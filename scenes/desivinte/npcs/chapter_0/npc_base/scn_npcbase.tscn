@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://datjrso34h6ud"]
+
+[ext_resource type="Script" uid="uid://cyybltf4wwi8l" path="res://scenes/desivinte/npcs/chapter_0/npc_base/sc_npcbase.gd" id="1_rqcum"]
+
+[node name="NpcBase" type="Area2D" unique_id=267910094]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_rqcum")

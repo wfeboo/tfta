@@ -4,7 +4,8 @@ extends Node
 
 const DIALOGUE_PATHS: Array[String] = [
 	"res://data/dialogue/intro/librarian_dialogue.txt",
-	"res://data/dialogue/intro/destiny_dialogue.txt"
+	"res://data/dialogue/intro/destiny_dialogue.txt",
+	"res://data/dialogue/desivinte/chapter_0/desivinte_interaction_ch0.txt"
 ]
 
 # Agrupa líneas por su Conversation ID: {"INTRO-00": [linea1, linea2, ...], "CHATS-02": [...]}

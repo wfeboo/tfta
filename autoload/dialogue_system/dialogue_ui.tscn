@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://c07hyl6ehjbrm"]
+
+[ext_resource type="Script" uid="uid://1tf832jt2hu4" path="res://autoload/dialogue_system/dialogue_ui.gd" id="1_botrp"]
+[ext_resource type="Texture2D" uid="uid://bti8g6dkq580f" path="res://assets/sprites/intro_scene/intro_sequence/first_scene/M-godarti-STOCK-5.jpg" id="2_m1jbf"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_anufe"]
+
+[node name="DialogueUI" type="CanvasLayer" unique_id=1921246629]
+script = ExtResource("1_botrp")
+
+[node name="Control" type="Control" parent="." unique_id=178834113]
+layout_mode = 3
+anchor_left = 0.22500001
+anchor_top = 0.266
+anchor_right = 0.77500004
+anchor_bottom = 0.734
+offset_left = -144.0
+offset_top = -136.192
+offset_right = 143.99997
+offset_bottom = 136.19199
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DialogueBox" type="NinePatchRect" parent="Control" unique_id=982971611]
+custom_minimum_size = Vector2(0, 67)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0875
+anchor_top = 0.765625
+anchor_right = 0.925
+anchor_bottom = 0.984375
+grow_horizontal = 2
+grow_vertical = 0
+texture = SubResource("PlaceholderTexture2D_anufe")
+metadata/_edit_use_anchors_ = true
+
+[node name="DialogueLabel" type="RichTextLabel" parent="Control/DialogueBox" unique_id=201912475]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ProgressIndicate" type="Sprite2D" parent="Control/DialogueBox" unique_id=1015535174]
+position = Vector2(512, 88)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("2_m1jbf")
+
+[node name="SpeakerBox" type="NinePatchRect" parent="Control" unique_id=875904866]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.087000005
+anchor_top = 0.72606254
+anchor_right = 0.4125
+anchor_bottom = 0.765625
+offset_left = 0.31999588
+offset_top = 0.25598145
+grow_horizontal = 2
+grow_vertical = 0
+texture = SubResource("PlaceholderTexture2D_anufe")
+metadata/_edit_use_anchors_ = true
+
+[node name="SpeakerLabel" type="RichTextLabel" parent="Control/SpeakerBox" unique_id=324924348]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
