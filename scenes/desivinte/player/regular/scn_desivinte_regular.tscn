@@ -27,5 +27,7 @@ texture = ExtResource("2_743oy")
 [node name="AreaHitbox" type="CollisionShape2D" parent="InteractionArea" unique_id=1137424489]
 shape = SubResource("RectangleShape2D_743oy")
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=162292451]
+
 [connection signal="area_entered" from="InteractionArea" to="." method="_on_interaction_area_area_entered"]
 [connection signal="area_exited" from="InteractionArea" to="." method="_on_interaction_area_area_exited"]

@@ -26,8 +26,8 @@ DTNY-0022,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0004,You need something.
 DTNY-0023,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0004,Your heart aches for an unreachable desire.,None,
 DTNY-0024,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0004,It's all right.,None,
 DTNY-0025,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0004,You don't need to know the answer for everything.,None,
-DTNY-0026,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0004,Not right now.,None,bar_blinks
-DTNY-0027,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0005,,None,roots_strengthen
+DTNY-0026,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0004,Not right now.,None,roots_strengthen
+DTNY-0027,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0005,,None,bar_blinks
 DTNY-0028,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0005,"This won’t last long, but I won’t leave you on your own.",None,
 DTNY-0029,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0005,I offer you...,None,
 DTNY-0030,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0005,The assistance of a great friend of mine.,None,

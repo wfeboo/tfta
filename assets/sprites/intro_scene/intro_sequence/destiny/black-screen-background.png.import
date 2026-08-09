@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://h1jmd8avehop"
-path="res://.godot/imported/Logos_Tales_For_The_Asleep_TFTA_17.png-b22d1492f6e026d91aafb290f3353422.ctex"
+uid="uid://y1y4ptclv6hm"
+path="res://.godot/imported/black-screen-background.png-bdb5e8ce9a9844dca1309812a7647ac5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/menu/Logos_Tales_For_The_Asleep_TFTA_17.png"
-dest_files=["res://.godot/imported/Logos_Tales_For_The_Asleep_TFTA_17.png-b22d1492f6e026d91aafb290f3353422.ctex"]
+source_file="res://assets/sprites/intro_scene/intro_sequence/destiny/black-screen-background.png"
+dest_files=["res://.godot/imported/black-screen-background.png-bdb5e8ce9a9844dca1309812a7647ac5.ctex"]
 
 [params]
 

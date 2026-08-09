@@ -2,7 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dw5mljab0acfb" path="res://scenes/menu/intro/intro scripts/intro_sequence_scripts/sc_destiny.gd" id="1_ew2qg"]
 [ext_resource type="Texture2D" uid="uid://bti8g6dkq580f" path="res://assets/sprites/intro_scene/intro_sequence/first_scene/M-godarti-STOCK-5.jpg" id="2_fqmkc"]
-[ext_resource type="Texture2D" uid="uid://byvl2wkeytuqr" path="res://assets/sprites/intro_scene/intro_sequence/comic/bg_panels.png" id="3_uv15u"]
+[ext_resource type="Texture2D" uid="uid://y1y4ptclv6hm" path="res://assets/sprites/intro_scene/intro_sequence/destiny/black-screen-background.png" id="3_j7kom"]
+[ext_resource type="Texture2D" uid="uid://bbf02g8pp74eo" path="res://assets/sprites/intro_scene/intro_sequence/destiny/Logos_Tales_For_The_Asleep_TFTA_19.png" id="3_srpox"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_fqmkc"]
 
@@ -40,10 +41,22 @@ position = Vector2(660, 88)
 scale = Vector2(0.02, 0.02)
 texture = ExtResource("2_fqmkc")
 
+[node name="BlackScreen" type="ColorRect" parent="UILayer" unique_id=725210086]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="LogoSprite" type="Sprite2D" parent="UILayer/BlackScreen" unique_id=786826228]
+position = Vector2(320, 256)
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("3_srpox")
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=916540582]
 position = Vector2(320, 256)
 
-[node name="Background" type="Sprite2D" parent="." unique_id=1624226132]
-position = Vector2(320, 344)
-scale = Vector2(5.44, 3.4399996)
-texture = ExtResource("3_uv15u")
+[node name="BlackScreenBackground" type="Sprite2D" parent="." unique_id=1461681475]
+position = Vector2(320, 259)
+texture = ExtResource("3_j7kom")

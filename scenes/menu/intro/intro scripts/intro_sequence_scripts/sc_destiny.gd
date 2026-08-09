@@ -22,16 +22,14 @@ var ROOTS: Array[PackedScene] = [
 
 func _ready() -> void:
 	$UILayer/Control/DialogueBox.modulate.a = 0.0
+	$UILayer/BlackScreen.visible = false
 	$UILayer/Control/DialogueBox/ProgressIndicate.visible = false
+	$UILayer/BlackScreen/LogoSprite.visible = false
 
 	# Aparece la caja de diálogo
+	await get_tree().create_timer(2.5).timeout
 	var ui_tween := create_tween()
-	ui_tween.tween_property(
-		$UILayer/Control/DialogueBox,
-		"modulate:a",
-		1.0,
-		2.5
-	)
+	ui_tween.tween_property($UILayer/Control/DialogueBox,"modulate:a",1.0,4.5)
 	await ui_tween.finished
 
 	# Recorre las conversaciones en orden
@@ -39,7 +37,6 @@ func _ready() -> void:
 		await show_dialogue_manual(conversation_id)
 
 	$UILayer/Control/DialogueBox.visible = false
-	_on_scene_finished()
 
 
 func show_dialogue_manual(conversation_id: String) -> void:
@@ -65,22 +62,19 @@ func show_dialogue_manual(conversation_id: String) -> void:
 				pass
 			"roots_start":
 				roots_growing = true
-				spawn_interval = 4.0
+				spawn_interval = 5.8
 				grow_roots()
 			"bar_blinks":
 				blink_dialogue()
 			"roots_intensify":
-				spawn_interval = 1.3
+				spawn_interval = 2.2
 			"name_trigger_question":
 				pass
 			"yes_no_question":
 				pass
 			"roots_strengthen":
-				spawn_interval = 0.3
+				spawn_interval = 0.6
 			"roots_cover_screen":
-				pass
-			"title_drop":
-				roots_growing = false
 				pass
 
 		var text_length: int = line["text"].length()
@@ -99,30 +93,37 @@ func show_dialogue_manual(conversation_id: String) -> void:
 				typewriter_tween.set_speed_scale(1.6)
 			else:
 				typewriter_tween.set_speed_scale(1.0)
-
+		
 			await get_tree().process_frame
+			
+		if line["trigger"] == "title_drop":
+			await get_tree().create_timer(0.5).timeout
+			roots_growing = false
+			$UILayer/BlackScreen.visible = true
+			$UILayer/BlackScreen/LogoSprite.visible = true
+			await get_tree().create_timer(5.5).timeout
+			var logo_tween := create_tween()
+			logo_tween.tween_property($UILayer/BlackScreen/LogoSprite,"modulate:a",0.0,4.0)
+			await logo_tween.finished
+			await get_tree().create_timer(1.5).timeout
+			_on_scene_finished()
+		else:
+			# Esperar 1.5 segundos antes de mostrar el indicador
+			await get_tree().create_timer(1.5).timeout
 
-		# Esperar 2.5 segundos antes de mostrar el indicador
-		await get_tree().create_timer(2.5).timeout
-
-		# Mostrar el indicador hasta que el jugador continúe
-		progress_indicate.visible = true
-
-		while not Input.is_action_just_pressed("ui_accept"):
+			# Mostrar el indicador hasta que el jugador continúe
+			progress_indicate.visible = true
+			while not Input.is_action_just_pressed("ui_accept"):
+				await get_tree().process_frame
+			# Ocultarlo después de presionar
+			progress_indicate.visible = false
+			# Evitar que la misma pulsación salte la siguiente línea
 			await get_tree().process_frame
-
-		# Ocultarlo después de presionar
-		progress_indicate.visible = false
-
-		# Evitar que la misma pulsación salte la siguiente línea
-		await get_tree().process_frame
 
 
 func _on_scene_finished() -> void:
 	# Solo cambia de escena - NO toca el guardado en disco
-	get_tree().change_scene_to_file(
-		"res://scenes/menu/intro/intro_scenes/intro_sequence_scenes/scn_welcome.tscn"
-	)
+	get_tree().change_scene_to_file("res://scenes/menu/intro/intro_scenes/intro_sequence_scenes/scn_welcome.tscn")
 
 func grow_roots() -> void:
 	while roots_growing:

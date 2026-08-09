@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://bg06nuf8rc1ml"]
+
+[ext_resource type="Script" uid="uid://kn55pnib7yqk" path="res://scenes/desivinte/player/combat/melee/sc_desivinte_melee.gd" id="1_ln5j1"]
+[ext_resource type="Texture2D" uid="uid://bti8g6dkq580f" path="res://assets/sprites/intro_scene/intro_sequence/first_scene/M-godarti-STOCK-5.jpg" id="2_a8pra"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p0p68"]
+radius = 20.0
+height = 48.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qqclk"]
+size = Vector2(71, 48)
+
+[node name="ScnDesivinteMelee" type="CharacterBody2D" unique_id=1936526618]
+script = ExtResource("1_ln5j1")
+
+[node name="NormalHitbox" type="CollisionShape2D" parent="." unique_id=1772900960]
+shape = SubResource("CapsuleShape2D_p0p68")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1043225182]
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("2_a8pra")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1566932728]
+
+[node name="AreaHitbox" type="CollisionShape2D" parent="InteractionArea" unique_id=1437355963]
+shape = SubResource("RectangleShape2D_qqclk")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2018320915]
+position = Vector2(153, -67)
+
+[node name="CanDJ" type="Label" parent="." unique_id=962635852]
+offset_left = -167.0
+offset_top = -280.0
+offset_right = 1.0
+offset_bottom = -257.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "Can Double Jump: NO"
+
+[node name="Jumped" type="Label" parent="." unique_id=925207855]
+offset_left = -167.0
+offset_top = -258.0
+offset_right = 1.0
+offset_bottom = -235.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "Jumped: NO"
+
+[node name="Pressing" type="Label" parent="." unique_id=2059257469]
+offset_left = -167.0
+offset_top = -301.0
+offset_right = 15.0
+offset_bottom = -278.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "Currently Moving: BASE"
+
+[node name="Shift" type="Label" parent="." unique_id=788758395]
+offset_left = -167.0
+offset_top = -323.0
+offset_right = -57.0
+offset_bottom = -300.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "Is Shifting: NO"
