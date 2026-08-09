@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://d2wsnarabyjcx"]
+
+[ext_resource type="Script" uid="uid://ba1t3chysmn1b" path="res://scenes/menu/intro/intro scripts/intro_sequence_scripts/roots/sc_roots_a.gd" id="1_qnxxc"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_qnxxc"]
+
+[node name="RootsA" type="Node2D" unique_id=1215956285]
+script = ExtResource("1_qnxxc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=124677011]
+scale = Vector2(10, 10)
+texture = SubResource("PlaceholderTexture2D_qnxxc")

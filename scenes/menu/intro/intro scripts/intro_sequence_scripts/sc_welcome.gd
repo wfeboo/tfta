@@ -74,7 +74,12 @@ func show_dialogue() -> void:
 		var typewriter_tween := create_tween()
 		typewriter_tween.tween_property($UILayer/Control/DialogueBox/DialogueLabel,"visible_ratio",1.0,duration)
 		# Hasta que termine de escribirse todo el diálogo
-		await typewriter_tween.finished
+		while typewriter_tween.is_running():
+			if Input.is_action_pressed("ui_accept"):
+				typewriter_tween.set_speed_scale(2.5)
+			else:
+				typewriter_tween.set_speed_scale(1.0)
+			await get_tree().process_frame
 		await get_tree().create_timer(1.0).timeout
 		# Le mostramos progress_indicate
 		progress_indicate.visible = true

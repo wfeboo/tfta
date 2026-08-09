@@ -39,7 +39,7 @@ func _ready() -> void:
 
 func _on_scene_finished() -> void:
 	# Solo cambia de escena - NO toca el guardado en disco
-	get_tree().change_scene_to_file("res://scenes/menu/intro/intro_scenes/scn_goodbye.tscn")
+	get_tree().change_scene_to_file("res://scenes/menu/intro/intro_scenes/intro_sequence_scenes/scn_goodbye.tscn")
 
 
 func show_dialogue() -> void:
@@ -74,8 +74,12 @@ func show_dialogue() -> void:
 		var typewriter_tween := create_tween()
 		typewriter_tween.tween_property($UILayer/Control/DialogueBox/DialogueLabel,"visible_ratio",1.0,duration)
 			# Hasta que termine de escribirse todo el diálogo
-		await typewriter_tween.finished
-		await get_tree().create_timer(1.5).timeout
+		while typewriter_tween.is_running():
+			if Input.is_action_pressed("ui_accept"):
+				typewriter_tween.set_speed_scale(2.5)
+			else:
+				typewriter_tween.set_speed_scale(1.0)
+			await get_tree().process_frame
 		# Le mostramos progress_indicate
 		progress_indicate.visible = true
 		# Guardamos el tiempo de espera para que el diálogo se pase automáticamente
