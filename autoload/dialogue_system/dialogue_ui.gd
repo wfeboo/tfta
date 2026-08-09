@@ -10,11 +10,14 @@ func _ready() -> void:
 
 func show_dialogue(conversation_id: String, caller: Node) -> void:
 	var conversation: Array = DialogueDatabase.get_conversation(conversation_id)
-	$Control/SpeakerBox.visible = true
 	$Control/DialogueBox.visible = true
 	dialogue_active = true
 	var progress_indicate = $Control/DialogueBox/ProgressIndicate
 	for line in conversation:
+		if line["character"] != "":
+			$Control/SpeakerBox.visible = true
+		else:
+			$Control/SpeakerBox.visible = false
 		$Control/DialogueBox/ProgressIndicate.visible = false
 		$Control/SpeakerBox/SpeakerLabel.text = line["character"]
 		$Control/DialogueBox/DialogueLabel.text = line["text"]

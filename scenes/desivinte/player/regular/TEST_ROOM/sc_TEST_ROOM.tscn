@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://vknacdmbidox"]
 
 [ext_resource type="Texture2D" uid="uid://c82juw1rfajcx" path="res://assets/sprites/intro_scene/intro_sequence/comic/temp_panels/images.jpg" id="1_7my0a"]
-[ext_resource type="PackedScene" uid="uid://bg06nuf8rc1ml" path="res://scenes/desivinte/player/combat/melee/scn_desivinte_melee.tscn" id="1_ejo85"]
 [ext_resource type="Texture2D" uid="uid://iqqa56ctilo4" path="res://assets/sprites/intro_scene/intro_sequence/welcome/crowdpeople_a.png" id="3_ejo85"]
+[ext_resource type="PackedScene" uid="uid://tqqscrt7ar60" path="res://scenes/desivinte/player/regular/scn_desivinte_regular.tscn" id="3_y00qj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7my0a"]
 size = Vector2(6142.5, 109)
@@ -22,8 +22,6 @@ position = Vector2(3080.5, 456)
 scale = Vector2(15.91473, 0.21317823)
 texture = ExtResource("1_7my0a")
 
-[node name="ScnDesivinteMelee" parent="." unique_id=1936526618 instance=ExtResource("1_ejo85")]
-
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=455555809]
 position = Vector2(897, 370)
 
@@ -33,3 +31,5 @@ texture = ExtResource("3_ejo85")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=282183612]
 position = Vector2(8.5, 2)
 shape = SubResource("RectangleShape2D_y00qj")
+
+[node name="ScnDesivinte" parent="." unique_id=935461782 instance=ExtResource("3_y00qj")]
