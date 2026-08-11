@@ -9,24 +9,56 @@ script = ExtResource("1_fud3j")
 [node name="Node2D" type="Node2D" parent="." unique_id=2026924866]
 script = ExtResource("2_m700u")
 
-[node name="Book1" type="Button" parent="Node2D" unique_id=962310560]
-offset_left = 94.0
-offset_top = 61.0
-offset_right = 229.0
-offset_bottom = 447.0
+[node name="CanvasLayer" type="CanvasLayer" parent="Node2D" unique_id=633515226]
+
+[node name="Book1" type="Button" parent="Node2D/CanvasLayer" unique_id=962310560]
+offset_left = 178.0
+offset_top = 145.0
+offset_right = 260.0
+offset_bottom = 284.0
 theme_override_colors/font_color = Color(0.89257044, 0.8674368, 0.8737566, 1)
-text = "1"
+text = "Desvinte"
 
-[node name="Book2" type="Button" parent="Node2D" unique_id=1284199548]
-offset_left = 273.0
-offset_top = 60.0
-offset_right = 395.0
-offset_bottom = 443.0
-text = "2"
+[node name="Book2" type="Button" parent="Node2D/CanvasLayer" unique_id=1284199548]
+offset_left = 296.0
+offset_top = 147.0
+offset_right = 375.0
+offset_bottom = 285.0
+text = "Coming
+Soon"
 
-[node name="Book3" type="Button" parent="Node2D" unique_id=271857327]
-offset_left = 449.0
-offset_top = 61.0
-offset_right = 565.0
-offset_bottom = 444.0
-text = "3"
+[node name="Book3" type="Button" parent="Node2D/CanvasLayer" unique_id=271857327]
+offset_left = 410.0
+offset_top = 149.0
+offset_right = 489.0
+offset_bottom = 285.0
+text = "Coming
+Soon"
+
+[node name="QuitGame" type="Button" parent="Node2D/CanvasLayer" unique_id=536082080]
+offset_left = 26.0
+offset_top = 71.0
+offset_right = 136.0
+offset_bottom = 118.0
+text = "Quit Game"
+
+[node name="Settings" type="Button" parent="Node2D/CanvasLayer" unique_id=1312846750]
+offset_left = 487.0
+offset_top = 51.0
+offset_right = 615.0
+offset_bottom = 83.0
+text = "Settings"
+
+[node name="Collectionables" type="Button" parent="Node2D/CanvasLayer" unique_id=1893688476]
+offset_left = 115.0
+offset_top = 402.0
+offset_right = 241.0
+offset_bottom = 439.0
+text = "Collectionables"
+
+[node name="Arcade" type="Button" parent="Node2D/CanvasLayer" unique_id=623175074]
+offset_left = 492.0
+offset_top = 367.0
+offset_right = 618.0
+offset_bottom = 410.0
+text = "Arcade"
