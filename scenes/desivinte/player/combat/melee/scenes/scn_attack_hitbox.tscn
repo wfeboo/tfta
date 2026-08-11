@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b7nbjtkxcv35u"]
+
+[ext_resource type="Script" uid="uid://bkmyg7vjn0ow3" path="res://scenes/desivinte/player/combat/melee/scripts/sc_attack_hitbox.gd" id="1_bxirk"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_npwl4"]
+
+[node name="AttackHitbox" type="Area2D" unique_id=1394947178]
+collision_layer = 0
+collision_mask = 16
+script = ExtResource("1_bxirk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=315024202]
+shape = SubResource("CapsuleShape2D_npwl4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

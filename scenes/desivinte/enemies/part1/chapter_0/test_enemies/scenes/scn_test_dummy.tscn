@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://c8xfxn2x3uxgs"]
+
+[sub_resource type="GDScript" id="GDScript_pucbt"]
+script/source = "extends StaticBody2D
+
+func blink_sprite() -> void:
+	$CollisionShape2D/ColorRect.modulate = Color.DARK_RED
+	await get_tree().create_timer(0.7).timeout
+	$CollisionShape2D/ColorRect.modulate = Color.WHITE
+
+func take_damage(amount) -> void:
+	blink_sprite()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iav6b"]
+
+[node name="ScnTestDummy" type="StaticBody2D" unique_id=788511812]
+collision_layer = 16
+collision_mask = 0
+script = SubResource("GDScript_pucbt")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=9094110]
+custom_minimum_size = Vector2(30, 30)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = -15.0
+offset_right = 15.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.3254902, 1, 1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1998445252]
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_iav6b")

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cu1iki54e4xea"]
+
+[ext_resource type="Script" uid="uid://bseaymasigowe" path="res://scenes/desivinte/player/combat/melee/dummy/sc_test_dummy.gd" id="1_s5mmv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s5mmv"]
+
+[node name="TestDummy" type="StaticBody2D" unique_id=615985187 groups=["damageables"]]
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("1_s5mmv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1677666523]
+shape = SubResource("RectangleShape2D_s5mmv")

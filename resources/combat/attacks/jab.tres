@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AttackData" format=3 uid="uid://bttl6n0du6isq"]
+
+[ext_resource type="Script" uid="uid://cp2h0c7fbwbns" path="res://resources/combat/attack_data.gd" id="1_cfw3d"]
+
+[resource]
+script = ExtResource("1_cfw3d")
+attack_id = "DESIV_ATK_MELEE_JAB"
+damage = 7.0
+hitbox_size = Vector2(160, 100)
+active_duration = 3.0
+metadata/_custom_type_script = "uid://cp2h0c7fbwbns"
