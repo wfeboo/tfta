@@ -61,6 +61,7 @@ func _animate_scale(btn: BaseButton, target_scale: Vector2) -> void:
 
 # --- MANEJADOR DE CLICS ---
 
+
 func _on_any_button_pressed(btn: BaseButton) -> void:
 	var btn_name: String = btn.name.strip_edges().to_lower()
 	
