@@ -62,3 +62,29 @@ offset_top = 367.0
 offset_right = 618.0
 offset_bottom = 410.0
 text = "Arcade"
+
+[node name="SettingsGroup" type="Node2D" parent="Node2D/CanvasLayer" unique_id=1062789484]
+z_index = 10
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/CanvasLayer/SettingsGroup" unique_id=1923688746]
+
+[node name="Volume" type="Button" parent="Node2D/CanvasLayer/SettingsGroup" unique_id=56416369]
+offset_left = 540.0
+offset_top = 114.0
+offset_right = 607.0
+offset_bottom = 145.0
+text = "Volume"
+
+[node name="Button2" type="Button" parent="Node2D/CanvasLayer/SettingsGroup" unique_id=389226404]
+offset_left = 552.0
+offset_top = 187.0
+offset_right = 606.0
+offset_bottom = 218.0
+text = "Audio"
+
+[node name="Button" type="Button" parent="Node2D/CanvasLayer/SettingsGroup" unique_id=1755057490]
+offset_left = 537.0
+offset_top = 152.0
+offset_right = 611.0
+offset_bottom = 183.0
+text = "Controls"
