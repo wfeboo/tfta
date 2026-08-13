@@ -33,6 +33,7 @@ grow_vertical = 2
 color = Color(0.66656864, 0.6665687, 0.66656864, 1)
 
 [node name="InteractionArea" type="Area2D" parent="." unique_id=1227587827]
+collision_mask = 4
 
 [node name="AreaHitbox" type="CollisionShape2D" parent="InteractionArea" unique_id=1137424489]
 shape = SubResource("RectangleShape2D_743oy")
