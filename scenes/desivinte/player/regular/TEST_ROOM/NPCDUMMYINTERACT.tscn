@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://ft8cbhna1p36"]
+
+[ext_resource type="Script" uid="uid://b8ah8unaghrpr" path="res://scenes/desivinte/player/regular/TEST_ROOM/npcdummyinteract.gd" id="1_ud74m"]
+[ext_resource type="Texture2D" uid="uid://iqqa56ctilo4" path="res://assets/sprites/intro_scene/intro_sequence/welcome/crowdpeople_a.png" id="2_e5m8h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kituy"]
+
+[node name="Npcdummyinteract" type="Area2D" unique_id=1157479243]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_ud74m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=24944270]
+shape = SubResource("RectangleShape2D_kituy")
+
+[node name="PromptLabel" type="Label" parent="." unique_id=919261672]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Presiona E"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1418893765]
+texture = ExtResource("2_e5m8h")
