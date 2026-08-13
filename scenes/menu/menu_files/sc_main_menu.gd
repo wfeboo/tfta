@@ -5,41 +5,101 @@ var normal_scale: Vector2 = Vector2(1.0, 1.0)
 var animation_duration: float = 0.35
 
 var tweens: Dictionary = {}
-var settings_group: Node2D
+
+# --- REFERENCIAS A PANELES ---
+@onready var settings_group: Node = $CanvasLayer/SettingsGroup
+@onready var volume_group: Node = $CanvasLayer/VolumeGroup
+@onready var warning_panel: Node = $CanvasLayer/WarningPanel
+
+# --- REFERENCIAS A BOTONES DE AJUSTES ---
+@onready var btn_settings: BaseButton = $CanvasLayer/Settings
+@onready var btn_volume: BaseButton = $CanvasLayer/SettingsGroup/Volume
+@onready var btn_close_volume: BaseButton = $CanvasLayer/VolumeGroup/Button2
+@onready var btn_quit: BaseButton = $CanvasLayer/QuitGame
+
+# --- REFERENCIAS A LIBROS ---
+@onready var btn_book1: BaseButton = $CanvasLayer/Book1
+@onready var btn_book2: BaseButton = $CanvasLayer/Book2
+@onready var btn_book3: BaseButton = $CanvasLayer/Book3
+
+# --- BOTÓN DE CERRAR DEL WARNING PANEL ---
+# Si tu botón dentro de WarningPanel se llama distinto (ej. "Button", "CloseButton"), cámbialo aquí:
+@onready var btn_close_warning: BaseButton = $CanvasLayer/WarningPanel/Button 
 
 func _ready() -> void:
 	await get_tree().process_frame
-	
-	settings_group = find_child("SettingsGroup", true, false) as Node2D
 
-	if settings_group != null:
-		settings_group.visible = false
+	# Evitar que los paneles invisibles bloqueen clics
+	_set_mouse_ignore(settings_group)
+	_set_mouse_ignore(volume_group)
+	_set_mouse_ignore(warning_panel)
 
-	var found_buttons: Array[Node] = find_children("*", "BaseButton", true, false)
-	
-	for btn in found_buttons:
-		if btn is BaseButton:
-			# Si el botón está dentro del menú de ajustes, ignoramos la apertura/cierre
-			if settings_group != null and settings_group.is_ancestor_of(btn):
-				continue
-				
-			btn.mouse_filter = Control.MOUSE_FILTER_STOP
-			
-			if "size" in btn and btn.size != Vector2.ZERO:
-				btn.pivot_offset = btn.size / 2.0
-			
-			# LIMPIEZA TOTAL DE CONEXIONES DUPLICADAS EN GODOT 4
-			for conn in btn.pressed.get_connections():
-				btn.pressed.disconnect(conn.callable)
-			for conn in btn.mouse_entered.get_connections():
-				btn.mouse_entered.disconnect(conn.callable)
-			for conn in btn.mouse_exited.get_connections():
-				btn.mouse_exited.disconnect(conn.callable)
-			
-			# Conectamos limpiamente una sola vez
-			btn.mouse_entered.connect(_on_button_hover_enter.bind(btn))
-			btn.mouse_exited.connect(_on_button_hover_exit.bind(btn))
-			btn.pressed.connect(_on_any_button_pressed.bind(btn))
+	# Estado inicial: Paneles ocultos
+	if settings_group: settings_group.visible = false
+	if volume_group: volume_group.visible = false
+	if warning_panel: warning_panel.visible = false
+
+	# 1. Configurar botones del MENÚ DE AJUSTES
+	var menu_buttons: Array[BaseButton] = [btn_settings, btn_volume, btn_close_volume, btn_quit]
+	for btn in menu_buttons:
+		if btn != null:
+			_setup_button_hover(btn)
+
+	if btn_settings: btn_settings.pressed.connect(_on_settings_pressed)
+	if btn_volume: btn_volume.pressed.connect(_on_volume_pressed)
+	if btn_close_volume: btn_close_volume.pressed.connect(_on_close_volume_pressed)
+	if btn_quit: btn_quit.pressed.connect(_on_quit_pressed)
+
+	# 2. Configurar LIBROS
+	var book_buttons: Array[BaseButton] = [btn_book1, btn_book2, btn_book3]
+	for book in book_buttons:
+		if book != null:
+			_setup_button_hover(book)
+			book.pressed.connect(_on_book_pressed)
+
+	# 3. Configurar BOTÓN CERRAR del WarningPanel
+	if btn_close_warning != null:
+		_setup_button_hover(btn_close_warning)
+		btn_close_warning.pressed.connect(_on_close_warning_pressed)
+
+# --- AUXILIARES ---
+
+func _set_mouse_ignore(node: Node) -> void:
+	if node is Control:
+		node.mouse_filter = Control.MOUSE_FILTER_IGNORE
+
+func _setup_button_hover(btn: BaseButton) -> void:
+	if "size" in btn and btn.size != Vector2.ZERO:
+		btn.pivot_offset = btn.size / 2.0
+	btn.mouse_entered.connect(_on_button_hover_enter.bind(btn))
+	btn.mouse_exited.connect(_on_button_hover_exit.bind(btn))
+
+# --- ACCIONES DE CLIC ---
+
+func _on_settings_pressed() -> void:
+	if settings_group:
+		settings_group.visible = !settings_group.visible
+		if not settings_group.visible and volume_group:
+			volume_group.visible = false
+
+func _on_volume_pressed() -> void:
+	if volume_group:
+		volume_group.visible = !volume_group.visible
+
+func _on_close_volume_pressed() -> void:
+	if volume_group:
+		volume_group.visible = false
+
+func _on_quit_pressed() -> void:
+	get_tree().quit()
+
+func _on_book_pressed() -> void:
+	if warning_panel:
+		warning_panel.visible = true
+
+func _on_close_warning_pressed() -> void:
+	if warning_panel:
+		warning_panel.visible = false
 
 # --- ANIMACIONES HOVER ---
 
@@ -58,17 +118,3 @@ func _animate_scale(btn: BaseButton, target_scale: Vector2) -> void:
 	var tween: Tween = create_tween().set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	tweens[btn] = tween
 	tween.tween_property(btn, "scale", target_scale, animation_duration)
-
-# --- MANEJADOR DE CLICS ---
-
-
-func _on_any_button_pressed(btn: BaseButton) -> void:
-	var btn_name: String = btn.name.strip_edges().to_lower()
-	
-	if btn_name == "settings":
-		if settings_group != null:
-			settings_group.visible = !settings_group.visible
-			print(" Visibilidad actual del menú: ", settings_group.visible)
-			
-	elif btn_name == "quitgame":
-		get_tree().quit()

@@ -88,3 +88,70 @@ offset_top = 152.0
 offset_right = 611.0
 offset_bottom = 183.0
 text = "Controls"
+
+[node name="WarningPanel" type="Panel" parent="Node2D/CanvasLayer" unique_id=1144213411]
+visible = false
+offset_left = 144.0
+offset_top = 166.0
+offset_right = 516.0
+offset_bottom = 280.0
+
+[node name="Label" type="Label" parent="Node2D/CanvasLayer/WarningPanel" unique_id=1629218082]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 25.0
+offset_right = 341.0
+offset_bottom = 64.0
+text = "Finish the last book to unclock this one"
+
+[node name="Button" type="Button" parent="Node2D/CanvasLayer/WarningPanel" unique_id=2144231636]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 66.0
+offset_right = 226.0
+offset_bottom = 97.0
+text = "Close"
+
+[node name="VolumeGroup" type="Panel" parent="Node2D/CanvasLayer" unique_id=1498863871]
+offset_left = 215.0
+offset_top = 114.0
+offset_right = 458.0
+offset_bottom = 330.0
+
+[node name="Label" type="Label" parent="Node2D/CanvasLayer/VolumeGroup" unique_id=1789402429]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 32.0
+offset_right = 166.0
+offset_bottom = 62.0
+text = "Music"
+
+[node name="HSliderMusic" type="HSlider" parent="Node2D/CanvasLayer/VolumeGroup" unique_id=1069629658]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 41.0
+offset_right = 216.0
+offset_bottom = 111.0
+
+[node name="Label2" type="Label" parent="Node2D/CanvasLayer/VolumeGroup" unique_id=453900941]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 97.0
+offset_right = 144.0
+offset_bottom = 120.0
+text = "Sound Effects"
+
+[node name="HSlider" type="HSlider" parent="Node2D/CanvasLayer/VolumeGroup" unique_id=377771526]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 111.0
+offset_right = 218.0
+offset_bottom = 171.0
+
+[node name="Button2" type="Button" parent="Node2D/CanvasLayer/VolumeGroup" unique_id=1792212238]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 152.0
+offset_right = 158.0
+offset_bottom = 183.0
+text = "Close"
