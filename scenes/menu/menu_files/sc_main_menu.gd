@@ -23,7 +23,6 @@ var tweens: Dictionary = {}
 @onready var btn_book3: BaseButton = $CanvasLayer/Book3
 
 # --- BOTÓN DE CERRAR DEL WARNING PANEL ---
-# Si tu botón dentro de WarningPanel se llama distinto (ej. "Button", "CloseButton"), cámbialo aquí:
 @onready var btn_close_warning: BaseButton = $CanvasLayer/WarningPanel/Button 
 
 func _ready() -> void:
@@ -50,12 +49,12 @@ func _ready() -> void:
 	if btn_close_volume: btn_close_volume.pressed.connect(_on_close_volume_pressed)
 	if btn_quit: btn_quit.pressed.connect(_on_quit_pressed)
 
-	# 2. Configurar LIBROS
+	# 2. Configurar LIBROS (Pasamos 'book' como parámetro al conectar)
 	var book_buttons: Array[BaseButton] = [btn_book1, btn_book2, btn_book3]
 	for book in book_buttons:
 		if book != null:
 			_setup_button_hover(book)
-			book.pressed.connect(_on_book_pressed)
+			book.pressed.connect(_on_book_pressed.bind(book))
 
 	# 3. Configurar BOTÓN CERRAR del WarningPanel
 	if btn_close_warning != null:
@@ -93,9 +92,19 @@ func _on_close_volume_pressed() -> void:
 func _on_quit_pressed() -> void:
 	get_tree().quit()
 
-func _on_book_pressed() -> void:
-	if warning_panel:
-		warning_panel.visible = true
+# --- LÓGICA DE LIBROS ---
+
+func _on_book_pressed(book: BaseButton) -> void:
+	# Verificamos qué libro se presionó según su nombre en el árbol de nodos
+	if book == btn_book1:
+		# ¡Aquí va la acción de Book1! (Ejemplo: Cargar la escena del Nivel 1)
+		print("Iniciando Nivel 1 desde Book1...")
+		# get_tree().change_scene_to_file("res://escenas/nivel1.tscn")
+		
+	elif book == btn_book2 or book == btn_book3:
+		# Solo mostramos la advertencia para Book2 y Book3
+		if warning_panel:
+			warning_panel.visible = true
 
 func _on_close_warning_pressed() -> void:
 	if warning_panel:

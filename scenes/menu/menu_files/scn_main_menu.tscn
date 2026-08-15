@@ -64,6 +64,7 @@ offset_bottom = 410.0
 text = "Arcade"
 
 [node name="SettingsGroup" type="Node2D" parent="Node2D/CanvasLayer" unique_id=1062789484]
+visible = false
 z_index = 10
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D/CanvasLayer/SettingsGroup" unique_id=1923688746]
@@ -76,11 +77,11 @@ offset_bottom = 145.0
 text = "Volume"
 
 [node name="Button2" type="Button" parent="Node2D/CanvasLayer/SettingsGroup" unique_id=389226404]
-offset_left = 552.0
-offset_top = 187.0
-offset_right = 606.0
-offset_bottom = 218.0
-text = "Audio"
+offset_left = 545.0
+offset_top = 188.0
+offset_right = 607.0
+offset_bottom = 219.0
+text = "Others"
 
 [node name="Button" type="Button" parent="Node2D/CanvasLayer/SettingsGroup" unique_id=1755057490]
 offset_left = 537.0
@@ -96,13 +97,27 @@ offset_top = 166.0
 offset_right = 516.0
 offset_bottom = 280.0
 
+[node name="ColorRect2" type="ColorRect" parent="Node2D/CanvasLayer/WarningPanel" unique_id=1284277004]
+layout_mode = 0
+offset_left = -142.0
+offset_top = -163.0
+offset_right = 497.0
+offset_bottom = 349.0
+color = Color(0, 0, 0, 0.19607843)
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/CanvasLayer/WarningPanel" unique_id=1461421842]
+layout_mode = 0
+offset_right = 368.0
+offset_bottom = 117.0
+color = Color(0.26683483, 5.0176306e-05, 0.26851147, 1)
+
 [node name="Label" type="Label" parent="Node2D/CanvasLayer/WarningPanel" unique_id=1629218082]
 layout_mode = 0
 offset_left = 40.0
 offset_top = 25.0
 offset_right = 341.0
 offset_bottom = 64.0
-text = "Finish the last book to unclock this one"
+text = "Finish the last book to uncock this one"
 
 [node name="Button" type="Button" parent="Node2D/CanvasLayer/WarningPanel" unique_id=2144231636]
 layout_mode = 0
@@ -113,10 +128,25 @@ offset_bottom = 97.0
 text = "Close"
 
 [node name="VolumeGroup" type="Panel" parent="Node2D/CanvasLayer" unique_id=1498863871]
+visible = false
 offset_left = 215.0
 offset_top = 114.0
 offset_right = 458.0
 offset_bottom = 330.0
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/CanvasLayer/VolumeGroup" unique_id=1466936842]
+layout_mode = 0
+offset_left = -216.0
+offset_top = -117.0
+offset_right = 431.0
+offset_bottom = 397.0
+color = Color(0, 0, 0, 0.19607843)
+
+[node name="ColorRect2" type="ColorRect" parent="Node2D/CanvasLayer/VolumeGroup" unique_id=68732350]
+layout_mode = 0
+offset_right = 246.0
+offset_bottom = 215.0
+color = Color(0.24442291, 4.199408e-05, 0.24581262, 1)
 
 [node name="Label" type="Label" parent="Node2D/CanvasLayer/VolumeGroup" unique_id=1789402429]
 layout_mode = 0
