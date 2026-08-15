@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://vknacdmbidox"]
 
 [ext_resource type="Texture2D" uid="uid://c82juw1rfajcx" path="res://assets/sprites/intro_scene/intro_sequence/comic/temp_panels/images.jpg" id="1_7my0a"]
-[ext_resource type="PackedScene" uid="uid://bg06nuf8rc1ml" path="res://scenes/desivinte/player/combat/melee/scenes/scn_desivinte_melee.tscn" id="2_ejo85"]
 [ext_resource type="PackedScene" uid="uid://cu1iki54e4xea" path="res://scenes/desivinte/player/combat/melee/dummy/scn_test_dummy.tscn" id="3_ejo85"]
-[ext_resource type="PackedScene" uid="uid://ft8cbhna1p36" path="res://scenes/desivinte/player/regular/TEST_ROOM/NPCDUMMYINTERACT.tscn" id="4_y00qj"]
+[ext_resource type="PackedScene" uid="uid://y28843svjv43" path="res://scenes/desivinte/player/combat/scn_desivinte_combat.tscn" id="3_y00qj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7my0a"]
 size = Vector2(6142.5, 109)
@@ -20,12 +19,9 @@ position = Vector2(3080.5, 456)
 scale = Vector2(15.91473, 0.21317823)
 texture = ExtResource("1_7my0a")
 
-[node name="ScnDesivinteMelee" parent="." unique_id=1936526618 instance=ExtResource("2_ejo85")]
-position = Vector2(35, 344)
-
 [node name="TestDummy" parent="." unique_id=615985187 instance=ExtResource("3_ejo85")]
 position = Vector2(934, 365)
 scale = Vector2(3, 3)
 
-[node name="Npcdummyinteract" parent="." unique_id=1157479243 instance=ExtResource("4_y00qj")]
-position = Vector2(551, 365)
+[node name="ScnDesivinteCombat" parent="." unique_id=1829682518 instance=ExtResource("3_y00qj")]
+position = Vector2(28, 285)

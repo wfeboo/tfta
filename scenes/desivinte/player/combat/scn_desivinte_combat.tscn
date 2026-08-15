@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://y28843svjv43"]
+
+[ext_resource type="Script" uid="uid://mo2do5dxaue" path="res://scenes/desivinte/player/combat/sc_desivinte_combat.gd" id="1_ghwej"]
+
+[node name="ScnDesivinteCombat" type="Node2D" unique_id=1829682518]
+script = ExtResource("1_ghwej")

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b0jwta8pm2ydu"]
+
+[ext_resource type="Script" uid="uid://cftv4ip73rpwi" path="res://scenes/desivinte/player/combat/airborne/scenes/scn_desivinte_airborne.gd" id="1_mouhi"]
+[ext_resource type="Texture2D" uid="uid://bti8g6dkq580f" path="res://assets/sprites/intro_scene/intro_sequence/first_scene/M-godarti-STOCK-5.jpg" id="2_6o33g"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v4e7m"]
+radius = 20.0
+height = 48.0
+
+[node name="ScnDesivinteAirborne" type="CharacterBody2D" unique_id=1928459965]
+collision_layer = 2
+collision_mask = 17
+script = ExtResource("1_mouhi")
+
+[node name="NormalHitbox" type="CollisionShape2D" parent="." unique_id=1337076932]
+shape = SubResource("CapsuleShape2D_v4e7m")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=519095375]
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("2_6o33g")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1953273257]
+position = Vector2(153, -67)
