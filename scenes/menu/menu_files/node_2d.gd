@@ -10,20 +10,29 @@ var tweens: Dictionary = {}
 @onready var settings_group: Node = $CanvasLayer/SettingsGroup
 @onready var volume_group: Node = $CanvasLayer/VolumeGroup
 @onready var warning_panel: Node = $CanvasLayer/WarningPanel
+@onready var collect_warning: Node = $"CanvasLayer/Collect-Warning"
+@onready var controls_panel: Node = $"CanvasLayer/Controls-panel"
 
-# --- REFERENCIAS A BOTONES DE AJUSTES ---
+# --- REFERENCIAS A BOTONES PRINCIPALES ---
 @onready var btn_settings: BaseButton = $CanvasLayer/Settings
-@onready var btn_volume: BaseButton = $CanvasLayer/SettingsGroup/Volume
-@onready var btn_close_volume: BaseButton = $CanvasLayer/VolumeGroup/Button2
 @onready var btn_quit: BaseButton = $CanvasLayer/QuitGame
+@onready var btn_collectionables: BaseButton = $CanvasLayer/Collectionables
+@onready var btn_arcade: BaseButton = $CanvasLayer/Arcade
+
+# --- REFERENCIAS DENTRO DEL SUBMENÚ SETTINGS ---
+@onready var btn_volume: BaseButton = $CanvasLayer/SettingsGroup/Volume
+@onready var btn_controls: BaseButton = $CanvasLayer/SettingsGroup/Button # Cambia a Button2 si este no es el de controles
 
 # --- REFERENCIAS A LIBROS ---
 @onready var btn_book1: BaseButton = $CanvasLayer/Book1
 @onready var btn_book2: BaseButton = $CanvasLayer/Book2
 @onready var btn_book3: BaseButton = $CanvasLayer/Book3
 
-# --- BOTÓN DE CERRAR DEL WARNING PANEL ---
+# --- BOTONES DE CERRAR PANELES ---
+@onready var btn_close_volume: BaseButton = $CanvasLayer/VolumeGroup/Button2
 @onready var btn_close_warning: BaseButton = $CanvasLayer/WarningPanel/Button 
+@onready var btn_close_collect_warning: BaseButton = $"CanvasLayer/Collect-Warning/Button"
+@onready var btn_close_controls: BaseButton = $"CanvasLayer/Controls-panel/Button"
 
 func _ready() -> void:
 	await get_tree().process_frame
@@ -32,34 +41,62 @@ func _ready() -> void:
 	_set_mouse_ignore(settings_group)
 	_set_mouse_ignore(volume_group)
 	_set_mouse_ignore(warning_panel)
+	_set_mouse_ignore(collect_warning)
+	_set_mouse_ignore(controls_panel)
+
+	# Asegurar que el botón de cerrar reciba clics a pesar del MOUSE_FILTER_IGNORE de su panel padre
+	if btn_close_controls:
+		btn_close_controls.mouse_filter = Control.MOUSE_FILTER_STOP
 
 	# Estado inicial: Paneles ocultos
 	if settings_group: settings_group.visible = false
 	if volume_group: volume_group.visible = false
 	if warning_panel: warning_panel.visible = false
+	if collect_warning: collect_warning.visible = false
+	if controls_panel: controls_panel.visible = false
 
-	# 1. Configurar botones del MENÚ DE AJUSTES
-	var menu_buttons: Array[BaseButton] = [btn_settings, btn_volume, btn_close_volume, btn_quit]
+	# 1. Configurar botones del MENÚ DE AJUSTES Y NAVEGACIÓN
+	var menu_buttons: Array[BaseButton] = [
+		btn_settings, 
+		btn_volume, 
+		btn_controls,
+		btn_close_volume, 
+		btn_quit, 
+		btn_collectionables, 
+		btn_arcade
+	]
+	
 	for btn in menu_buttons:
 		if btn != null:
 			_setup_button_hover(btn)
 
 	if btn_settings: btn_settings.pressed.connect(_on_settings_pressed)
 	if btn_volume: btn_volume.pressed.connect(_on_volume_pressed)
+	if btn_controls: btn_controls.pressed.connect(_on_controls_pressed)
 	if btn_close_volume: btn_close_volume.pressed.connect(_on_close_volume_pressed)
 	if btn_quit: btn_quit.pressed.connect(_on_quit_pressed)
+	if btn_collectionables: btn_collectionables.pressed.connect(_on_collect_warning_toggle)
+	if btn_arcade: btn_arcade.pressed.connect(_on_collect_warning_toggle)
 
-	# 2. Configurar LIBROS (Pasamos 'book' como parámetro al conectar)
+	# 2. Configurar LIBROS
 	var book_buttons: Array[BaseButton] = [btn_book1, btn_book2, btn_book3]
 	for book in book_buttons:
 		if book != null:
 			_setup_button_hover(book)
 			book.pressed.connect(_on_book_pressed.bind(book))
 
-	# 3. Configurar BOTÓN CERRAR del WarningPanel
+	# 3. Configurar BOTONES DE CERRAR PANELES
 	if btn_close_warning != null:
 		_setup_button_hover(btn_close_warning)
 		btn_close_warning.pressed.connect(_on_close_warning_pressed)
+
+	if btn_close_collect_warning != null:
+		_setup_button_hover(btn_close_collect_warning)
+		btn_close_collect_warning.pressed.connect(_on_close_collect_warning_pressed)
+
+	if btn_close_controls != null:
+		_setup_button_hover(btn_close_controls)
+		btn_close_controls.pressed.connect(_on_close_controls_pressed)
 
 # --- AUXILIARES ---
 
@@ -78,31 +115,51 @@ func _setup_button_hover(btn: BaseButton) -> void:
 func _on_settings_pressed() -> void:
 	if settings_group:
 		settings_group.visible = !settings_group.visible
-		if not settings_group.visible and volume_group:
-			volume_group.visible = false
+		if not settings_group.visible:
+			if volume_group: volume_group.visible = false
+			if controls_panel: controls_panel.visible = false
 
 func _on_volume_pressed() -> void:
 	if volume_group:
 		volume_group.visible = !volume_group.visible
+	if controls_panel:
+		controls_panel.visible = false
 
 func _on_close_volume_pressed() -> void:
 	if volume_group:
 		volume_group.visible = false
 
+func _on_controls_pressed() -> void:
+	if controls_panel:
+		controls_panel.visible = !controls_panel.visible
+	if volume_group:
+		volume_group.visible = false
+
+func _on_close_controls_pressed() -> void:
+	if controls_panel:
+		controls_panel.visible = false
+
 func _on_quit_pressed() -> void:
 	get_tree().quit()
+
+# --- LÓGICA DE COLLECT-WARNING ---
+
+func _on_collect_warning_toggle() -> void:
+	if collect_warning:
+		collect_warning.visible = !collect_warning.visible
+
+func _on_close_collect_warning_pressed() -> void:
+	if collect_warning:
+		collect_warning.visible = false
 
 # --- LÓGICA DE LIBROS ---
 
 func _on_book_pressed(book: BaseButton) -> void:
-	# Verificamos qué libro se presionó según su nombre en el árbol de nodos
 	if book == btn_book1:
-		# ¡Aquí va la acción de Book1! (Ejemplo: Cargar la escena del Nivel 1)
 		print("Iniciando Nivel 1 desde Book1...")
 		# get_tree().change_scene_to_file("res://escenas/nivel1.tscn")
 		
 	elif book == btn_book2 or book == btn_book3:
-		# Solo mostramos la advertencia para Book2 y Book3
 		if warning_panel:
 			warning_panel.visible = true
 

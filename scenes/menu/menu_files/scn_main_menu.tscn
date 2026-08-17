@@ -185,3 +185,80 @@ offset_top = 152.0
 offset_right = 158.0
 offset_bottom = 183.0
 text = "Close"
+
+[node name="Collect-Warning" type="Panel" parent="Node2D/CanvasLayer" unique_id=2066631335]
+visible = false
+offset_left = 143.0
+offset_top = 167.0
+offset_right = 515.0
+offset_bottom = 283.0
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/CanvasLayer/Collect-Warning" unique_id=712986267]
+layout_mode = 0
+offset_left = -143.0
+offset_top = -167.0
+offset_right = 496.0
+offset_bottom = 347.0
+color = Color(0, 0, 0, 0.19607843)
+
+[node name="ColorRect2" type="ColorRect" parent="Node2D/CanvasLayer/Collect-Warning" unique_id=897243364]
+layout_mode = 0
+offset_right = 373.0
+offset_bottom = 117.0
+color = Color(0.38323665, 0.000103312654, 0.38466245, 1)
+
+[node name="Label" type="Label" parent="Node2D/CanvasLayer/Collect-Warning" unique_id=2056376975]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 12.0
+offset_right = 352.0
+offset_bottom = 61.0
+text = "You can't access this part yet
+Finish Desvinte's book to unlock"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Node2D/CanvasLayer/Collect-Warning" unique_id=534631643]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 74.0
+offset_right = 227.0
+offset_bottom = 105.0
+text = "Close"
+
+[node name="Controls-panel" type="Panel" parent="Node2D/CanvasLayer" unique_id=1657719599]
+offset_left = 210.0
+offset_top = 196.0
+offset_right = 455.0
+offset_bottom = 297.0
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/CanvasLayer/Controls-panel" unique_id=836215911]
+layout_mode = 0
+offset_left = -213.0
+offset_top = -198.0
+offset_right = 430.0
+offset_bottom = 326.0
+color = Color(0, 0, 0, 0.49019608)
+
+[node name="ColorRect2" type="ColorRect" parent="Node2D/CanvasLayer/Controls-panel" unique_id=829354891]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 247.0
+offset_bottom = 103.0
+color = Color(0.49215633, 0.00017404079, 0.49326962, 1)
+
+[node name="Label" type="Label" parent="Node2D/CanvasLayer/Controls-panel" unique_id=1941375848]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 7.0
+offset_right = 216.0
+offset_bottom = 30.0
+text = "Not available in Demo"
+
+[node name="Button" type="Button" parent="Node2D/CanvasLayer/Controls-panel" unique_id=215578588]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 55.0
+offset_right = 160.0
+offset_bottom = 88.0
+text = "Close"
