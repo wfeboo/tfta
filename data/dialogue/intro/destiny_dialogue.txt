@@ -34,3 +34,4 @@ DTNY-0030,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0005,The assistance of a
 DTNY-0031,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0005,There is only one thing I need from you…,None,
 DTNY-0032,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0006,,None,roots_cover_screen
 DTNY-0033,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0006,CHANGE,None,title_drop
+DTNY-0034,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0007,Characatunga,None, 

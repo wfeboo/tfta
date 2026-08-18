@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://iqqa56ctilo4" path="res://assets/sprites/intro_scene/intro_sequence/welcome/crowdpeople_a.png" id="2_e5m8h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kituy"]
+size = Vector2(115, 84)
 
 [node name="Npcdummyinteract" type="Area2D" unique_id=1157479243]
 collision_layer = 4
@@ -11,12 +12,19 @@ collision_mask = 2
 script = ExtResource("1_ud74m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=24944270]
+position = Vector2(46.5, 42)
 shape = SubResource("RectangleShape2D_kituy")
 
 [node name="PromptLabel" type="Label" parent="." unique_id=919261672]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Presiona E"
+offset_left = -193.0
+offset_top = -6.0
+offset_right = 19.0
+offset_bottom = 17.0
+text = "Presiona E para interactuar"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1418893765]
+position = Vector2(51, 45)
 texture = ExtResource("2_e5m8h")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
