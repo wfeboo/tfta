@@ -1,17 +1,21 @@
+# Controlador de movimiento libre (2D) para personaje en vuelo / combate.
+#
+# Administra la velocidad horizontal y vertical utilizando una máquina de estados 
+# basada en enums. Incluye modo "Focus" (Shift) para reducir la velocidad y permitir 
+# un control de precisión, además de aceleración suave con 'move_toward'.
 extends CharacterBody2D
 
-# Configuración de velocidades según la acción o estado
-const BRAKE_SPEED = 150.0
-const BASE_SPEED_X = 280.0
-const BASE_SPEED_Y = 220.0
-const FORWARD_SPEED = 380.0
-# Ahora es menor porque cuando vuela, shift disminuye la velocidad del jugador (focus mode)
-const SHIFT_SPEED = 180.0
+# Configuración de velocidades según la acción o estado actual del jugador.
+const BRAKE_SPEED: float = 150.0
+const BASE_SPEED_X: float = 280.0
+const BASE_SPEED_Y: float = 220.0
+const FORWARD_SPEED: float = 380.0
+const SHIFT_SPEED: float = 180.0
 
-# Bandera para saber si el modo "Focus" (Shift) está activo
-var is_focused = false
+# Bandera que indica si el modo de precisión / Focus (tecla Shift) está activo.
+var is_focused: bool = false
 
-# Estados relacionados con el movimiento horizontal
+# Estados posibles para el movimiento horizontal.
 enum HorizontalState {
 	BRAKING,
 	BASE,
@@ -19,27 +23,28 @@ enum HorizontalState {
 	FOCUSED
 }
 
-# Estados relacionados con el movimiento vertical
+# Estados posibles para el movimiento vertical.
 enum VerticalState {
 	NEUTRAL,
 	UP,
 	DOWN
 }
 
-# Estado actual del personaje (por defecto empieza en BASE)
+# Estado actual del personaje en cada eje.
 var horizontal_state: HorizontalState = HorizontalState.BASE
 var vertical_state: VerticalState = VerticalState.NEUTRAL
 
+
 func _physics_process(delta: float) -> void:
-	# Obtiene las entradas del jugador (-1, 0, o 1 en cada eje)
-	var direction_x := Input.get_axis("move_left", "move_right")
-	var direction_y := Input.get_axis("move_up", "move_down")
+	# Obtener la entrada vectorial del jugador (-1.0, 0.0, o 1.0)
+	var direction_x: float = Input.get_axis("move_left", "move_right")
+	var direction_y: float = Input.get_axis("move_up", "move_down")
 	
-	# Revisa si la tecla de modificación (ej. Shift) está presionada
+	# Detectar si la tecla de modificación (Focus) está presionada
 	is_focused = Input.is_action_pressed("modifier")
 	var target_speed_x: float = BASE_SPEED_X
 	
-	# Evalúa el estado horizontal y asigna la velocidad objetivo en X
+	# Determinar el estado horizontal y asignar la velocidad objetivo en X
 	if is_focused:
 		horizontal_state = HorizontalState.FOCUSED
 		target_speed_x = SHIFT_SPEED
@@ -53,23 +58,20 @@ func _physics_process(delta: float) -> void:
 		horizontal_state = HorizontalState.BASE
 		target_speed_x = BASE_SPEED_X
 
-	# Aplica una aceleración suave (suavizado de movimiento) hacia la velocidad objetivo en X
+	# Aplicar interpolación suave hacia la velocidad objetivo en X
 	velocity.x = move_toward(velocity.x, target_speed_x, 1000.0 * delta)
 	
-	# Determina la velocidad vertical dependiendo de si está en modo "Focus"
-	var current_speed_y = SHIFT_SPEED if is_focused else BASE_SPEED_Y
+	# Ajustar la velocidad del eje Y según el estado del modo Focus
+	var current_speed_y: float = SHIFT_SPEED if is_focused else BASE_SPEED_Y
 	velocity.y = direction_y * current_speed_y
 
-	# Cambia el estado a UP o DOWN si hay movimiento vertical
-	# (Nota: Esto sobreescribirá los estados FOCUSED, BRAKING o FORWARD en el enum)
+	# Actualizar el estado vertical
 	if direction_y < 0:
 		vertical_state = VerticalState.UP
-
 	elif direction_y > 0:
 		vertical_state = VerticalState.DOWN
-
 	else:
 		vertical_state = VerticalState.NEUTRAL
 
-	# Ejecuta la física de movimiento del motor Godot
+	# Ejecutar el movimiento físico del personaje
 	move_and_slide()

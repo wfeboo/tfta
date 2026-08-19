@@ -5,8 +5,7 @@ DTNY-0002,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0000,Can you hear me?,No
 DTNY-0003,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0000,Are you there?,None,
 DTNY-0004,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0000,...,None,roots_start
 DTNY-0005,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0001,I can sense you.,None,
-DTNY-0006,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0001,"I can feel you reading this.
-",None,
+DTNY-0006,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0001,"I can feel you reading this.",None,
 DTNY-0007,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0002,,None,bar_blinks
 DTNY-0008,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0002,Can you hear them? ,None,
 DTNY-0009,First Intro,Intro Destiny,Destiny,INTRO-DSTNY-0002,They're...,None,

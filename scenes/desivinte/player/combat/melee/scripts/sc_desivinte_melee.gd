@@ -1,13 +1,18 @@
+# Controlador de física y combate para el personaje en modo terrestre (Melee).
+#
+# Administra la física de plataformas (gravedad, salto y doble salto), el control
+# progresivo de velocidad horizontal según la dirección/sprint, la gestión de
+# estados animados y la ejecución de ataques basados en un kit de habilidades.
 extends CharacterBody2D
 
-# Configuración de velocidades de movimiento y fuerza de salto
-const BRAKE_SPEED = 150.0
-const BASE_SPEED = 280.0
-const FORWARD_SPEED = 380.0
-const SHIFT_SPEED = 520.0
-const JUMP_VELOCITY = -400.0
+# Configuración de constantes para físicas de movimiento y salto.
+const BRAKE_SPEED: float = 150.0
+const BASE_SPEED: float = 280.0
+const FORWARD_SPEED: float = 380.0
+const SHIFT_SPEED: float = 520.0
+const JUMP_VELOCITY: float = -400.0
 
-# Enum que define los estados posibles en el modo terrestre/Melee
+# Estados de animación/físicas posibles para el modo terrestre.
 enum MeleeStates {
 	BRAKING,
 	BASE,
@@ -17,15 +22,15 @@ enum MeleeStates {
 	FALL
 }
 
-# Control para permitir el doble salto
+# Control para habilitar la mecánica de doble salto en el aire.
 var can_doublejump: bool = false
 
-# Estado y velocidad actual del personaje
+# Estado y velocidad horizontal actual del personaje.
 var current_state: MeleeStates = MeleeStates.BASE
 var current_speed: float = BASE_SPEED
 
-# Lista de los 4 slots de ataque equipados ("" indica slot vacío)
-# El slot 0 contiene el ataque Jab base por defecto
+# Registro de los 4 slots de ataque equipados (guarda los ID de los ataques).
+# Por defecto incluye el ataque Jab base en el primer slot.
 var equipped_kit: Array[String] = [
 	"DESIV_ATK_MELEE_JAB",
 	"",
@@ -33,80 +38,58 @@ var equipped_kit: Array[String] = [
 	""
 ]
 
-# Referencia al área encargada de registrar los golpes
+# Referencia a la hitbox de ataque instanciada dinámicamente.
 var attack_hitbox: Area2D
 
 
 func _ready() -> void:
-	# Precarga e instanciación de la hitbox de ataque como nodo hijo
-	var attack_hitbox_scene = preload(
+	# Instanciar y configurar el área de colisión (hitbox) para los ataques
+	var attack_hitbox_scene: PackedScene = preload(
 		"res://scenes/desivinte/player/combat/melee/scenes/scn_attack_hitbox.tscn"
 	)
 
-	attack_hitbox = attack_hitbox_scene.instantiate()
+	attack_hitbox = attack_hitbox_scene.instantiate() as Area2D
 	add_child(attack_hitbox)
 
-	# Ubica la hitbox ligeramente hacia adelante del personaje
-	attack_hitbox.position = Vector2(30, 0)
+	# Posicionar la hitbox desplazada horizontalmente con respecto al personaje
+	attack_hitbox.position = Vector2(30.0, 0.0)
 
 
 func _physics_process(delta: float) -> void:
-
-	# Aplica la gravedad si está en el aire o reinicia la habilidad de doble salto si está en el suelo
+	# 1. Aplicación de gravedad y reinicio de salto
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	else:
 		can_doublejump = false
 
-
-	# Maneja el primer salto desde el suelo o el segundo salto en el aire
+	# 2. Gestión de salto principal y doble salto
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		can_doublejump = true
 
-	elif Input.is_action_just_pressed("jump") \
-	and not is_on_floor() \
-	and can_doublejump:
+	elif Input.is_action_just_pressed("jump") and not is_on_floor() and can_doublejump:
 		velocity.y = JUMP_VELOCITY
 		can_doublejump = false
 
-
-	# Calcula la velocidad horizontal progresiva según la tecla de dirección o modificador presionada
+	# 3. Control de aceleración y velocidad horizontal
 	if Input.is_action_pressed("move_left"):
-		current_speed = move_toward(
-			current_speed,
-			BRAKE_SPEED,
-			500.0 * delta
-		)
+		current_speed = move_toward(current_speed, BRAKE_SPEED, 500.0 * delta)
 
 	elif Input.is_action_pressed("modifier"):
-		current_speed = move_toward(
-			current_speed,
-			SHIFT_SPEED,
-			500.0 * delta
-		)
+		current_speed = move_toward(current_speed, SHIFT_SPEED, 500.0 * delta)
 
 	elif Input.is_action_pressed("move_right"):
-		current_speed = move_toward(
-			current_speed,
-			FORWARD_SPEED,
-			500.0 * delta
-		)
+		current_speed = move_toward(current_speed, FORWARD_SPEED, 500.0 * delta)
 
 	elif Input.is_action_pressed("move_up"):
-		current_speed = 0
+		current_speed = 0.0
 
 	else:
-		current_speed = move_toward(
-			current_speed,
-			BASE_SPEED,
-			500.0 * delta
-		)
+		current_speed = move_toward(current_speed, BASE_SPEED, 500.0 * delta)
 
 	velocity.x = current_speed
 
-
-	# Detecta los botones de ataque e intenta ejecutar la habilidad asignada al slot correspondiente
+	# 4. Escuchar entradas de ataque (Kit de habilidades)
 	if Input.is_action_just_pressed("kit_1_action"):
 		_try_attack(0)
 
@@ -119,8 +102,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("kit_4_action"):
 		pass
 
-
-	# Actualiza el estado del personaje según la velocidad horizontal o el estado vertical (salto/caída)
+	# 5. Actualización de la máquina de estados según velocidad y física vertical
 	if is_on_floor():
 		if abs(velocity.x) <= BRAKE_SPEED:
 			current_state = MeleeStates.BRAKING
@@ -140,13 +122,18 @@ func _physics_process(delta: float) -> void:
 	else:
 		current_state = MeleeStates.FALL
 
-
-	# Ejecuta la física de movimiento del motor Godot
+	# 6. Ejecutar movimiento físico en el motor Godot
 	move_and_slide()
 
 
-# Valida si existe un ataque configurado en el slot seleccionado y activa la hitbox con sus datos
+# Valida si existe un ataque asignado en el slot del kit y activa la hitbox con su recurso.
+#
+# Parámetros:
+#   - slot: Índice del arreglo 'equipped_kit' a consultar (0 a 3).
 func _try_attack(slot: int) -> void:
+	if slot < 0 or slot >= equipped_kit.size():
+		return
+
 	var attack_id: String = equipped_kit[slot]
 
 	if attack_id.is_empty():
@@ -155,7 +142,8 @@ func _try_attack(slot: int) -> void:
 	var attack_data: AttackData = AttackDatabase.get_attack(attack_id)
 
 	if attack_data == null:
-		push_warning("No se encontró el ataque: " + attack_id)
+		push_warning("MeleePlayer: No se encontró el recurso de ataque para el ID: " + attack_id)
 		return
 
-	attack_hitbox.activate(attack_data)
+	if attack_hitbox and attack_hitbox.has_method("activate"):
+		attack_hitbox.activate(attack_data)

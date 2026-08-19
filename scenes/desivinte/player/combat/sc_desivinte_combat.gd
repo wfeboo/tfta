@@ -1,53 +1,68 @@
+# Administrador de estados y modos de combate del personaje (Combat Manager).
+#
+# Alterna dinámicamente entre las jugabilidades Melee (cuerpo a cuerpo) y 
+# Airborne (aéreo), destruyendo e instanciando la escena correspondiente 
+# mientras preserva la posición global exacta en el escenario.
 extends Node2D
-# Contenedor/manager de combate. Decide qué modo de Desivinte está
-# activo (Melee o Airborne) y maneja el cambio entre ambos.
 
-# Enumeración para definir los dos modos de combate posibles
-enum CombatMode { MELEE, AIRBORNE }
+# Modos de combate disponibles en el sistema.
+enum CombatMode {
+	MELEE,
+	AIRBORNE
+}
 
-# Precarga de las escenas para cada modo de combate
-const MELEE_SCENE = preload("res://scenes/desivinte/player/combat/melee/scenes/scn_desivinte_melee.tscn")
-const AIRBORNE_SCENE = preload("res://scenes/desivinte/player/combat/airborne/scenes/scn_desivinte_airborne.tscn")
+# Precarga de recursos de escena para evitar tirones de rendimiento (stuttering) al instanciar.
+const MELEE_SCENE: PackedScene = preload("res://scenes/desivinte/player/combat/melee/scenes/scn_desivinte_melee.tscn")
+const AIRBORNE_SCENE: PackedScene = preload("res://scenes/desivinte/player/combat/airborne/scenes/scn_desivinte_airborne.tscn")
 
-# Estado actual del modo de combate (inicia en MELEE por defecto)
+# Modo de combate activo actualmente (por defecto inicia en Melee).
 var current_mode: CombatMode = CombatMode.MELEE
 
-# Referencia al nodo/personaje activo actualmente en pantalla
+# Referencia a la instancia activa del personaje en la escena.
 var current_instance: CharacterBody2D = null
 
+
 func _ready() -> void:
-	# Al iniciar el nodo, instancia el modo MELEE en la posición inicial (0,0)
+	# Inicializar la entidad en el modo por defecto en el origen
 	_spawn_mode(CombatMode.MELEE, Vector2.ZERO)
 
+
 func _process(_delta: float) -> void:
-	# Detecta si se presionó el botón asignado a "kit_4_action" para alternar el modo
+	# Escuchar la entrada del jugador para alternar el kit/modo de combate
 	if Input.is_action_just_pressed("kit_4_action"):
 		_switch_mode()
 
-# Maneja la lógica para cambiar de un modo a otro manteniendo la posición actual
+
+# Cambia el modo de combate activo conservando la posición global del personaje.
 func _switch_mode() -> void:
-	# Guarda la posición global del personaje actual antes de eliminarlo
+	if current_instance == null:
+		return
+
+	# Registrar la posición global antes de reemplazar el nodo
 	var last_position: Vector2 = current_instance.global_position
 	
-	# Determina el nuevo modo (si era MELEE pasa a AIRBORNE y viceversa)
-	var new_mode = CombatMode.AIRBORNE if current_mode == CombatMode.MELEE else CombatMode.MELEE
+	# Determinar el modo opuesto al actual
+	var new_mode: CombatMode = CombatMode.AIRBORNE if current_mode == CombatMode.MELEE else CombatMode.MELEE
 	
-	# Instancia el nuevo modo en la última posición guardada
+	# Instanciar el nuevo modo en la posición registrada
 	_spawn_mode(new_mode, last_position)
 
-# Destruye la instancia actual e instancia la escena correspondiente al modo indicado
+
+# Reemplaza la instancia actual por la escena correspondiente al nuevo modo.
+#
+# Parámetros:
+#   - mode: Enumeración CombatMode indicando la escena a instanciar.
+#   - spawn_position: Posición Vector2 donde se ubicará el nuevo personaje.
 func _spawn_mode(mode: CombatMode, spawn_position: Vector2) -> void:
-	# Si ya existe un personaje en escena, se marca para eliminación
+	# Liberar de la memoria el nodo anterior si existe
 	if current_instance != null:
 		current_instance.queue_free()
 
-	# Selecciona la escena a utilizar según el modo
-	var scene_to_use = MELEE_SCENE if mode == CombatMode.MELEE else AIRBORNE_SCENE
+	# Seleccionar y crear la instancia correspondiente
+	var scene_to_use: PackedScene = MELEE_SCENE if mode == CombatMode.MELEE else AIRBORNE_SCENE
+	current_instance = scene_to_use.instantiate() as CharacterBody2D
 	
-	# Instancia y añade la nueva escena como hijo de este nodo
-	current_instance = scene_to_use.instantiate()
+	# Agregar al árbol de nodos y posicionar
 	add_child(current_instance)
-	
-	# Asigna la posición guardada al nuevo personaje e actualiza el modo activo
 	current_instance.global_position = spawn_position
 	current_mode = mode

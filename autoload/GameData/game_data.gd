@@ -1,40 +1,49 @@
-extends Node
 # Autoload: game_data.gd
-# Maneja tanto datos de sesión (para RAM) como datos de progreso persistente (disco)
+# Gestor de datos globales y persisencia de partida.
+#
+# Administra tanto las variables de sesión en memoria RAM como los datos
+# de progreso guardados en disco duro utilizando el sistema ConfigFile de Godot.
+extends Node
 
-# --- Datos de Progreso (EN DISCO) ---
-var intro_seen: bool = false
-# Ruta especial de Godot para guardados del usuario (no es parte del proyecto,
-# es una carpeta del sistema operativo pensada para esto)
-
+# Ruta estándar de usuario donde se almacena el archivo de guardado en el sistema.
 const SAVE_PATH: String = "user://savegame.cfg"
 
+# --- Datos de Progreso (Persistentes) ---
+# Indica si el jugador ya ha visto la cinemática o secuencia de introducción.
+var intro_seen: bool = false
+
+
 func _ready() -> void:
-	# Apenas arranca el autoload
-	# Intentamos buscar el progreso guardado
 	load_game()
-	
+
+
+# Guarda el estado actual de las variables de progreso en un archivo en disco.
 func save_game() -> void:
-	# ConfigFile es como una libreta organizada en secciones y claves
 	var config := ConfigFile.new()
-	# Sección "progress", clave "intro_seen", con el valor actual de dicha variable
-	config.set_value("progress","intro_seen",intro_seen)
-	# Escribimos la libreta al archivo real en disco
-	config.save(SAVE_PATH)
 	
+	# Guardar valores dentro de la sección "progress"
+	config.set_value("progress", "intro_seen", intro_seen)
+	
+	# Escribir los datos en la ruta asignada
+	var error := config.save(SAVE_PATH)
+	if error != OK:
+		push_error("GameData: No se pudo guardar el archivo en: " + SAVE_PATH)
+
+
+# Carga los datos de progreso desde el disco duro si el archivo existe.
 func load_game() -> void:
 	var config := ConfigFile.new()
-	# Se intenta abrir el archivo. Si este no existe (porque es la primera vez que se abre)
-	# load dará error y nos dejaremos los valores por defecto
 	var error := config.load(SAVE_PATH)
+	
+	# Si no existe el archivo de guardado o hay un error, se conservan los valores por defecto
 	if error != OK:
-		# No hay archivo de guardado así que no hay nada que cargar
 		return
-		# get_value(seccion, clave, valor_por_defecto)
-		# El valor por defecto se usa si esa clave no existe aún
-	intro_seen = config.get_value("progress","intro_seen",false)
 
+	# Obtener los valores (con un valor de respaldo por si la clave no existe)
+	intro_seen = config.get_value("progress", "intro_seen", false)
+
+
+# Marca la introducción como completada y guarda los cambios inmediatamente en disco.
 func mark_intro_seen() -> void:
-	# Función para cuando termine la cinemática
 	intro_seen = true
 	save_game()
