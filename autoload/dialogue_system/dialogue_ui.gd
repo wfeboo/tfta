@@ -28,11 +28,11 @@ func show_dialogue(conversation_id: String, caller: Node) -> void:
 	$Control/DialogueBox.visible = true
 	dialogue_active = true
 
-	var speaker_box: Control = $Control/SpeakerBox
-	var dialogue_box: Control = $Control/DialogueBox
-	var speaker_label: Label = $Control/SpeakerBox/SpeakerLabel
-	var dialogue_label: Label = $Control/DialogueBox/DialogueLabel
-	var progress_indicate: Control = $Control/DialogueBox/ProgressIndicate
+	var speaker_box := $Control/SpeakerBox
+	var dialogue_box := $Control/DialogueBox
+	var speaker_label := $Control/SpeakerBox/SpeakerLabel
+	var dialogue_label := $Control/DialogueBox/DialogueLabel
+	var progress_indicate := $Control/DialogueBox/ProgressIndicate
 
 	for line: Dictionary in conversation:
 		# Mostrar u ocultar la caja del personaje según si hay un nombre asignado

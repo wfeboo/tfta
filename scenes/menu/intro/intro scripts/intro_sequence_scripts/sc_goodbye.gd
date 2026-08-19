@@ -36,11 +36,11 @@ func _ready() -> void:
 # Procesa la conversación INTRO-03, animando el texto y ejecutando triggers visuales.
 func show_dialogue() -> void:
 	var conversation: Array = DialogueDatabase.get_conversation("INTRO-03")
-	var progress_indicate: Control = $UILayer/Control/DialogueBox/ProgressIndicate
-	var speaker_box: Control = $UILayer/Control/SpeakerBox
-	var dialogue_box: Control = $UILayer/Control/DialogueBox
-	var speaker_label: Label = $UILayer/Control/SpeakerBox/SpeakerLabel
-	var dialogue_label: Label = $UILayer/Control/DialogueBox/DialogueLabel
+	var progress_indicate := $UILayer/Control/DialogueBox/ProgressIndicate
+	var speaker_box := $UILayer/Control/SpeakerBox
+	var dialogue_box := $UILayer/Control/DialogueBox
+	var speaker_label := $UILayer/Control/SpeakerBox/SpeakerLabel
+	var dialogue_label := $UILayer/Control/DialogueBox/DialogueLabel
 
 	for line: Dictionary in conversation:
 		progress_indicate.visible = false

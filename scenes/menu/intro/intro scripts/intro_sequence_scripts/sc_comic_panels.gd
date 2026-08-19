@@ -51,11 +51,11 @@ func show_panel(panel_index: int) -> void:
 # Carga la conversación y procesa la animación de texto, triggers y tiempos de espera.
 func show_dialogue() -> void:
 	var conversation: Array = DialogueDatabase.get_conversation("INTRO-02")
-	var progress_indicate: Control = $UILayer/Control/DialogueBox/ProgressIndicate
-	var speaker_box: Control = $UILayer/Control/SpeakerBox
-	var dialogue_box: Control = $UILayer/Control/DialogueBox
-	var speaker_label: Label = $UILayer/Control/SpeakerBox/SpeakerLabel
-	var dialogue_label: Label = $UILayer/Control/DialogueBox/DialogueLabel
+	var progress_indicate := $UILayer/Control/DialogueBox/ProgressIndicate
+	var speaker_box := $UILayer/Control/SpeakerBox
+	var dialogue_box := $UILayer/Control/DialogueBox
+	var speaker_label := $UILayer/Control/SpeakerBox/SpeakerLabel
+	var dialogue_label := $UILayer/Control/DialogueBox/DialogueLabel
 
 	for line: Dictionary in conversation:
 		progress_indicate.visible = false

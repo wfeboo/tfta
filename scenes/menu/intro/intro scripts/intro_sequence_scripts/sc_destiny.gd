@@ -57,8 +57,9 @@ func _ready() -> void:
 #   - conversation_id: ID String de la conversación a solicitar a DialogueDatabase.
 func show_dialogue_manual(conversation_id: String) -> void:
 	var conversation: Array = DialogueDatabase.get_conversation(conversation_id)
-	var dialogue_label: Label = $UILayer/Control/DialogueBox/DialogueLabel
-	var progress_indicate: Control = $UILayer/Control/DialogueBox/ProgressIndicate
+	# Corregido: Tipo de variable ajustado a RichTextLabel
+	var dialogue_label := $UILayer/Control/DialogueBox/DialogueLabel
+	var progress_indicate := $UILayer/Control/DialogueBox/ProgressIndicate
 
 	# Validación defensiva por si la ID no existe en la base de datos
 	if conversation.is_empty():
