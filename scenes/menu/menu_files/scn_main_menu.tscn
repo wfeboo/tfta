@@ -17,55 +17,209 @@ offset_top = 145.0
 offset_right = 260.0
 offset_bottom = 284.0
 theme_override_colors/font_color = Color(0.89257044, 0.8674368, 0.8737566, 1)
-text = "Desvinte"
+
+[node name="ColorRect4" type="ColorRect" parent="Node2D/CanvasLayer/Book1" unique_id=478919657]
+layout_mode = 0
+offset_right = 83.0
+offset_bottom = 139.0
+mouse_filter = 2
+color = Color(0.24948934, 2.5870278e-05, 0.23241907, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Node2D/CanvasLayer/Book1" unique_id=1659768748]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 78.0
+offset_bottom = 136.0
+mouse_filter = 2
+color = Color(0.36288688, 5.6481436e-05, 0.34044635, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Node2D/CanvasLayer/Book1" unique_id=1434625031]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 47.0
+offset_right = 84.0
+offset_bottom = 87.0
+mouse_filter = 2
+color = Color(0.30211517, 0.056484707, 0.12500274, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/CanvasLayer/Book1" unique_id=871232598]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 50.0
+offset_right = 80.0
+offset_bottom = 83.0
+mouse_filter = 2
+color = Color(0.39490694, 0.08748708, 0.17351747, 1)
+
+[node name="Label" type="Label" parent="Node2D/CanvasLayer/Book1" unique_id=1486353560]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 53.0
+offset_right = 75.0
+offset_bottom = 76.0
+text = "Desivinte"
 
 [node name="Book2" type="Button" parent="Node2D/CanvasLayer" unique_id=1284199548]
 offset_left = 296.0
 offset_top = 147.0
 offset_right = 375.0
 offset_bottom = 285.0
+
+[node name="ColorRect4" type="ColorRect" parent="Node2D/CanvasLayer/Book2" unique_id=1224451574]
+layout_mode = 0
+offset_right = 83.0
+offset_bottom = 139.0
+mouse_filter = 2
+color = Color(0.10004724, 0.15664694, 0.07630054, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Node2D/CanvasLayer/Book2" unique_id=775542412]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 78.0
+offset_bottom = 136.0
+mouse_filter = 2
+color = Color(0.18671176, 0.33151054, 0.1900163, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Node2D/CanvasLayer/Book2" unique_id=770277805]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 44.0
+offset_right = 84.0
+offset_bottom = 101.0
+mouse_filter = 2
+color = Color(0.30211517, 0.056484707, 0.12500274, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/CanvasLayer/Book2" unique_id=640554405]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 48.0
+offset_right = 80.0
+offset_bottom = 97.0
+mouse_filter = 2
+color = Color(0.39490694, 0.08748708, 0.17351747, 1)
+
+[node name="Label" type="Label" parent="Node2D/CanvasLayer/Book2" unique_id=1378752434]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 49.0
+offset_right = 81.0
+offset_bottom = 99.0
 text = "Coming
-Soon"
+   Soon"
 
 [node name="Book3" type="Button" parent="Node2D/CanvasLayer" unique_id=271857327]
 offset_left = 410.0
 offset_top = 149.0
 offset_right = 489.0
 offset_bottom = 285.0
+
+[node name="ColorRect4" type="ColorRect" parent="Node2D/CanvasLayer/Book3" unique_id=2083982011]
+layout_mode = 0
+offset_right = 83.0
+offset_bottom = 139.0
+mouse_filter = 2
+color = Color(0.06675419, 0.12840596, 0.27637485, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Node2D/CanvasLayer/Book3" unique_id=94871016]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 78.0
+offset_bottom = 136.0
+mouse_filter = 2
+color = Color(0.29217222, 0.2656854, 0.6030246, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Node2D/CanvasLayer/Book3" unique_id=1703968535]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 43.0
+offset_right = 84.0
+offset_bottom = 100.0
+mouse_filter = 2
+color = Color(0.30211517, 0.056484707, 0.12500274, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/CanvasLayer/Book3" unique_id=360833209]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 46.0
+offset_right = 81.0
+offset_bottom = 96.0
+mouse_filter = 2
+color = Color(0.39490694, 0.08748708, 0.17351747, 1)
+
+[node name="Label" type="Label" parent="Node2D/CanvasLayer/Book3" unique_id=1877365305]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 46.0
+offset_right = 78.0
+offset_bottom = 95.0
 text = "Coming
-Soon"
+  Soon"
 
 [node name="QuitGame" type="Button" parent="Node2D/CanvasLayer" unique_id=536082080]
-offset_left = 26.0
+offset_left = 25.0
 offset_top = 71.0
-offset_right = 136.0
+offset_right = 135.0
 offset_bottom = 118.0
 text = "Quit Game"
 
-[node name="Settings" type="Button" parent="Node2D/CanvasLayer" unique_id=1312846750]
-offset_left = 487.0
-offset_top = 51.0
-offset_right = 615.0
-offset_bottom = 83.0
-text = "Settings"
+[node name="ColorRect2" type="ColorRect" parent="Node2D/CanvasLayer/QuitGame" unique_id=1214503659]
+layout_mode = 0
+offset_right = 110.0
+offset_bottom = 47.0
+mouse_filter = 2
+color = Color(0.26481017, 0.19702178, 0.13950667, 1)
 
-[node name="Collectionables" type="Button" parent="Node2D/CanvasLayer" unique_id=1893688476]
-offset_left = 115.0
-offset_top = 402.0
-offset_right = 241.0
-offset_bottom = 439.0
-text = "Collectionables"
+[node name="ColorRect" type="ColorRect" parent="Node2D/CanvasLayer/QuitGame" unique_id=1390519873]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 107.0
+offset_bottom = 43.0
+mouse_filter = 2
+color = Color(0.43816665, 0.33592716, 0.2528518, 1)
 
-[node name="Arcade" type="Button" parent="Node2D/CanvasLayer" unique_id=623175074]
-offset_left = 492.0
-offset_top = 367.0
-offset_right = 618.0
-offset_bottom = 410.0
-text = "Arcade"
+[node name="Label" type="Label" parent="Node2D/CanvasLayer/QuitGame" unique_id=2092822206]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 10.0
+offset_right = 96.0
+offset_bottom = 33.0
+text = "Quit Game"
 
 [node name="SettingsGroup" type="Node2D" parent="Node2D/CanvasLayer" unique_id=1062789484]
 visible = false
 z_index = 10
+
+[node name="ColorRect3" type="ColorRect" parent="Node2D/CanvasLayer/SettingsGroup" unique_id=677277807]
+offset_left = 552.0
+offset_top = 83.0
+offset_right = 560.0
+offset_bottom = 192.0
+color = Color(0.26666668, 0.19607843, 0.14117648, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/CanvasLayer/SettingsGroup" unique_id=520488123]
+offset_left = 553.0
+offset_top = 84.0
+offset_right = 559.0
+offset_bottom = 192.0
+color = Color(0.4392157, 0.3372549, 0.2509804, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Node2D/CanvasLayer/SettingsGroup" unique_id=1203700983]
+offset_left = 598.0
+offset_top = 84.0
+offset_right = 604.0
+offset_bottom = 192.0
+color = Color(0.26666668, 0.19607843, 0.14117648, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Node2D/CanvasLayer/SettingsGroup" unique_id=2078213976]
+offset_left = 599.0
+offset_top = 84.0
+offset_right = 603.0
+offset_bottom = 192.0
+color = Color(0.4392157, 0.3372549, 0.2509804, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D/CanvasLayer/SettingsGroup" unique_id=1923688746]
 
@@ -76,12 +230,29 @@ offset_right = 607.0
 offset_bottom = 145.0
 text = "Volume"
 
-[node name="Button2" type="Button" parent="Node2D/CanvasLayer/SettingsGroup" unique_id=389226404]
-offset_left = 545.0
-offset_top = 188.0
-offset_right = 607.0
-offset_bottom = 219.0
-text = "Others"
+[node name="ColorRect2" type="ColorRect" parent="Node2D/CanvasLayer/SettingsGroup/Volume" unique_id=380616762]
+layout_mode = 0
+offset_right = 69.0
+offset_bottom = 34.0
+mouse_filter = 2
+color = Color(0.26481017, 0.19702178, 0.13950667, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/CanvasLayer/SettingsGroup/Volume" unique_id=1816981458]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 66.0
+offset_bottom = 31.0
+mouse_filter = 2
+color = Color(0.43816665, 0.33592716, 0.2528518, 1)
+
+[node name="Label" type="Label" parent="Node2D/CanvasLayer/SettingsGroup/Volume" unique_id=651033830]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 6.0
+offset_right = 91.0
+offset_bottom = 29.0
+text = "Volume"
 
 [node name="Button" type="Button" parent="Node2D/CanvasLayer/SettingsGroup" unique_id=1755057490]
 offset_left = 537.0
@@ -89,6 +260,154 @@ offset_top = 152.0
 offset_right = 611.0
 offset_bottom = 183.0
 text = "Controls"
+
+[node name="ColorRect2" type="ColorRect" parent="Node2D/CanvasLayer/SettingsGroup/Button" unique_id=1330395968]
+layout_mode = 0
+offset_right = 75.0
+offset_bottom = 33.0
+mouse_filter = 2
+color = Color(0.26481017, 0.19702178, 0.13950667, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/CanvasLayer/SettingsGroup/Button" unique_id=600735062]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 72.0
+offset_bottom = 28.0
+mouse_filter = 2
+color = Color(0.43816665, 0.33592716, 0.2528518, 1)
+
+[node name="Label" type="Label" parent="Node2D/CanvasLayer/SettingsGroup/Button" unique_id=1811216929]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 88.0
+offset_bottom = 28.0
+text = "Controls"
+
+[node name="Button2" type="Button" parent="Node2D/CanvasLayer/SettingsGroup" unique_id=389226404]
+offset_left = 545.0
+offset_top = 188.0
+offset_right = 607.0
+offset_bottom = 219.0
+text = "Others"
+
+[node name="ColorRect2" type="ColorRect" parent="Node2D/CanvasLayer/SettingsGroup/Button2" unique_id=28632827]
+layout_mode = 0
+offset_right = 63.0
+offset_bottom = 34.0
+mouse_filter = 2
+color = Color(0.26481017, 0.19702178, 0.13950667, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/CanvasLayer/SettingsGroup/Button2" unique_id=679658302]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 59.0
+offset_bottom = 31.0
+mouse_filter = 2
+color = Color(0.43816665, 0.33592716, 0.2528518, 1)
+
+[node name="Label" type="Label" parent="Node2D/CanvasLayer/SettingsGroup/Button2" unique_id=1748199006]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 61.0
+offset_bottom = 27.0
+text = "Others"
+
+[node name="Settings" type="Button" parent="Node2D/CanvasLayer" unique_id=1312846750]
+offset_left = 487.0
+offset_top = 51.0
+offset_right = 615.0
+offset_bottom = 83.0
+text = "Settings"
+
+[node name="ColorRect2" type="ColorRect" parent="Node2D/CanvasLayer/Settings" unique_id=1166615157]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 33.0
+mouse_filter = 2
+color = Color(0.26481017, 0.19702178, 0.13950667, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/CanvasLayer/Settings" unique_id=926326489]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 123.0
+offset_bottom = 30.0
+mouse_filter = 2
+color = Color(0.43816665, 0.33592716, 0.2528518, 1)
+
+[node name="Label" type="Label" parent="Node2D/CanvasLayer/Settings" unique_id=1339174688]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 4.0
+offset_right = 112.0
+offset_bottom = 27.0
+text = "Settings"
+
+[node name="Collectionables" type="Button" parent="Node2D/CanvasLayer" unique_id=1893688476]
+offset_left = 226.0
+offset_top = 403.0
+offset_right = 352.0
+offset_bottom = 440.0
+text = "Collectionables"
+
+[node name="ColorRect2" type="ColorRect" parent="Node2D/CanvasLayer/Collectionables" unique_id=295574862]
+layout_mode = 0
+offset_right = 126.0
+offset_bottom = 38.0
+mouse_filter = 2
+color = Color(0.26481017, 0.19702178, 0.13950667, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/CanvasLayer/Collectionables" unique_id=122482619]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 123.0
+offset_bottom = 34.0
+mouse_filter = 2
+color = Color(0.43816665, 0.33592716, 0.2528518, 1)
+
+[node name="Label" type="Label" parent="Node2D/CanvasLayer/Collectionables" unique_id=7946582]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 123.0
+offset_bottom = 28.0
+text = "Collectionables"
+
+[node name="Arcade" type="Button" parent="Node2D/CanvasLayer" unique_id=623175074]
+offset_left = 492.0
+offset_top = 367.0
+offset_right = 618.0
+offset_bottom = 410.0
+text = "Arcade"
+
+[node name="ColorRect2" type="ColorRect" parent="Node2D/CanvasLayer/Arcade" unique_id=103944802]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 44.0
+mouse_filter = 2
+color = Color(0.26481017, 0.19702178, 0.13950667, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/CanvasLayer/Arcade" unique_id=1379634931]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 123.0
+offset_bottom = 39.0
+mouse_filter = 2
+color = Color(0.43816665, 0.33592716, 0.2528518, 1)
+
+[node name="Label" type="Label" parent="Node2D/CanvasLayer/Arcade" unique_id=1764145162]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 9.0
+offset_right = 118.0
+offset_bottom = 32.0
+text = "Arcade"
 
 [node name="WarningPanel" type="Panel" parent="Node2D/CanvasLayer" unique_id=1144213411]
 visible = false
@@ -105,11 +424,19 @@ offset_right = 497.0
 offset_bottom = 349.0
 color = Color(0, 0, 0, 0.19607843)
 
+[node name="ColorRect3" type="ColorRect" parent="Node2D/CanvasLayer/WarningPanel" unique_id=1705071133]
+layout_mode = 0
+offset_right = 373.0
+offset_bottom = 117.0
+color = Color(0.26666668, 0.19607843, 0.14117648, 1)
+
 [node name="ColorRect" type="ColorRect" parent="Node2D/CanvasLayer/WarningPanel" unique_id=1461421842]
 layout_mode = 0
-offset_right = 368.0
-offset_bottom = 117.0
-color = Color(0.26683483, 5.0176306e-05, 0.26851147, 1)
+offset_left = 12.0
+offset_top = 7.0
+offset_right = 366.0
+offset_bottom = 109.0
+color = Color(0.4392157, 0.3372549, 0.2509804, 1)
 
 [node name="Label" type="Label" parent="Node2D/CanvasLayer/WarningPanel" unique_id=1629218082]
 layout_mode = 0
@@ -127,6 +454,31 @@ offset_right = 226.0
 offset_bottom = 97.0
 text = "Close"
 
+[node name="ColorRect3" type="ColorRect" parent="Node2D/CanvasLayer/WarningPanel/Button" unique_id=445224913]
+layout_mode = 0
+offset_left = -3.0
+offset_right = 73.0
+offset_bottom = 34.0
+mouse_filter = 2
+color = Color(0.26666668, 0.19607843, 0.14117648, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/CanvasLayer/WarningPanel/Button" unique_id=155729867]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 68.0
+offset_bottom = 29.0
+mouse_filter = 2
+color = Color(0.4392157, 0.3372549, 0.2509804, 1)
+
+[node name="Label" type="Label" parent="Node2D/CanvasLayer/WarningPanel/Button" unique_id=1755198333]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 3.0
+offset_right = 53.0
+offset_bottom = 26.0
+text = "Close"
+
 [node name="VolumeGroup" type="Panel" parent="Node2D/CanvasLayer" unique_id=1498863871]
 visible = false
 offset_left = 215.0
@@ -142,11 +494,19 @@ offset_right = 431.0
 offset_bottom = 397.0
 color = Color(0, 0, 0, 0.19607843)
 
-[node name="ColorRect2" type="ColorRect" parent="Node2D/CanvasLayer/VolumeGroup" unique_id=68732350]
+[node name="ColorRect3" type="ColorRect" parent="Node2D/CanvasLayer/VolumeGroup" unique_id=1530864284]
 layout_mode = 0
 offset_right = 246.0
-offset_bottom = 215.0
-color = Color(0.24442291, 4.199408e-05, 0.24581262, 1)
+offset_bottom = 217.0
+color = Color(0.26666668, 0.19607843, 0.14117648, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Node2D/CanvasLayer/VolumeGroup" unique_id=2142548348]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 7.0
+offset_right = 235.0
+offset_bottom = 207.0
+color = Color(0.4392157, 0.3372549, 0.2509804, 1)
 
 [node name="Label" type="Label" parent="Node2D/CanvasLayer/VolumeGroup" unique_id=1789402429]
 layout_mode = 0
@@ -180,10 +540,35 @@ offset_bottom = 171.0
 
 [node name="Button2" type="Button" parent="Node2D/CanvasLayer/VolumeGroup" unique_id=1792212238]
 layout_mode = 0
-offset_left = 90.0
-offset_top = 152.0
-offset_right = 158.0
-offset_bottom = 183.0
+offset_left = 92.0
+offset_top = 161.0
+offset_right = 160.0
+offset_bottom = 192.0
+text = "Close"
+
+[node name="ColorRect3" type="ColorRect" parent="Node2D/CanvasLayer/VolumeGroup/Button2" unique_id=2110492875]
+layout_mode = 0
+offset_left = -3.0
+offset_right = 73.0
+offset_bottom = 34.0
+mouse_filter = 2
+color = Color(0.26666668, 0.19607843, 0.14117648, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/CanvasLayer/VolumeGroup/Button2" unique_id=468647333]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 68.0
+offset_bottom = 29.0
+mouse_filter = 2
+color = Color(0.4392157, 0.3372549, 0.2509804, 1)
+
+[node name="Label" type="Label" parent="Node2D/CanvasLayer/VolumeGroup/Button2" unique_id=1640480744]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 3.0
+offset_right = 53.0
+offset_bottom = 26.0
 text = "Close"
 
 [node name="Collect-Warning" type="Panel" parent="Node2D/CanvasLayer" unique_id=2066631335]
@@ -195,17 +580,25 @@ offset_bottom = 283.0
 
 [node name="ColorRect" type="ColorRect" parent="Node2D/CanvasLayer/Collect-Warning" unique_id=712986267]
 layout_mode = 0
-offset_left = -143.0
-offset_top = -167.0
-offset_right = 496.0
-offset_bottom = 347.0
+offset_left = -141.0
+offset_top = -200.0
+offset_right = 498.0
+offset_bottom = 314.0
 color = Color(0, 0, 0, 0.19607843)
 
-[node name="ColorRect2" type="ColorRect" parent="Node2D/CanvasLayer/Collect-Warning" unique_id=897243364]
+[node name="ColorRect3" type="ColorRect" parent="Node2D/CanvasLayer/Collect-Warning" unique_id=1585667696]
 layout_mode = 0
 offset_right = 373.0
 offset_bottom = 117.0
-color = Color(0.38323665, 0.000103312654, 0.38466245, 1)
+color = Color(0.26666668, 0.19607843, 0.14117648, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Node2D/CanvasLayer/Collect-Warning" unique_id=269852505]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 7.0
+offset_right = 366.0
+offset_bottom = 109.0
+color = Color(0.4392157, 0.3372549, 0.2509804, 1)
 
 [node name="Label" type="Label" parent="Node2D/CanvasLayer/Collect-Warning" unique_id=2056376975]
 layout_mode = 0
@@ -219,13 +612,39 @@ horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="Node2D/CanvasLayer/Collect-Warning" unique_id=534631643]
 layout_mode = 0
-offset_left = 165.0
-offset_top = 74.0
-offset_right = 227.0
-offset_bottom = 105.0
+offset_left = 157.0
+offset_top = 67.0
+offset_right = 219.0
+offset_bottom = 98.0
+text = "Close"
+
+[node name="ColorRect3" type="ColorRect" parent="Node2D/CanvasLayer/Collect-Warning/Button" unique_id=1065205760]
+layout_mode = 0
+offset_left = -3.0
+offset_right = 73.0
+offset_bottom = 34.0
+mouse_filter = 2
+color = Color(0.26666668, 0.19607843, 0.14117648, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/CanvasLayer/Collect-Warning/Button" unique_id=857252030]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 68.0
+offset_bottom = 29.0
+mouse_filter = 2
+color = Color(0.4392157, 0.3372549, 0.2509804, 1)
+
+[node name="Label" type="Label" parent="Node2D/CanvasLayer/Collect-Warning/Button" unique_id=864285539]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 3.0
+offset_right = 53.0
+offset_bottom = 26.0
 text = "Close"
 
 [node name="Controls-panel" type="Panel" parent="Node2D/CanvasLayer" unique_id=1657719599]
+visible = false
 offset_left = 210.0
 offset_top = 196.0
 offset_right = 455.0
@@ -239,26 +658,58 @@ offset_right = 430.0
 offset_bottom = 326.0
 color = Color(0, 0, 0, 0.49019608)
 
-[node name="ColorRect2" type="ColorRect" parent="Node2D/CanvasLayer/Controls-panel" unique_id=829354891]
+[node name="ColorRect3" type="ColorRect" parent="Node2D/CanvasLayer/Controls-panel" unique_id=1591515594]
 layout_mode = 0
-offset_left = 2.0
-offset_top = 1.0
-offset_right = 247.0
+offset_left = 1.0
+offset_right = 246.0
 offset_bottom = 103.0
-color = Color(0.49215633, 0.00017404079, 0.49326962, 1)
+color = Color(0.26666668, 0.19607843, 0.14117648, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Node2D/CanvasLayer/Controls-panel" unique_id=1597570220]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 7.0
+offset_right = 241.0
+offset_bottom = 98.0
+color = Color(0.4392157, 0.3372549, 0.2509804, 1)
 
 [node name="Label" type="Label" parent="Node2D/CanvasLayer/Controls-panel" unique_id=1941375848]
 layout_mode = 0
-offset_left = 45.0
-offset_top = 7.0
-offset_right = 216.0
-offset_bottom = 30.0
+offset_left = 33.0
+offset_top = 18.0
+offset_right = 204.0
+offset_bottom = 41.0
 text = "Not available in Demo"
 
 [node name="Button" type="Button" parent="Node2D/CanvasLayer/Controls-panel" unique_id=215578588]
 layout_mode = 0
-offset_left = 88.0
-offset_top = 55.0
-offset_right = 160.0
-offset_bottom = 88.0
+offset_left = 85.0
+offset_top = 61.0
+offset_right = 157.0
+offset_bottom = 94.0
+text = "Close"
+
+[node name="ColorRect3" type="ColorRect" parent="Node2D/CanvasLayer/Controls-panel/Button" unique_id=475011284]
+layout_mode = 0
+offset_left = -3.0
+offset_right = 73.0
+offset_bottom = 34.0
+mouse_filter = 2
+color = Color(0.26666668, 0.19607843, 0.14117648, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/CanvasLayer/Controls-panel/Button" unique_id=986216864]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 68.0
+offset_bottom = 29.0
+mouse_filter = 2
+color = Color(0.4392157, 0.3372549, 0.2509804, 1)
+
+[node name="Label" type="Label" parent="Node2D/CanvasLayer/Controls-panel/Button" unique_id=1428501126]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 3.0
+offset_right = 53.0
+offset_bottom = 26.0
 text = "Close"

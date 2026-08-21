@@ -29,6 +29,7 @@ var tweens: Dictionary = {}
 # --- REFERENCIAS DEL SUBMENÚ DE AJUSTES ---
 @onready var btn_volume: BaseButton = $CanvasLayer/SettingsGroup/Volume
 @onready var btn_controls: BaseButton = $CanvasLayer/SettingsGroup/Button
+@onready var btn_others: BaseButton = $CanvasLayer/SettingsGroup/Button2 # <-- Agregado para Button2
 
 # --- REFERENCIAS A BOTONES DE SELECCIÓN DE NIVEL (LIBROS) ---
 @onready var btn_book1: BaseButton = $CanvasLayer/Book1
@@ -69,6 +70,7 @@ func _ready() -> void:
 		btn_settings: _on_settings_pressed,
 		btn_volume: _on_volume_pressed,
 		btn_controls: _on_controls_pressed,
+		btn_others: _on_controls_pressed, # <-- Vinculado a la función de controles (o cámbiala por su función correspondiente)
 		btn_close_volume: _on_close_volume_pressed,
 		btn_quit: _on_quit_pressed,
 		btn_collectionables: _on_collect_warning_toggle,
