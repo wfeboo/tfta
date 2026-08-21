@@ -41,127 +41,115 @@ var tweens: Dictionary = {}
 @onready var btn_close_collect_warning: BaseButton = $"CanvasLayer/Collect-Warning/Button"
 @onready var btn_close_controls: BaseButton = $"CanvasLayer/Controls-panel/Button"
 
+# Arreglo para iterar y gestionar paneles fácilmente
+@onready var all_panels: Array[Node] = [
+	settings_group, 
+	volume_group, 
+	warning_panel, 
+	collect_warning, 
+	controls_panel
+]
 
 func _ready() -> void:
 	# Esperar un frame para asegurar la inicialización completa de la jerarquía de UI
 	await get_tree().process_frame
 
-	# Evitar que contenedores invisibles o transparentes bloqueen clics en botones inferiores
-	_set_mouse_ignore(settings_group)
-	_set_mouse_ignore(volume_group)
-	_set_mouse_ignore(warning_panel)
-	_set_mouse_ignore(collect_warning)
-	_set_mouse_ignore(controls_panel)
+	# 1. Ocultar paneles e ignorar eventos de ratón en sus contenedores transparentes
+	for panel in all_panels:
+		if panel:
+			if panel is Control:
+				panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
+			panel.visible = false
 
-	# Asegurar que el botón de cerrar controles reciba eventos de ratón explícitamente
-	if btn_close_controls:
-		btn_close_controls.mouse_filter = Control.MOUSE_FILTER_STOP
+	# 2. Configurar sliders de volumen al 70% por defecto
+	_setup_volume_sliders()
 
-	# Estado inicial: Ocultar todos los submenús y ventanas emergentes
-	if settings_group: settings_group.visible = false
-	if volume_group: volume_group.visible = false
-	if warning_panel: warning_panel.visible = false
-	if collect_warning: collect_warning.visible = false
-	if controls_panel: controls_panel.visible = false
+	# 3. Mapear botones con sus acciones mediante un Diccionario
+	var button_actions: Dictionary = {
+		btn_settings: _on_settings_pressed,
+		btn_volume: _on_volume_pressed,
+		btn_controls: _on_controls_pressed,
+		btn_close_volume: _on_close_volume_pressed,
+		btn_quit: _on_quit_pressed,
+		btn_collectionables: _on_collect_warning_toggle,
+		btn_arcade: _on_collect_warning_toggle,
+		btn_close_warning: func(): _set_panel_visible(warning_panel, false),
+		btn_close_collect_warning: func(): _set_panel_visible(collect_warning, false),
+		btn_close_controls: _on_close_controls_pressed
+	}
 
-	# 1. Configuración de botones del menú principal y submenús
-	var menu_buttons: Array[BaseButton] = [
-		btn_settings,
-		btn_volume,
-		btn_controls,
-		btn_close_volume,
-		btn_quit,
-		btn_collectionables,
-		btn_arcade
-	]
-	
-	for btn in menu_buttons:
+	# Conectar botones del menú principal y de cierre
+	for btn in button_actions:
 		if btn != null:
-			_setup_button_hover(btn)
+			_setup_button(btn)
+			btn.pressed.connect(button_actions[btn])
 
-	# Conexión de señales de pulsación (pressed)
-	if btn_settings: btn_settings.pressed.connect(_on_settings_pressed)
-	if btn_volume: btn_volume.pressed.connect(_on_volume_pressed)
-	if btn_controls: btn_controls.pressed.connect(_on_controls_pressed)
-	if btn_close_volume: btn_close_volume.pressed.connect(_on_close_volume_pressed)
-	if btn_quit: btn_quit.pressed.connect(_on_quit_pressed)
-	if btn_collectionables: btn_collectionables.pressed.connect(_on_collect_warning_toggle)
-	if btn_arcade: btn_arcade.pressed.connect(_on_collect_warning_toggle)
-
-	# 2. Configuración de botones de libros (niveles)
+	# Conectar botones de selección de libros (niveles)
 	var book_buttons: Array[BaseButton] = [btn_book1, btn_book2, btn_book3]
 	for book in book_buttons:
 		if book != null:
-			_setup_button_hover(book)
+			_setup_button(book)
 			book.pressed.connect(_on_book_pressed.bind(book))
 
-	# 3. Configuración de botones de cierre de ventanas
-	if btn_close_warning != null:
-		_setup_button_hover(btn_close_warning)
-		btn_close_warning.pressed.connect(_on_close_warning_pressed)
 
-	if btn_close_collect_warning != null:
-		_setup_button_hover(btn_close_collect_warning)
-		btn_close_collect_warning.pressed.connect(_on_close_collect_warning_pressed)
+# --- CONFIGURACIÓN E ITERACIÓN AUXILIAR ---
 
-	if btn_close_controls != null:
-		_setup_button_hover(btn_close_controls)
-		btn_close_controls.pressed.connect(_on_close_controls_pressed)
-
-
-# --- FUNCIONES AUXILIARES ---
-
-# Configura un nodo Control para ignorar los eventos de ratón y no bloquear capas inferiores.
-func _set_mouse_ignore(node: Node) -> void:
-	if node is Control:
-		node.mouse_filter = Control.MOUSE_FILTER_IGNORE
-
-
-# Ajusta el pivote al centro del botón y conecta las señales mouse_entered y mouse_exited.
-func _setup_button_hover(btn: BaseButton) -> void:
+# Configura eventos hover y asegura la captura de eventos de clic en el botón.
+func _setup_button(btn: BaseButton) -> void:
+	btn.mouse_filter = Control.MOUSE_FILTER_STOP
 	if "size" in btn and btn.size != Vector2.ZERO:
 		btn.pivot_offset = btn.size / 2.0
 	btn.mouse_entered.connect(_on_button_hover_enter.bind(btn))
 	btn.mouse_exited.connect(_on_button_hover_exit.bind(btn))
 
 
+# Busca todos los deslizadores en la escena y fija su valor inicial al 70%.
+func _setup_volume_sliders() -> void:
+	var sliders: Array[Node] = find_children("*", "Slider", true, false)
+	for slider in sliders:
+		if slider is Slider:
+			slider.value = 70.0
+
+
+# Cambia la visibilidad de un nodo de panel específico de forma segura.
+func _set_panel_visible(panel: Node, is_visible: bool) -> void:
+	if panel:
+		panel.visible = is_visible
+
+
 # --- GESTIÓN DE SUBMENÚS Y NAVEGACIÓN ---
 
-# Alterna la visibilidad del menú de ajustes. Si se oculta, cierra también sus subpaneles.
+# Alterna la visibilidad del menú de ajustes. Si se oculta, cierra sus subpaneles.
 func _on_settings_pressed() -> void:
 	if settings_group:
 		settings_group.visible = !settings_group.visible
 		if not settings_group.visible:
-			if volume_group: volume_group.visible = false
-			if controls_panel: controls_panel.visible = false
+			_set_panel_visible(volume_group, false)
+			_set_panel_visible(controls_panel, false)
 
 
 # Alterna el panel de volumen y oculta el panel de controles.
 func _on_volume_pressed() -> void:
 	if volume_group:
 		volume_group.visible = !volume_group.visible
-	if controls_panel:
-		controls_panel.visible = false
+	_set_panel_visible(controls_panel, false)
 
 
 # Oculta el panel de volumen.
 func _on_close_volume_pressed() -> void:
-	if volume_group:
-		volume_group.visible = false
+	_set_panel_visible(volume_group, false)
 
 
 # Alterna el panel de controles y oculta el panel de volumen.
 func _on_controls_pressed() -> void:
 	if controls_panel:
 		controls_panel.visible = !controls_panel.visible
-	if volume_group:
-		volume_group.visible = false
+	_set_panel_visible(volume_group, false)
 
 
 # Oculta el panel de controles.
 func _on_close_controls_pressed() -> void:
-	if controls_panel:
-		controls_panel.visible = false
+	_set_panel_visible(controls_panel, false)
 
 
 # Cierra la aplicación/juego.
@@ -169,18 +157,10 @@ func _on_quit_pressed() -> void:
 	get_tree().quit()
 
 
-# --- GESTIÓN DE ADVERTENCIAS Y NIVELES ---
-
-# Alterna la visibilidad de la advertencia para el modo coleccionables / arcade.
+# Alterna la visibilidad de la advertencia de coleccionables.
 func _on_collect_warning_toggle() -> void:
 	if collect_warning:
 		collect_warning.visible = !collect_warning.visible
-
-
-# Oculta la advertencia de coleccionables.
-func _on_close_collect_warning_pressed() -> void:
-	if collect_warning:
-		collect_warning.visible = false
 
 
 # Procesa la pulsación de un libro para iniciar nivel o desplegar advertencia de bloqueo.
@@ -188,16 +168,8 @@ func _on_book_pressed(book: BaseButton) -> void:
 	if book == btn_book1:
 		print("Iniciando Nivel 1 desde Book1...")
 		# get_tree().change_scene_to_file("res://escenas/nivel1.tscn")
-		
 	elif book == btn_book2 or book == btn_book3:
-		if warning_panel:
-			warning_panel.visible = true
-
-
-# Oculta la advertencia de nivel bloqueado.
-func _on_close_warning_pressed() -> void:
-	if warning_panel:
-		warning_panel.visible = false
+		_set_panel_visible(warning_panel, true)
 
 
 # --- ANIMACIONES HOVER DE BOTONES ---
