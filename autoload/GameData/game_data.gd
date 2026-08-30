@@ -9,8 +9,34 @@ extends Node
 const SAVE_PATH: String = "user://savegame.cfg"
 
 # --- Datos de Progreso (Persistentes) ---
-# Indica si el jugador ya ha visto la cinemática o secuencia de introducción.
 var intro_seen: bool = false
+
+# Identificadores de los tres protagonistas de TFTA.
+enum Protagonist { DESIVINTE, KATH_JULES, HETHELINE }
+
+# Estado de combate persistente por protagonista (vida actual/máxima).
+# Se mantiene en memoria entre escenas y se guarda en disco.
+var combat_state: Dictionary = {
+	Protagonist.DESIVINTE: {"current_hp": 100.0, "max_hp": 100.0},
+	Protagonist.KATH_JULES: {"current_hp": 100.0, "max_hp": 100.0},
+	Protagonist.HETHELINE: {"current_hp": 100.0, "max_hp": 100.0},
+}
+
+func get_current_hp(protagonist: Protagonist) -> float:
+	return combat_state[protagonist]["current_hp"]
+
+func get_max_hp(protagonist: Protagonist) -> float:
+	return combat_state[protagonist]["max_hp"]
+
+# Actualiza la vida actual del protagonista, respetando el máximo.
+func set_current_hp(protagonist: Protagonist, value: float) -> void:
+	var max_hp: float = combat_state[protagonist]["max_hp"]
+	combat_state[protagonist]["current_hp"] = clamp(value, 0.0, max_hp)
+
+# Cura por completo al protagonista — usar explícitamente en saltos temporales
+# (ej. entre etapas de la cinemática de intro), nunca automático entre combates normales.
+func heal_full(protagonist: Protagonist) -> void:
+	combat_state[protagonist]["current_hp"] = combat_state[protagonist]["max_hp"]
 
 
 func _ready() -> void:

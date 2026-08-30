@@ -58,3 +58,9 @@ func _try_attack(slot: int) -> void:
 		return
 	if attack_hitbox and attack_hitbox.has_method("activate"):
 		attack_hitbox.activate(attack_data)
+
+# En sc_desivinte_ground.gd, sc_lin_*.gd, etc.
+@onready var health: Health = $Health
+
+func take_damage(amount: float) -> void:
+	health.take_damage(amount)

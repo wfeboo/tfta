@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cw0jf4brf01p7"]
 
 [ext_resource type="Script" uid="uid://fstydg5pido2" path="res://scenes/desivinte/player/combat/ground_encounter/scripts/sc_desivinte_ground.gd" id="1_2yh4y"]
+[ext_resource type="PackedScene" uid="uid://btvv0ji25pvcy" path="res://scripts/health.tscn" id="2_scyjp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2yh4y"]
 radius = 20.0
@@ -29,3 +30,5 @@ color = Color(0.66656864, 0.6665687, 0.66656864, 1)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=801891476]
 position = Vector2(0, -84)
+
+[node name="Health" parent="." unique_id=99482824 instance=ExtResource("2_scyjp")]

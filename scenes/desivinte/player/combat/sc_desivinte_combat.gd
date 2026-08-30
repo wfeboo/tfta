@@ -66,3 +66,9 @@ func _spawn_mode(mode: CombatMode, spawn_position: Vector2) -> void:
 	add_child(current_instance)
 	current_instance.global_position = spawn_position
 	current_mode = mode
+
+# En sc_desivinte_ground.gd, sc_lin_*.gd, etc.
+@onready var health: Health = $Health
+
+func take_damage(amount: float) -> void:
+	health.take_damage(amount)

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://kn55pnib7yqk" path="res://scenes/desivinte/player/combat/melee_stadium/scripts/sc_desivinte_melee.gd" id="1_tef0s"]
 [ext_resource type="Texture2D" uid="uid://bti8g6dkq580f" path="res://assets/sprites/intro_scene/intro_sequence/first_scene/M-godarti-STOCK-5.jpg" id="2_y88pq"]
+[ext_resource type="PackedScene" uid="uid://btvv0ji25pvcy" path="res://scripts/health.tscn" id="3_y88pq"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p0p68"]
 radius = 20.0
@@ -21,3 +22,5 @@ texture = ExtResource("2_y88pq")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2018320915]
 position = Vector2(153, -67)
+
+[node name="Health" parent="." unique_id=99482824 instance=ExtResource("3_y88pq")]

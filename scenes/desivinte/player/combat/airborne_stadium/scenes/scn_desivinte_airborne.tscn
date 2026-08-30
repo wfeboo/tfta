@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cftv4ip73rpwi" path="res://scenes/desivinte/player/combat/airborne_stadium/scripts/sc_desivinte_airborne.gd" id="1_k0ufo"]
 [ext_resource type="Texture2D" uid="uid://bti8g6dkq580f" path="res://assets/sprites/intro_scene/intro_sequence/first_scene/M-godarti-STOCK-5.jpg" id="2_4pdph"]
+[ext_resource type="PackedScene" uid="uid://btvv0ji25pvcy" path="res://scripts/health.tscn" id="3_4t81m"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v4e7m"]
 radius = 20.0
@@ -21,3 +22,5 @@ texture = ExtResource("2_4pdph")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1953273257]
 position = Vector2(153, -67)
+
+[node name="Health" parent="." unique_id=99482824 instance=ExtResource("3_4t81m")]

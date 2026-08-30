@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cu1iki54e4xea" path="res://scenes/desivinte/npcs/chapter_0/npc_test/scn_test_dummy.tscn" id="3_ejo85"]
 [ext_resource type="PackedScene" uid="uid://ft8cbhna1p36" path="res://scenes/desivinte/TEST_ROOM/test_npc_dummies/scn_npc_interact.tscn" id="3_y00qj"]
 [ext_resource type="PackedScene" uid="uid://cw0jf4brf01p7" path="res://scenes/desivinte/player/combat/ground_encounter/scenes/scn_desivinte_ground.tscn" id="4_myaiq"]
+[ext_resource type="PackedScene" uid="uid://ck7o8bv3squ2a" path="res://scenes/desivinte/enemies/part1/chapter_0/intro_cinematic/lin/scn_lin.tscn" id="5_ahmwd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7my0a"]
 size = Vector2(6142.5, 109)
@@ -39,3 +40,6 @@ position = Vector2(2247, 202)
 
 [node name="ScnDesivinteGround" parent="." unique_id=208521235 instance=ExtResource("4_myaiq")]
 position = Vector2(253, 352)
+
+[node name="ScnLin" parent="." unique_id=827235787 instance=ExtResource("5_ahmwd")]
+position = Vector2(420, 340)

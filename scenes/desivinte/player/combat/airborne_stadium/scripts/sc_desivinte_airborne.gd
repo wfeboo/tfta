@@ -75,3 +75,9 @@ func _physics_process(delta: float) -> void:
 
 	# Ejecutar el movimiento físico del personaje
 	move_and_slide()
+
+# En sc_desivinte_ground.gd, sc_lin_*.gd, etc.
+@onready var health: Health = $Health
+
+func take_damage(amount: float) -> void:
+	health.take_damage(amount)
