@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://tqqscrt7ar60"]
 
-[ext_resource type="Script" uid="uid://bl74kujkgmsi4" path="res://scenes/desivinte/player/regular/sc_desivinte_regular.gd" id="1_x44ob"]
+[ext_resource type="Script" uid="uid://bl74kujkgmsi4" path="res://scenes/desivinte/player/overworld/sc_desivinte_regular.gd" id="1_x44ob"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x44ob"]
 radius = 20.0

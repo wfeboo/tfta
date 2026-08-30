@@ -8,6 +8,9 @@ extends Area2D
 # Daño que infligirá la hitbox durante su ventana de activación actual.
 var current_damage: float = 0.0
 
+# Registro de cuerpos ya golpeados durante la activación actual.
+# Se limpia cada vez que activate() vuelve a habilitar la hitbox.
+var _hit_bodies: Array[Node2D] = []
 
 # Configura y activa la hitbox según las propiedades descritas en el objeto AttackData.
 # Desactiva la monitorización automáticamente al finalizar el tiempo de ataque.
@@ -20,6 +23,9 @@ func activate(attack_data: AttackData) -> void:
 		return
 
 	current_damage = attack_data.damage
+
+	# Reiniciar el registro de golpeados — cada activación es una ventana nueva.
+	_hit_bodies.clear()
 
 	# Obtener y redimensionar la colisión de la hitbox
 	var collision_shape: CollisionShape2D = $CollisionShape2D
@@ -37,15 +43,19 @@ func activate(attack_data: AttackData) -> void:
 	# Deshabilitar la detección al terminar el ataque
 	monitoring = false
 
-
 # Callback ejecutado cuando un cuerpo físico entra en el área de la hitbox.
 #
 # Parámetros:
 #   - body: Nodo2D que colisionó con la hitbox.
 func _on_body_entered(body: Node2D) -> void:
+	# Ya fue golpeado durante esta activación — ignorar.
+	if body in _hit_bodies:
+		return
+
 	# Verificación de seguridad para aplicar daño solo a objetivos válidos
 	if body.is_in_group("damageables"):
 		if body.has_method("take_damage"):
+			_hit_bodies.append(body)
 			body.take_damage(current_damage)
 		else:
 			push_warning("Hitbox: El nodo '" + body.name + "' está en el grupo 'damageables' pero no implementa 'take_damage()'.")

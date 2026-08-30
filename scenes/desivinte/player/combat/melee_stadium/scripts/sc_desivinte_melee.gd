@@ -44,9 +44,7 @@ var attack_hitbox: Area2D
 
 func _ready() -> void:
 	# Instanciar y configurar el área de colisión (hitbox) para los ataques
-	var attack_hitbox_scene: PackedScene = preload(
-		"res://scenes/desivinte/player/combat/melee/scenes/scn_attack_hitbox.tscn"
-	)
+	var attack_hitbox_scene: PackedScene = preload("res://scenes/desivinte/player/combat/shared/scn_attack_hitbox.tscn")
 
 	attack_hitbox = attack_hitbox_scene.instantiate() as Area2D
 	add_child(attack_hitbox)

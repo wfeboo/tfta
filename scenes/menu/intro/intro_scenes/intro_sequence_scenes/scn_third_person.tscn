@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://byvl2wkeytuqr" path="res://assets/sprites/intro_scene/intro_sequence/comic/bg_panels.png" id="1_3yv8b"]
 [ext_resource type="Script" uid="uid://cw6xun7ig5mx" path="res://scenes/menu/intro/intro scripts/intro_sequence_scripts/sc_third_person.gd" id="1_aushr"]
 [ext_resource type="Texture2D" uid="uid://bti8g6dkq580f" path="res://assets/sprites/intro_scene/intro_sequence/first_scene/M-godarti-STOCK-5.jpg" id="3_f23rc"]
+[ext_resource type="Texture2D" uid="uid://c0dvdg3qtusyr" path="res://assets/sprites/intro_scene/intro_sequence/third_person/vint.png" id="4_a6p7u"]
+[ext_resource type="Texture2D" uid="uid://b5crhhu23s1ay" path="res://assets/sprites/intro_scene/intro_sequence/third_person/kath.png" id="5_r000y"]
+[ext_resource type="Texture2D" uid="uid://ctlseutwntsy" path="res://assets/sprites/intro_scene/intro_sequence/third_person/heth.png" id="6_n5e67"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_wy64s"]
 
@@ -93,16 +96,17 @@ scale = Vector2(1, 0.8333334)
 color = Color(1, 0, 1, 1)
 polygon = PackedVector2Array(128, 128, 128, 320, 512, 320, 512, 128, 319.3529, 127.99999)
 
-[node name="Panel2" type="Polygon2D" parent="." unique_id=1898042687]
-position = Vector2(-89.36364, -208.00003)
-scale = Vector2(1.5795455, 1.6000001)
-polygon = PackedVector2Array(168, 240, 256, 240, 256, 240, 168, 320)
+[node name="Panel2" type="Sprite2D" parent="." unique_id=2018987052]
+position = Vector2(240, 240)
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("4_a6p7u")
 
-[node name="Panel4" type="Polygon2D" parent="." unique_id=539825564]
-position = Vector2(-180.45506, -220.79996)
-scale = Vector2(1.5795467, 1.5999999)
-polygon = PackedVector2Array(320, 248, 408, 248, 408, 328)
+[node name="Panel3" type="Sprite2D" parent="." unique_id=2030723230]
+position = Vector2(320, 240)
+scale = Vector2(0.52, 0.52)
+texture = ExtResource("5_r000y")
 
-[node name="Panel3" type="Polygon2D" parent="." unique_id=1885688933]
-position = Vector2(0, 24)
-polygon = PackedVector2Array(320, 160, 192, 280, 448, 280)
+[node name="Panel4" type="Sprite2D" parent="." unique_id=878872769]
+position = Vector2(400, 240)
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("6_n5e67")

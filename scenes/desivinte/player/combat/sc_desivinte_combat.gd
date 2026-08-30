@@ -12,8 +12,8 @@ enum CombatMode {
 }
 
 # Precarga de recursos de escena para evitar tirones de rendimiento (stuttering) al instanciar.
-const MELEE_SCENE: PackedScene = preload("res://scenes/desivinte/player/combat/melee/scenes/scn_desivinte_melee.tscn")
-const AIRBORNE_SCENE: PackedScene = preload("res://scenes/desivinte/player/combat/airborne/scenes/scn_desivinte_airborne.tscn")
+const MELEE_SCENE: PackedScene = preload("res://scenes/desivinte/player/combat/melee_stadium/scenes/scn_desivinte_melee.tscn")
+const AIRBORNE_SCENE: PackedScene = preload("res://scenes/desivinte/player/combat/airborne_stadium/scenes/scn_desivinte_airborne.tscn")
 
 # Modo de combate activo actualmente (por defecto inicia en Melee).
 var current_mode: CombatMode = CombatMode.MELEE

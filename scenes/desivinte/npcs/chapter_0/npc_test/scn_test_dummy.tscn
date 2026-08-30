@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cu1iki54e4xea"]
 
-[ext_resource type="Script" uid="uid://bseaymasigowe" path="res://scenes/desivinte/player/combat/melee/dummy/sc_test_dummy.gd" id="1_s5mmv"]
+[ext_resource type="Script" uid="uid://bseaymasigowe" path="res://scenes/desivinte/npcs/chapter_0/npc_test/sc_test_dummy.gd" id="1_s5mmv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s5mmv"]
 

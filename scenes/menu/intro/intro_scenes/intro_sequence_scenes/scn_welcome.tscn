@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://dglrvcsqvbwp4"]
 
 [ext_resource type="Script" uid="uid://c4fnspjonwdyx" path="res://scenes/menu/intro/intro scripts/intro_sequence_scripts/sc_welcome.gd" id="1_ci655"]
-[ext_resource type="Texture2D" uid="uid://r1j62camtwb5" path="res://assets/sprites/intro_scene/intro_sequence/welcome/temp_background_DONTUSE.png" id="2_743fy"]
+[ext_resource type="Texture2D" uid="uid://dak8rftfiqo43" path="res://assets/sprites/intro_scene/intro_sequence/welcome/background_welcome.png" id="2_ioyhn"]
 [ext_resource type="Texture2D" uid="uid://bti8g6dkq580f" path="res://assets/sprites/intro_scene/intro_sequence/first_scene/M-godarti-STOCK-5.jpg" id="3_743fy"]
-[ext_resource type="Texture2D" uid="uid://c77373vbxv0n6" path="res://assets/sprites/intro_scene/intro_sequence/welcome/librarian_righthand_early.png" id="3_uqo1f"]
-[ext_resource type="Texture2D" uid="uid://illc2t4ecrvf" path="res://assets/sprites/intro_scene/intro_sequence/welcome/librarian_lefthand_early.png" id="4_musqv"]
+[ext_resource type="Texture2D" uid="uid://d1x5mbfarosgy" path="res://assets/sprites/intro_scene/intro_sequence/welcome/first_librarian_cuts_cene_leaf.png" id="4_dhmfy"]
 [ext_resource type="Texture2D" uid="uid://iqqa56ctilo4" path="res://assets/sprites/intro_scene/intro_sequence/welcome/crowdpeople_a.png" id="5_dpcnr"]
+[ext_resource type="Texture2D" uid="uid://cbnws8cxy1313" path="res://assets/sprites/intro_scene/intro_sequence/welcome/first_librarian_cuts_cene_hands.png" id="6_6hjq7"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_wy64s"]
 
@@ -17,7 +17,8 @@ color = Color(1.557, 1.557, 1.557, 1)
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1095987160]
 position = Vector2(320, 256)
-texture = ExtResource("2_743fy")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ioyhn")
 
 [node name="UILayer" type="CanvasLayer" parent="." unique_id=1695019801]
 follow_viewport_scale = 306.555
@@ -88,18 +89,21 @@ metadata/_edit_use_anchors_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1828019086]
 
-[node name="LibrarianHandLeft" type="Sprite2D" parent="." unique_id=790485116]
-position = Vector2(220, 290)
-texture = ExtResource("3_uqo1f")
-
-[node name="LibrarianHandRight" type="Sprite2D" parent="." unique_id=1627802154]
-position = Vector2(420, 290)
-texture = ExtResource("4_musqv")
-
 [node name="BackgroundPeople" type="Sprite2D" parent="." unique_id=1388949002]
-position = Vector2(320, 288)
+position = Vector2(320, 272)
+scale = Vector2(0.33, 0.33)
 texture = ExtResource("5_dpcnr")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=864426529]
 position = Vector2(320, 256)
 zoom = Vector2(2.1, 2.1)
+
+[node name="Border" type="Sprite2D" parent="." unique_id=2120437814]
+position = Vector2(320, 256.99994)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("6_6hjq7")
+
+[node name="Hands" type="Sprite2D" parent="." unique_id=474169221]
+position = Vector2(322, 257)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_dhmfy")

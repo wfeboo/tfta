@@ -28,12 +28,14 @@ func _process(delta: float) -> void:
 		else:
 			# 3% de probabilidad de mostrar la variante de multitud B, de lo contrario muestra la C
 			if randf() <= 0.03:
-				$BackgroundPeople.texture = CROWD_B
+				$BackgroundPeople.texture = CROWD_A
 			else:
-				$BackgroundPeople.texture = CROWD_C
+				$BackgroundPeople.texture = CROWD_A
 
 
 func _ready() -> void:
+	
+	
 	# Ocultar la UI inicialmente
 	$UILayer/Control/SpeakerBox.modulate.a = 0.0
 	$UILayer/Control/DialogueBox.modulate.a = 0.0

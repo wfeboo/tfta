@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ft8cbhna1p36"]
 
-[ext_resource type="Script" uid="uid://b8ah8unaghrpr" path="res://scenes/desivinte/player/regular/TEST_ROOM/npcdummyinteract.gd" id="1_ud74m"]
+[ext_resource type="Script" uid="uid://b8ah8unaghrpr" path="res://scenes/desivinte/TEST_ROOM/test_npc_dummies/sc_npc_interact.gd" id="1_ud74m"]
 [ext_resource type="Texture2D" uid="uid://iqqa56ctilo4" path="res://assets/sprites/intro_scene/intro_sequence/welcome/crowdpeople_a.png" id="2_e5m8h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kituy"]
@@ -16,10 +16,10 @@ position = Vector2(46.5, 42)
 shape = SubResource("RectangleShape2D_kituy")
 
 [node name="PromptLabel" type="Label" parent="." unique_id=919261672]
-offset_left = -193.0
-offset_top = -6.0
-offset_right = 19.0
-offset_bottom = 17.0
+offset_left = -111.0
+offset_top = -118.0
+offset_right = 101.0
+offset_bottom = -95.0
 text = "Presiona E para interactuar"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1418893765]

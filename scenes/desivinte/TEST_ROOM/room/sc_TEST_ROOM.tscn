@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://vknacdmbidox"]
+
+[ext_resource type="Texture2D" uid="uid://c82juw1rfajcx" path="res://assets/sprites/intro_scene/intro_sequence/comic/temp_panels/images.jpg" id="1_7my0a"]
+[ext_resource type="PackedScene" uid="uid://cu1iki54e4xea" path="res://scenes/desivinte/npcs/chapter_0/npc_test/scn_test_dummy.tscn" id="3_ejo85"]
+[ext_resource type="PackedScene" uid="uid://ft8cbhna1p36" path="res://scenes/desivinte/TEST_ROOM/test_npc_dummies/scn_npc_interact.tscn" id="3_y00qj"]
+[ext_resource type="PackedScene" uid="uid://cw0jf4brf01p7" path="res://scenes/desivinte/player/combat/ground_encounter/scenes/scn_desivinte_ground.tscn" id="4_myaiq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7my0a"]
+size = Vector2(6142.5, 109)
+
+[node name="TestRoom" type="StaticBody2D" unique_id=1944889196]
+position = Vector2(105, 110)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1350729779]
+position = Vector2(3070.75, 455)
+shape = SubResource("RectangleShape2D_7my0a")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1475707152]
+position = Vector2(3080.5, 456)
+scale = Vector2(15.91473, 0.21317823)
+texture = ExtResource("1_7my0a")
+
+[node name="TestDummy" parent="." unique_id=615985187 instance=ExtResource("3_ejo85")]
+position = Vector2(1275, 368)
+scale = Vector2(3, 3)
+
+[node name="TestDummy2" parent="." unique_id=799605470 instance=ExtResource("3_ejo85")]
+position = Vector2(1790, 310)
+scale = Vector2(3, 3)
+
+[node name="Npcdummyinteract" parent="." unique_id=1157479243 instance=ExtResource("3_y00qj")]
+position = Vector2(1505, 273)
+
+[node name="Npcdummyinteract3" parent="." unique_id=274513107 instance=ExtResource("3_y00qj")]
+position = Vector2(1922, 219)
+
+[node name="Npcdummyinteract2" parent="." unique_id=1534881291 instance=ExtResource("3_y00qj")]
+position = Vector2(2247, 202)
+
+[node name="ScnDesivinteGround" parent="." unique_id=208521235 instance=ExtResource("4_myaiq")]
+position = Vector2(253, 352)
