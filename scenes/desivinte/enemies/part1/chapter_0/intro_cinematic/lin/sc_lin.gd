@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 # Referencias principales
 @onready var health: Health = $Health
-@onready var player: Node2D = get_tree().get_first_node_in_group("player")
+var player: Node2D = null
 
 var attack_hitbox: Area2D
 
@@ -12,6 +12,10 @@ const MOVE_SPEED: float = 100.0
 const JUMP_VELOCITY: float = -380.0
 const CHASE_RANGE: float = 300.0
 const IDEAL_DISTANCE: float = 110.0
+
+# Control de Knockback / Stun
+var _knockback_timer: float = 0.0
+const KNOCKBACK_DECAY: float = 800.0
 
 # Umbral en eje Y para considerar que el jugador saltó o está arriba
 const JUMP_THRESHOLD_Y: float = 40.0
@@ -55,15 +59,24 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
+	# 1. Procesar Knockback si fue golpeada por Desivinte
+	if _knockback_timer > 0.0:
+		_knockback_timer -= delta
+		velocity.x = move_toward(velocity.x, 0.0, KNOCKBACK_DECAY * delta)
+		move_and_slide()
+		return
+
 	# Actualizar temporizadores de recarga (cooldowns)
 	_normal_cooldown = maxf(_normal_cooldown - delta, 0.0)
 	_sword_cooldown = maxf(_sword_cooldown - delta, 0.0)
 
-	# Detener movimiento si no se encuentra al jugador
-	if not player:
-		velocity.x = move_toward(velocity.x, 0.0, MOVE_SPEED * delta)
-		move_and_slide()
-		return
+	# 2. Verificar y reobtener referencia al jugador dinámicamente
+	if not is_instance_valid(player):
+		player = get_tree().get_first_node_in_group("player")
+		if not player:
+			velocity.x = move_toward(velocity.x, 0.0, MOVE_SPEED * delta)
+			move_and_slide()
+			return
 
 	var distance: float = global_position.distance_to(player.global_position)
 
@@ -92,7 +105,7 @@ func _chase(distance: float, delta: float) -> void:
 	var direction: float = signf(player.global_position.x - global_position.x)
 	_face_player(direction)
 
-	# Comprobar si debe saltar (si el jugador está significativamente por encima de Lin y dentro del rango de persecución)
+	# Comprobar si debe saltar
 	_check_jump()
 
 	# Intento de ataque normal (Prioridad en distancia corta)
@@ -116,7 +129,6 @@ func _check_jump() -> void:
 	if not is_on_floor():
 		return
 
-	# En Godot 2D, coordenadas Y menores significan estar más arriba en pantalla
 	var player_height_difference: float = global_position.y - player.global_position.y
 	
 	if player_height_difference > JUMP_THRESHOLD_Y:
@@ -183,6 +195,7 @@ func take_damage(amount: float) -> void:
 func _on_threshold_crossed(percent: float) -> void:
 	print("Lin cruzó el umbral: ", percent * 100.0, "%")
 
-# Aplica una fuerza vectorial instantánea a la velocidad del personaje
+# Aplica la fuerza de empuje e inhabilita las entradas temporalmente
 func apply_knockback(force: Vector2) -> void:
 	velocity = force
+	_knockback_timer = 0.25
