@@ -1,8 +1,4 @@
 # Controlador de física y combate para el personaje en modo terrestre (Melee).
-#
-# Administra la física de plataformas (gravedad, salto y doble salto), el control
-# progresivo de velocidad horizontal según la dirección/sprint, la gestión de
-# estados animados y la ejecución de ataques basados en un kit de habilidades.
 extends CharacterBody2D
 
 # Configuración de constantes para físicas de movimiento y salto.
@@ -28,9 +24,13 @@ var can_doublejump: bool = false
 # Estado y velocidad horizontal actual del personaje.
 var current_state: MeleeStates = MeleeStates.BASE
 var current_speed: float = BASE_SPEED
+var facing_direction: float = 1.0
 
-# Registro de los 4 slots de ataque equipados (guarda los ID de los ataques).
-# Por defecto incluye el ataque Jab base en el primer slot.
+# Control de Knockback / Stun
+var _knockback_timer: float = 0.0
+const KNOCKBACK_DECAY: float = 800.0
+
+# Registro de los 4 slots de ataque equipados.
 var equipped_kit: Array[String] = [
 	"DESIV_ATK_MELEE_JAB",
 	"",
@@ -41,16 +41,17 @@ var equipped_kit: Array[String] = [
 # Referencia a la hitbox de ataque instanciada dinámicamente.
 var attack_hitbox: Area2D
 
+@onready var health: Health = $Health
+
 
 func _ready() -> void:
-	# Instanciar y configurar el área de colisión (hitbox) para los ataques
 	var attack_hitbox_scene: PackedScene = preload("res://scenes/desivinte/player/combat/shared/scn_attack_hitbox.tscn")
-
 	attack_hitbox = attack_hitbox_scene.instantiate() as Area2D
 	add_child(attack_hitbox)
-
-	# Posicionar la hitbox desplazada horizontalmente con respecto al personaje
 	attack_hitbox.position = Vector2(30.0, 0.0)
+	
+	add_to_group("player")
+	add_to_group("damageables")
 
 
 func _physics_process(delta: float) -> void:
@@ -60,7 +61,15 @@ func _physics_process(delta: float) -> void:
 	else:
 		can_doublejump = false
 
-	# 2. Gestión de salto principal y doble salto
+	# 2. Gestión de Knockback: anula los controles y desacelera progresivamente
+	if _knockback_timer > 0.0:
+		_knockback_timer -= delta
+		velocity.x = move_toward(velocity.x, 0.0, KNOCKBACK_DECAY * delta)
+		current_speed = abs(velocity.x)
+		move_and_slide()
+		return
+
+	# 3. Gestión de salto principal y doble salto
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		can_doublejump = true
@@ -69,15 +78,21 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 		can_doublejump = false
 
-	# 3. Control de aceleración y velocidad horizontal
+	# 4. Control de aceleración y velocidad horizontal
 	if Input.is_action_pressed("move_left"):
 		current_speed = move_toward(current_speed, BRAKE_SPEED, 500.0 * delta)
+		facing_direction = -1.0
+		_update_hitbox_position()
 
 	elif Input.is_action_pressed("modifier"):
 		current_speed = move_toward(current_speed, SHIFT_SPEED, 500.0 * delta)
+		facing_direction = 1.0
+		_update_hitbox_position()
 
 	elif Input.is_action_pressed("move_right"):
 		current_speed = move_toward(current_speed, FORWARD_SPEED, 500.0 * delta)
+		facing_direction = 1.0
+		_update_hitbox_position()
 
 	elif Input.is_action_pressed("move_up"):
 		current_speed = 0.0
@@ -87,7 +102,7 @@ func _physics_process(delta: float) -> void:
 
 	velocity.x = current_speed
 
-	# 4. Escuchar entradas de ataque (Kit de habilidades)
+	# 5. Escuchar entradas de ataque (Kit de habilidades)
 	if Input.is_action_just_pressed("kit_1_action"):
 		_try_attack(0)
 
@@ -100,7 +115,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("kit_4_action"):
 		pass
 
-	# 5. Actualización de la máquina de estados según velocidad y física vertical
+	# 6. Actualización de la máquina de estados según velocidad y física vertical
 	if is_on_floor():
 		if abs(velocity.x) <= BRAKE_SPEED:
 			current_state = MeleeStates.BRAKING
@@ -120,14 +135,15 @@ func _physics_process(delta: float) -> void:
 	else:
 		current_state = MeleeStates.FALL
 
-	# 6. Ejecutar movimiento físico en el motor Godot
+	# 7. Ejecutar movimiento físico
 	move_and_slide()
 
 
-# Valida si existe un ataque asignado en el slot del kit y activa la hitbox con su recurso.
-#
-# Parámetros:
-#   - slot: Índice del arreglo 'equipped_kit' a consultar (0 a 3).
+func _update_hitbox_position() -> void:
+	if attack_hitbox:
+		attack_hitbox.position.x = 30.0 * facing_direction
+
+
 func _try_attack(slot: int) -> void:
 	if slot < 0 or slot >= equipped_kit.size():
 		return
@@ -143,5 +159,17 @@ func _try_attack(slot: int) -> void:
 		push_warning("MeleePlayer: No se encontró el recurso de ataque para el ID: " + attack_id)
 		return
 
+	_update_hitbox_position()
+
 	if attack_hitbox and attack_hitbox.has_method("activate"):
-		attack_hitbox.activate(attack_data)
+		attack_hitbox.activate(attack_data, self)
+
+
+# Aplica la fuerza de empuje e inhabilita las entradas temporalmente
+func apply_knockback(force: Vector2) -> void:
+	velocity = force
+	_knockback_timer = 0.25 # Duración del empuje/stun en segundos
+
+
+func take_damage(amount: float) -> void:
+	health.take_damage(amount)

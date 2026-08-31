@@ -8,6 +8,8 @@ radius = 20.0
 height = 48.0
 
 [node name="ScnDesivinteGround" type="CharacterBody2D" unique_id=208521235]
+collision_layer = 2
+collision_mask = 17
 script = ExtResource("1_2yh4y")
 
 [node name="NormalHitbox" type="CollisionShape2D" parent="." unique_id=1380672320]

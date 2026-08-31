@@ -1,61 +1,85 @@
 # Hitbox de ataque genérica y reutilizable (Area2D).
-#
-# Se instancia como nodo hijo en cualquier personaje o entidad en combate.
-# Ajusta dinámicamente sus dimensiones, daño y tiempo de activación
-# a partir de un recurso 'AttackData' recibido.
 extends Area2D
 
-# Daño que infligirá la hitbox durante su ventana de activación actual.
 var current_damage: float = 0.0
+var current_knockback_force: float = 0.0
 
-# Registro de cuerpos ya golpeados durante la activación actual.
-# Se limpia cada vez que activate() vuelve a habilitar la hitbox.
 var _hit_bodies: Array[Node2D] = []
+var _owner_body: Node2D = null
 
-# Configura y activa la hitbox según las propiedades descritas en el objeto AttackData.
-# Desactiva la monitorización automáticamente al finalizar el tiempo de ataque.
-#
-# Parámetros:
-#   - attack_data: Recurso AttackData con el daño, dimensiones y duración del ataque.
-func activate(attack_data: AttackData) -> void:
+var _default_radius: float = 10.0
+var _default_height: float = 20.0
+
+@onready var collision_shape: CollisionShape2D = $CollisionShape2D
+
+func _ready() -> void:
+	monitoring = false
+	if collision_shape:
+		collision_shape.disabled = true
+		if collision_shape.shape is CapsuleShape2D:
+			if not collision_shape.shape.is_local_to_scene():
+				collision_shape.shape = collision_shape.shape.duplicate()
+			
+			var hitbox_shape: CapsuleShape2D = collision_shape.shape
+			_default_radius = hitbox_shape.radius
+			_default_height = hitbox_shape.height
+
+func activate(attack_data: AttackData, owner_body: Node2D = null) -> void:
 	if attack_data == null:
 		push_error("Hitbox: Se intentó activar la hitbox con un AttackData nulo.")
 		return
 
+	_owner_body = owner_body
 	current_damage = attack_data.damage
+	
+	# Verificar si el AttackData tiene definida la fuerza de empuje
+	if "knockback_force" in attack_data:
+		current_knockback_force = attack_data.knockback_force
+	else:
+		current_knockback_force = 150.0 # Fuerza por defecto si no está en el recurso
 
-	# Reiniciar el registro de golpeados — cada activación es una ventana nueva.
 	_hit_bodies.clear()
 
-	# Obtener y redimensionar la colisión de la hitbox
-	var collision_shape: CollisionShape2D = $CollisionShape2D
 	if collision_shape and collision_shape.shape is CapsuleShape2D:
 		var hitbox_shape: CapsuleShape2D = collision_shape.shape
 		hitbox_shape.radius = attack_data.hitbox_size.x
 		hitbox_shape.height = attack_data.hitbox_size.y
 
-	# Habilitar la detección de colisiones
+	collision_shape.set_deferred("disabled", false)
 	monitoring = true
 
-	# Esperar el tiempo de duración activa del ataque
 	await get_tree().create_timer(attack_data.active_duration).timeout
 
-	# Deshabilitar la detección al terminar el ataque
 	monitoring = false
+	collision_shape.set_deferred("disabled", true)
+	
+	if collision_shape and collision_shape.shape is CapsuleShape2D:
+		var hitbox_shape: CapsuleShape2D = collision_shape.shape
+		hitbox_shape.radius = _default_radius
+		hitbox_shape.height = _default_height
 
-# Callback ejecutado cuando un cuerpo físico entra en el área de la hitbox.
-#
-# Parámetros:
-#   - body: Nodo2D que colisionó con la hitbox.
 func _on_body_entered(body: Node2D) -> void:
-	# Ya fue golpeado durante esta activación — ignorar.
-	if body in _hit_bodies:
+	if body == _owner_body or body in _hit_bodies:
 		return
 
-	# Verificación de seguridad para aplicar daño solo a objetivos válidos
 	if body.is_in_group("damageables"):
 		if body.has_method("take_damage"):
 			_hit_bodies.append(body)
+			
+			# Calcular la dirección del impacto (en X)
+			var knockback_direction: float = 1.0
+			if _owner_body:
+				var diff_x: float = body.global_position.x - _owner_body.global_position.x
+				knockback_direction = signf(diff_x)
+				if knockback_direction == 0.0:
+					knockback_direction = 1.0
+			
+			# Aplicar el knockback si la víctima implementa el método
+			if body.has_method("apply_knockback"):
+				var knockback_vector: Vector2 = Vector2(knockback_direction * current_knockback_force, -80.0)
+				body.apply_knockback(knockback_vector)
+
 			body.take_damage(current_damage)
+			print("¡Hitbox golpeó a ", body.name, " con knockback!")
 		else:
-			push_warning("Hitbox: El nodo '" + body.name + "' está en el grupo 'damageables' pero no implementa 'take_damage()'.")
+			push_warning("Hitbox: El nodo '" + body.name + "' no implementa 'take_damage()'.")

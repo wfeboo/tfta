@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="AttackData" format=3 uid="uid://dmads7vkwc20"]
+
+[ext_resource type="Script" uid="uid://cp2h0c7fbwbns" path="res://resources/combat/attack_data.gd" id="1_g61ry"]
+
+[resource]
+script = ExtResource("1_g61ry")
+attack_id = "LIN_ATK_SWORD"
+damage = 3.0
+hitbox_size = Vector2(160, 100)

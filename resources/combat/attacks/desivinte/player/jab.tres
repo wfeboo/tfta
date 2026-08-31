@@ -7,5 +7,5 @@ script = ExtResource("1_cfw3d")
 attack_id = "DESIV_ATK_MELEE_JAB"
 damage = 7.0
 hitbox_size = Vector2(160, 100)
-active_duration = 3.0
+active_duration = 0.35
 metadata/_custom_type_script = "uid://cp2h0c7fbwbns"

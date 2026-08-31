@@ -30,6 +30,8 @@ window/stretch/mode="canvas_items"
 [global_group]
 
 damageables=""
+player=""
+enemies=""
 
 [input]
 

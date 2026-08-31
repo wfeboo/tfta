@@ -10,3 +10,4 @@ enum Mode {MELEE, AIRBORNE}
 @export var active_duration: float = 0.15
 @export var cooldown: float = 0.3
 @export var chargeable: bool = false
+@export var knockback_force: float = 200.0 # Fuerza horizontal del empuje
