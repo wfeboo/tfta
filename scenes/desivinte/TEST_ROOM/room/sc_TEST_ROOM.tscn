@@ -38,8 +38,8 @@ position = Vector2(1922, 219)
 [node name="Npcdummyinteract2" parent="." unique_id=1534881291 instance=ExtResource("3_y00qj")]
 position = Vector2(2247, 202)
 
-[node name="ScnLin" parent="." unique_id=827235787 instance=ExtResource("5_ahmwd")]
-position = Vector2(420, 340)
-
 [node name="ScnDesivinteGround" parent="." unique_id=208521235 instance=ExtResource("4_myaiq")]
-position = Vector2(87, 348)
+position = Vector2(112, 328)
+
+[node name="ScnLin" parent="." unique_id=827235787 instance=ExtResource("5_ahmwd")]
+position = Vector2(675, 300)
