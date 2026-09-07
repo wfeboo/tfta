@@ -7,9 +7,9 @@ extends Node
 # Lista de rutas a los archivos .tres de cada ataque registrado en el juego.
 # Para añadir un nuevo ataque, basta con incluir su ruta en este arreglo.
 const ATTACK_PATHS: Array[String] = [
-	"res://resources/combat/attacks/desivinte/enemies/lin/chap_0/lin_basic.tres",
-	"res://resources/combat/attacks/desivinte/enemies/lin/chap_0/lin_sword.tres",
-	"res://resources/combat/attacks/desivinte/player/jab.tres",
+	"res://content/desivinte/part_01/intro/combat/enemies/lin/base/lin_basic.tres",
+	"res://content/desivinte/part_01/intro/combat/enemies/lin/base/lin_sword.tres",
+	"res://content/desivinte/part_01/attack_catalogue/melee/jab.tres",
 ]
 # Diccionario de almacenamiento: {"DESIV_ATK_MELEE_JAB": AttackData, ...}
 var attacks: Dictionary = {}

@@ -7,9 +7,8 @@ extends Node
 
 # Rutas a los archivos de diálogos que se cargarán al iniciar el juego.
 const DIALOGUE_PATHS: Array[String] = [
-	"res://data/dialogue/intro/librarian_dialogue.txt",
-	"res://data/dialogue/intro/destiny_dialogue.txt",
-	"res://data/dialogue/desivinte/chapter_0/desivinte_interaction_ch0.txt"
+	"res://content/game_intro/dialogue/destiny_dialogue.txt",
+	"res://content/game_intro/dialogue/librarian_dialogue.txt"
 ]
 
 # Estructura en memoria:

@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cw0jf4brf01p7"]
+
+[ext_resource type="Script" uid="uid://fstydg5pido2" path="res://content/desivinte/shared/player_base/ground/scripts/sc_desivinte_ground.gd" id="1_2yh4y"]
+[ext_resource type="PackedScene" uid="uid://btvv0ji25pvcy" path="res://core/components/health.tscn" id="2_scyjp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2yh4y"]
+radius = 20.0
+height = 48.0
+
+[node name="ScnDesivinteGround" type="CharacterBody2D" unique_id=208521235]
+collision_layer = 2
+collision_mask = 17
+script = ExtResource("1_2yh4y")
+
+[node name="NormalHitbox" type="CollisionShape2D" parent="." unique_id=1380672320]
+shape = SubResource("CapsuleShape2D_2yh4y")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=201279221]
+custom_minimum_size = Vector2(30, 30)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = -20.0
+offset_right = 15.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.66656864, 0.6665687, 0.66656864, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=801891476]
+position = Vector2(0, -84)
+
+[node name="Health" parent="." unique_id=99482824 instance=ExtResource("2_scyjp")]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c07hyl6ehjbrm"]
 
 [ext_resource type="Script" uid="uid://1tf832jt2hu4" path="res://autoload/dialogue_system/dialogue_ui.gd" id="1_botrp"]
-[ext_resource type="Texture2D" uid="uid://bti8g6dkq580f" path="res://assets/sprites/intro_scene/intro_sequence/first_scene/M-godarti-STOCK-5.jpg" id="2_m1jbf"]
+[ext_resource type="Texture2D" uid="uid://bti8g6dkq580f" path="res://assets/sprites/ui/placeholder/M-godarti-STOCK-5.jpg" id="2_m1jbf"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_anufe"]
 

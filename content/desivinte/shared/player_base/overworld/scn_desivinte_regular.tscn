@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://tqqscrt7ar60"]
+
+[ext_resource type="Script" uid="uid://bl74kujkgmsi4" path="res://content/desivinte/shared/player_base/overworld/sc_desivinte_regular.gd" id="1_x44ob"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x44ob"]
+radius = 20.0
+height = 48.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_743oy"]
+size = Vector2(71, 48)
+
+[node name="ScnDesivinte" type="CharacterBody2D" unique_id=935461782]
+collision_layer = 2
+collision_mask = 41
+script = ExtResource("1_x44ob")
+
+[node name="NormalHitbox" type="CollisionShape2D" parent="." unique_id=558984855]
+shape = SubResource("CapsuleShape2D_x44ob")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=66534149]
+custom_minimum_size = Vector2(30, 30)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = -20.0
+offset_right = 15.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.66656864, 0.6665687, 0.66656864, 1)
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1227587827]
+collision_mask = 4
+
+[node name="AreaHitbox" type="CollisionShape2D" parent="InteractionArea" unique_id=1137424489]
+shape = SubResource("RectangleShape2D_743oy")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=162292451]
+position = Vector2(0, -84)
+
+[connection signal="area_entered" from="InteractionArea" to="." method="_on_interaction_area_area_entered"]
+[connection signal="area_exited" from="InteractionArea" to="." method="_on_interaction_area_area_exited"]
