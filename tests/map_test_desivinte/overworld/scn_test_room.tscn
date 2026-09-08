@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://vknacdmbidox"]
+
+[ext_resource type="Texture2D" uid="uid://c82juw1rfajcx" path="res://assets/sprites/intro_scene/intro_sequence/comic/placeholder/images.jpg" id="1_amhe7"]
+[ext_resource type="PackedScene" uid="uid://cu1iki54e4xea" path="res://tests/test_enemies/scenes/scn_test_dummy.tscn" id="2_38fpy"]
+[ext_resource type="PackedScene" uid="uid://ft8cbhna1p36" path="res://tests/test_npc/npc_test/scn_npc_interact.tscn" id="3_2q006"]
+[ext_resource type="PackedScene" uid="uid://cw0jf4brf01p7" path="res://content/desivinte/shared/player_base/ground/scenes/scn_desivinte_ground.tscn" id="4_bw8uq"]
+[ext_resource type="PackedScene" uid="uid://db8cwclw2l7bv" path="res://content/desivinte/part_01/intro/components/base_lin/scn_lin.tscn" id="5_ld2nn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7my0a"]
+size = Vector2(6142.5, 109)
+
+[node name="TestRoom" type="StaticBody2D" unique_id=1944889196]
+position = Vector2(105, 110)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1350729779]
+position = Vector2(3070.75, 455)
+shape = SubResource("RectangleShape2D_7my0a")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1475707152]
+position = Vector2(3080.5, 456)
+scale = Vector2(15.91473, 0.21317823)
+texture = ExtResource("1_amhe7")
+
+[node name="TestDummy" parent="." unique_id=615985187 instance=ExtResource("2_38fpy")]
+position = Vector2(1275, 368)
+scale = Vector2(3, 3)
+
+[node name="TestDummy2" parent="." unique_id=799605470 instance=ExtResource("2_38fpy")]
+position = Vector2(1790, 310)
+scale = Vector2(3, 3)
+
+[node name="Npcdummyinteract" parent="." unique_id=1157479243 instance=ExtResource("3_2q006")]
+position = Vector2(1505, 273)
+
+[node name="Npcdummyinteract3" parent="." unique_id=274513107 instance=ExtResource("3_2q006")]
+position = Vector2(1922, 219)
+
+[node name="Npcdummyinteract2" parent="." unique_id=1534881291 instance=ExtResource("3_2q006")]
+position = Vector2(2247, 202)
+
+[node name="ScnDesivinteGround" parent="." unique_id=208521235 instance=ExtResource("4_bw8uq")]
+position = Vector2(112, 328)
+
+[node name="ScnLin" parent="." unique_id=827235787 instance=ExtResource("5_ld2nn")]
+position = Vector2(401, 324)
