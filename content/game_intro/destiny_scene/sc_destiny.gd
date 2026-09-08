@@ -172,4 +172,4 @@ func blink_dialogue(duration: float = 0.55, blink_interval: float = 0.1) -> void
 
 # Transición de cierre de la secuencia cinemática.
 func _on_scene_finished() -> void:
-	get_tree().change_scene_to_file("res://scenes/menu/intro/intro_scenes/intro_sequence_scenes/scn_welcome.tscn")
+	get_tree().change_scene_to_file("res://content/game_intro/welcome/scn_welcome.tscn")
