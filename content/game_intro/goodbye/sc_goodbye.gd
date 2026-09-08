@@ -110,4 +110,4 @@ func show_dialogue() -> void:
 
 # Cierra la cinemática y redirige al menú principal del juego.
 func _on_scene_finished() -> void:
-	get_tree().change_scene_to_file("res://scenes/menu/menu_files/scn_main_menu.tscn")
+	get_tree().change_scene_to_file("res://content/game_menu/scn_main_menu.tscn")

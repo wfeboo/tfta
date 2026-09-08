@@ -123,4 +123,4 @@ func show_dialogue() -> void:
 
 # Cierra la escena y cambia a la perspectiva de tercera persona en la secuencia de intro.
 func _on_scene_finished() -> void:
-	get_tree().change_scene_to_file("res://scenes/menu/intro/intro_scenes/intro_sequence_scenes/scn_third_person.tscn")
+	get_tree().change_scene_to_file("res://content/game_intro/third_person/scn_third_person.tscn")
