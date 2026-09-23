@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://vtgwmxglctwn"]
+
+[ext_resource type="Script" uid="uid://buan3x24m4nsv" path="res://tests/arma_lanzable/enemigo.gd" id="1_ovfrf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4tv3v"]
+
+[node name="Enemigo" type="CharacterBody2D" unique_id=32544592]
+script = ExtResource("1_ovfrf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=804351869]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1577842122]
+shape = SubResource("RectangleShape2D_4tv3v")

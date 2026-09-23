@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bwba6f4utpkq2"]
+
+[ext_resource type="Script" uid="uid://b7ymrek2rncuo" path="res://tests/arma_lanzable/arma_lanzable.gd" id="1_aas4g"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g5w8o"]
+radius = 8.0
+height = 2328.0
+
+[node name="ArmaLanzable" type="Area2D" unique_id=1718139174]
+script = ExtResource("1_aas4g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1922519071]
+scale = Vector2(1e-05, 1e-05)
+shape = SubResource("CapsuleShape2D_g5w8o")
+
+[node name="Line2D" type="Line2D" parent="." unique_id=2075375083]
+position = Vector2(2, 0)
+points = PackedVector2Array(-15, 0, -15, 0, 15, 0)
+width = 6.0
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=2125107931]
+color = Color(0.21568628, 0.22745098, 0.24705882, 1)
+offset = Vector2(15, 0)
